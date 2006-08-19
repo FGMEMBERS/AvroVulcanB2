@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+
+<!-- Control Positions -->
+
+<!-- 
+
+Notes:
+
+1) The controls are elevons, so we use two rotations: one for aileron and
+one for elevator
+
+2) The model allows a maximum roation of +/- 35 degrees
+
+3) We choose _not_ to show the outer/inner control ratio is 5:4.
+
+So, we allow +/- 16 for each of the the elevators and ailerons,
+
+-->
+ 
+
+<PropertyList>
+
+ <path>control_pos.ac</path>
+
+<!-- Trim for left elevons -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LeftOutTrim</object-name>
+  <object-name>LeftInTrim</object-name>
+  <property>/controls/flight/elevator-trim</property>
+  <factor>32</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LeftOutTrim</object-name>
+  <object-name>LeftInTrim</object-name>
+  <property>/controls/flight/aileron-trim</property>
+  <factor>32</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- Left elevon -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LeftOutElevon</object-name>
+  <object-name>LeftInElevon</object-name>
+  <property>/controls/flight/elevator</property>
+  <factor>16</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>LeftOutElevon</object-name>
+  <object-name>LeftInElevon</object-name>
+  <property>/controls/flight/aileron</property>
+  <factor>16</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- Right Trim -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RightOutTrim</object-name>
+  <object-name>RightInTrim</object-name>
+  <property>/controls/flight/elevator-trim</property>
+  <factor>32</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RightOutTrim</object-name>
+  <object-name>RightInTrim</object-name>
+  <property>/controls/flight/aileron-trim</property>
+  <factor>-32</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- Right Elevon -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RightOutElevon</object-name>
+  <object-name>RightInElevon</object-name>
+  <property>/controls/flight/elevator</property>
+  <factor>16</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>RightOutElevon</object-name>
+  <object-name>RightInElevon</object-name>
+  <property>/controls/flight/aileron</property>
+  <factor>-16</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+<!-- Rudder Trim -->
+ <animation>
+  <type>rotate</type>
+  <object-name>RudderTrim</object-name>
+  <property>/controls/flight/rudder-trim</property>
+  <factor>70</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Rudder</object-name>
+  <property>/controls/flight/rudder</property>
+  <factor>35</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+<!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+</PropertyList>

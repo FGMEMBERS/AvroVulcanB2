@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+JSBSim Vulcan B2
+
+Started June 6 2006 by Stuart Buchanan, 
+************************************************************************
+-->
+
+<PropertyList>
+
+ <sim>
+
+  <description>Avro Vulcan B.2</description>
+  <author>Stuart Buchanan</author>
+  <status>alpha</status>
+
+  <flight-model archive="y">jsb</flight-model>
+  <aero archive="y">vulcanb2</aero>
+
+  <model>
+   <path archive="y">Aircraft/vulcanb2/Models/vulcanb2-dpm.xml</path>
+  </model>
+
+  <sound>
+   <path>Aircraft/vulcanb2/Sounds/vulcanb2-sound.xml</path>
+  </sound>
+
+  <help>
+   <title>Avro Vulcan B.2</title>
+   <line>Speeds (AUW 180,000lbs)</line>
+   <line></line>
+   <line>Rotation: 148 kts</line>
+   <line>Initial Climb: 156</line>
+   <line>Climb (below 20k ft): 250 kts</line>
+   <line>Climb (above 20k ft): 300 kts</line>
+   <line>Pattern: 181 kts</line>
+   <line>Approach: 166 kts</line>
+   <line>Threshhold: 151 kts</line>
+   <line>TBC: 145 kts</line>
+   <line></line>
+   <line>Keys:</line>
+   <line>C - Tail Brake Parachute (TBC) control</line>
+   <line>D - Toggle Bomb Bay door</line>
+   <line>E - Toggle crew hatch</line>
+   <line>k/j - 2-position speedbrakes</line>
+  </help>
+ 
+  <panel>
+   <path>Aircraft/vulcanb2/Panels/vulcanb2-vfr-panel.xml</path>
+   <visibility>false</visibility>
+  </panel>
+  
+
+  <!-- position the pilot viewpoint and angle -->
+  <view n="0">
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">-0.5</x-offset-m>
+     <y-offset-m archive="y">1.32</y-offset-m>
+     <z-offset-m archive="y">5.04</z-offset-m>
+     <pitch-offset-deg>0.0</pitch-offset-deg>
+   </config>
+  </view>
+  
+  <!-- position the co-pilot viewpoint and angle -->
+  <!-- This is definitely a dual-control a/c -->
+  <view n="1">
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">-0.5</x-offset-m>
+     <y-offset-m archive="y">-1.32</y-offset-m>
+     <z-offset-m archive="y">5.04</z-offset-m>
+     <pitch-offset-deg>0.0</pitch-offset-deg>
+   </config>
+  </view>
+  <view n="2">
+   <config>
+     <!-- big plane, so extend chase view offset a bit -->
+     <z-offset-m type="double" archive="y">-75.0</z-offset-m>
+   </config>
+  </view>
+
+  <view n="3">
+   <config>
+     <!-- big plane, so extend chase view offset a bit -->
+     <z-offset-m type="double" archive="y">-75.0</z-offset-m>
+   </config>
+  </view>
+
+  <!-- No flaps on this aircraft -->
+  <flaps>
+   <setting>0.000</setting>  
+  </flaps>
+
+  <!-- Two-position spoilers. 
+   0 - Fully in
+   0.5 - Parially out - 35 degrees
+   1.0 - Fully extended - 55/80 degrees undercarriage up/down.
+   
+   We simplify the fully out position 
+ -->
+  <spoilers>
+      <setting>0.00</setting>
+      <setting>0.5</setting>
+      <setting>1.0</setting>
+      <chute-pos-norm>0.0</chute-pos-norm>
+  </spoilers>
+
+ </sim>
+  
+  <consumables>
+  <fuel>
+   <tank n="0">
+     <level-gal_us archive="y">1540</level-gal_us>
+   </tank>
+   <tank n="1">
+    <level-gal_us archive="y">1540</level-gal_us>
+   </tank>
+   <tank n="2">
+    <level-gal_us archive="y">1540</level-gal_us>
+   </tank>
+   <tank n="3">
+    <level-gal_us archive="y">1540</level-gal_us>
+   </tank>
+  </fuel>
+ </consumables>
+  
+ <engines>
+  <engine n="0">
+    <running>true</running>
+  </engine>
+  <engine n="1">
+    <running>true</running>
+  </engine>
+  <engine n="2">
+    <running>true</running>
+  </engine>
+  <engine n="3">
+    <running>true</running>
+  </engine>
+ </engines>
+  
+ <controls>
+   <!-- Start with the Parking Brake on, and everything closed up-->
+    <gear>
+      <brake-parking type="float">1.0</brake-parking>
+    </gear>
+
+    <doors>    
+      <cockpit-door-pos-norm type="float">0.0</cockpit-door-pos-norm>
+      <bb-door-pos-norm type="float">0.0</bb-door-pos-norm>
+      <chute-door-pos-norm type="float">0.0</chute-door-pos-norm>
+    </doors>
+
+
+   <!-- trim for level cruise -->
+
+  <flight>
+   <aileron-trim>0.027</aileron-trim>
+   <rudder-trim>0.0</rudder-trim>
+  </flight>
+
+ </controls>
+ 
+ <instrumentation>
+  <attitude-indicator>
+   <config>
+    <tumble-flag archive="y" type="bool">true</tumble-flag>
+   </config>
+  </attitude-indicator>
+ </instrumentation>
+ 
+<!-- Key mappings -->
+  <input>
+    <keyboard>
+
+      <key n="67">
+        <name>C</name>
+        <desc>Toggle Chute</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>vulcanb2.toggle_chute()</script>
+        </binding>
+      </key>
+
+      <key n="68">
+        <name>D</name>
+        <desc>Toggle Bomb Bay Doors</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>vulcanb2.toggle_bb_doors()</script>
+        </binding>
+      </key>
+
+      <key n="69">
+        <name>E</name>
+        <desc>Toggle Entrance Hatch</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>vulcanb2.toggle_cockpit_door()</script>
+        </binding>
+      </key>
+
+    </keyboard>
+  </input>
+  
+<!-- Aircraft limits -->  
+ <limits>
+   <max-gear-extension-speed>270</max-gear-extension-speed>
+   <vne>330</vne> <!-- VNE 0.92 mach -->
+ </limits>
+  
+ 
+<!-- Nasal files/scripts -->
+  <nasal>
+    <vulcanb2>
+      <file>Aircraft/vulcanb2/Nasal/vulcanb2.nas</file>
+    </vulcanb2>
+    <failures> 
+      <file>Aircraft/Generic/limits.nas</file>
+    </failures>
+  </nasal>
+
+</PropertyList>

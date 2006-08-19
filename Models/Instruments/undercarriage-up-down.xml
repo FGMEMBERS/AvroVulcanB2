@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+
+<!-- U/C switches -->
+
+<PropertyList>
+
+ <path>undercarriage-up-down.ac</path>
+
+<!-- **************** gear-up **************** 
+
+<animation>
+	<type>rotate</type>
+	<object-name>up-guard</object-name>
+	<property>gear/gear[0]/position-norm</property>
+	<factor>90</factor>
+	<center>
+	<x-m>0.0212157</x-m>
+	<y-m>-0.00810573</y-m>
+	<z-m>0.0246744</z-m>
+	</center>
+	<axis>
+		<x>0</x>
+		<y>0</y>
+		<z>-1</z>
+	</axis>
+</animation>
+
+-->
+
+<animation>
+  <type>translate</type>
+  <object-name>up-button</object-name>
+  <property>/controls/gear/gear-down</property>
+  <interpolation>
+   <entry><ind>0</ind><dep>0.01</dep></entry>
+   <entry><ind>1</ind><dep>0</dep></entry>
+  </interpolation>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>  
+</animation>
+ 
+<animation>
+	<object-name>up-lamp</object-name>
+	<type>material</type>
+	<condition>
+		<equals>
+			<property>gear/gear[0]/position-norm</property>
+			<value>1</value>
+		</equals>
+	</condition>
+
+    <emission> 
+			<red>0.0357</red>
+			<green>0.0</green>
+			<blue>0.0</blue>
+	</emission>
+    <ambient> 
+			<red>1.0</red>
+			<green>0.0</green>
+			<blue>0.0</blue>
+	</ambient>
+
+ </animation>
+ 
+  <!-- **************** gear-down **************** -->
+<animation>
+  <type>translate</type>
+  <object-name>down-button</object-name>
+  <property>/controls/gear/gear-down</property>
+  <interpolation>
+   <entry><ind>0</ind><dep>0.01</dep></entry>
+   <entry><ind>1</ind><dep>0</dep></entry>
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+	<animation> 
+	<condition>
+		<greater-than>
+			<property>/gear/gear[0]/position-norm</property>
+			<value>0.5</value>
+		</greater-than>
+	</condition>
+
+	<type>material</type>
+	<object-name>down-button-front</object-name>
+    <emission> 
+		<factor-prop>/gear/gear[0]/position-norm</factor-prop>
+			<red>0.0</red>
+			<green>1.0</green>
+			<blue>0.0</blue>
+	</emission>
+    <ambient> 
+		<factor-prop>/gear/gear[0]/position-norm</factor-prop>
+			<red>0.0</red>
+			<green>1.0</green>
+			<blue>0.0</blue>
+	</ambient>
+</animation>
+ 
+<!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+</PropertyList>

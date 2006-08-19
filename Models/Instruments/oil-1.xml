@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<path>oil.ac</path>
+	<animation>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>engines/engine[0]/oil-pressure-psi</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-210</dep></entry>
+			<entry><ind>50</ind><dep>-90</dep></entry>
+			<entry><ind>100</ind><dep>30</dep></entry>
+		</interpolation>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+        
+<!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+        
+</PropertyList>

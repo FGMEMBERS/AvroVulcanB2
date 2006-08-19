@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<PropertyList>
+
+ <name>Vulcan mock VFR Panel</name>
+ <background>Aircraft/vulcanb2/Panels/Textures/vulcanb2-panel-bg.rgb</background>
+ <w>1424</w>
+ <h>468</h>
+ <y-offset>0</y-offset>
+ <view-height>440</view-height>
+
+ <instruments>
+
+  <instrument include="../../Instruments/hsi.xml">
+   <name>Heading</name>
+   <x>75</x>
+   <y>75</y>
+   <w>125</w>
+   <h>125</h>
+  </instrument>
+
+  <instrument include="../../Instruments/turn.xml">
+   <name>TurnAndBank</name>
+   <x>75</x>
+   <y>200</y>
+   <w>125</w>
+   <h>125</h>
+  </instrument>
+
+  <instrument include="../../Instruments/asi-590-knot-a4c.xml">
+   <name>Machometer</name>
+   <x>75</x>
+   <y>325</y>
+   <w>125</w>
+   <h>125</h>
+  </instrument>
+
+  <instrument include="Instruments/attitude-indicator.xml">
+   <name>Attitude Indicator</name>
+   <x>225</x>
+   <y>75</y>
+   <w>125</w>
+   <h>125</h>
+  </instrument>
+
+  <instrument include="../../Instruments/vertical-speed-6kfpm.xml">
+   <name>Vertical Speed</name>
+   <x>225</x>
+   <y>200</y>
+   <w>125</w>
+   <h>125</h>
+  </instrument>
+
+  <instrument include="Instruments/digital-alt.xml">
+   <name>Digital Altimeter</name>
+   <x>150</x>
+   <y>280</y>
+   <w>50</w>
+   <h>15</h>
+  </instrument>
+
+  <instrument include="../../Instruments/altimeter.xml">
+   <name>Altimeter</name>
+   <x>225</x>
+   <y>365</y>
+   <w>125</w>
+   <h>125</h>
+  </instrument>
+
+<!-- Engine controls central cluster -->
+
+  <instrument include="../../Instruments/throttle-knob.xml">
+   <name>Engine 0 throttle quadrant</name>
+   <params>
+    <engine-throttle-select>/controls/engines/engine[0]/throttle</engine-throttle-select>
+   </params>
+   <x>350</x>
+   <y>30</y>
+   <w>12</w>
+   <h>50</h>
+  </instrument>
+
+  <instrument include="../../Instruments/throttle-knob.xml">
+   <name>Engine 1 throttle quadrant</name>
+   <params>
+    <engine-throttle-select>/controls/engines/engine[1]/throttle</engine-throttle-select>
+   </params>
+   <x>375</x>
+   <y>30</y>
+   <w>12</w>
+   <h>50</h>
+  </instrument>
+
+  <instrument include="../../Instruments/throttle-knob.xml">
+   <name>Engine 2 throttle quadrant</name>
+   <params>
+    <engine-throttle-select>/controls/engines/engine[2]/throttle</engine-throttle-select>
+   </params>
+   <x>400</x>
+   <y>30</y>
+   <w>12</w>
+   <h>50</h>
+  </instrument>
+
+  <instrument include="../../Instruments/throttle-knob.xml">
+   <name>Engine 3 throttle quadrant</name>
+   <params>
+    <engine-throttle-select>/controls/engines/engine[3]/throttle</engine-throttle-select>
+   </params>
+   <x>425</x>
+   <y>30</y>
+   <w>12</w>
+   <h>50</h>
+  </instrument>
+  
+<!-- Engine instruments -->
+
+   <instrument include="../../Instruments/oil.xml">
+   <name>Oil Temp Engine 0</name>
+   <params>
+    <engine-oil-temp-select>/engines/engine[0]/oil-temperature-degf</engine-oil-temp-select>
+    <engine-oil-press-select>/engines/engine[0]/oil-pressure-psi</engine-oil-press-select>
+   </params>
+   <x>375</x>
+   <y>100</y>
+   <w>100</w>
+   <h>100</h>
+  </instrument>
+
+   <instrument include="../../Instruments/oil.xml">
+   <name>Oil Temp Engine 1</name>
+   <params>
+    <engine-oil-temp-select>/engines/engine[1]/oil-temperature-degf</engine-oil-temp-select>
+    <engine-oil-press-select>/engines/engine[1]/oil-pressure-psi</engine-oil-press-select>
+   </params>
+   <x>475</x>
+   <y>100</y>
+   <w>100</w>
+   <h>100</h>
+  </instrument>
+
+   <instrument include="../../Instruments/oil.xml">
+   <name>Oil Temp Engine 2</name>
+   <params>
+    <engine-oil-temp-select>/engines/engine[2]/oil-temperature-degf</engine-oil-temp-select>
+    <engine-oil-press-select>/engines/engine[2]/oil-pressure-psi</engine-oil-press-select>
+   </params>
+   <x>575</x>
+   <y>100</y>
+   <w>100</w>
+   <h>100</h>
+  </instrument>
+
+   <instrument include="../../Instruments/oil.xml">
+   <name>Oil Temp Engine 3</name>
+   <params>
+    <engine-oil-temp-select>/engines/engine[3]/oil-temperature-degf</engine-oil-temp-select>
+    <engine-oil-press-select>/engines/engine[3]/oil-pressure-psi</engine-oil-press-select>
+   </params>
+   <x>675</x>
+   <y>100</y>
+   <w>100</w>
+   <h>100</h>
+  </instrument>
+  
+  <instrument include="./Instruments/n1-0.xml">
+   <name>N1 0</name>
+   <x>375</x>
+   <y>200</y>
+   <w>100</w>
+   <h>100</h>
+  </instrument>
+  
+  <instrument include="./Instruments/n1-1.xml">
+   <name>N1 1</name>
+   <x>475</x>
+   <y>200</y>
+   <w>100</w>
+   <h>100</h>
+  </instrument>
+  
+  <instrument include="./Instruments/n1-2.xml">
+   <name>N1 2</name>
+   <x>575</x>
+   <y>200</y>
+   <w>100</w>
+   <h>100</h>
+  </instrument>
+  
+  <instrument include="./Instruments/n1-3.xml">
+   <name>N1 3</name>
+   <x>675</x>
+   <y>200</y>
+   <w>100</w>
+   <h>100</h>
+  </instrument>
+
+  <instrument include="Instruments/accel.xml">
+   <name>Acceleration</name>
+   <x>375</x>
+   <y>320</y>
+   <w>125</w>
+   <h>125</h>
+  </instrument>
+  
+<!-- controls visual feedback cluster -->
+
+  <instrument include="../../Instruments/gear-indicator.xml">
+   <name>Gear Indicator Light</name>
+   <x>475</x>
+   <y>300</y>
+   <w>40</w>
+   <h>17</h>
+  </instrument>
+
+  <instrument include="../../Instruments/brakes.xml">
+   <name>Brake Indicator Light</name>
+   <x>475</x>
+   <y>320</y>
+   <w>40</w>
+   <h>17</h>
+  </instrument>
+
+  <instrument include="../../Instruments/controls.xml">
+   <name>Control Position Indicators</name>
+   <x>550</x>
+   <y>300</y>
+   <w>90</w>
+   <h>90</h>
+  </instrument>
+  
+  <instrument include="../../Instruments/dme.xml">
+   <name>DME Display</name>
+   <x>650</x>
+   <y>300</y>
+   <w>122</w>
+   <h>59</h>
+  </instrument>
+  
+
+<!-- end controls visual feedback cluster -->
+
+
+<!-- radio stack -->
+
+  <instrument include="../../Instruments/markerbeacon.xml">
+   <name>Marker Beacon Indicators</name>
+   <x>798</x>
+   <y>450</y>
+   <w>70</w>
+   <h>22</h>
+  </instrument>
+
+  <instrument include="../../Instruments/navcom-kx155.xml">
+   <name>NavCom 1 Radio</name>
+   <x>890</x>
+   <y>395</y>
+  </instrument>
+
+  <instrument include="../../Instruments/navcom-kx155.xml">
+   <name>NavCom 2 Radio</name>
+   <params>
+    <comm-freq-selected-prop>/instrumentation/comm[1]/frequencies/selected-mhz</comm-freq-selected-prop>
+    <comm-freq-standby-prop>/instrumentation/comm[1]/frequencies/standby-mhz</comm-freq-standby-prop>
+    <nav-freq-selected-prop>/instrumentation/nav[1]/frequencies/selected-mhz</nav-freq-selected-prop>
+    <nav-freq-standby-prop>/instrumentation/nav[1]/frequencies/standby-mhz</nav-freq-standby-prop>
+    <nav-morse-id-volume-prop>/instrumentation/nav[1]/volume</nav-morse-id-volume-prop>
+    <nav-morse-ident-toggle-prop>/instrumentation/nav[1]/ident</nav-morse-ident-toggle-prop>
+   </params>
+   <x>890</x>
+   <y>309</y>
+  </instrument>
+
+  <instrument include="../../Instruments/adf-radio.xml">
+   <name>ADF Radio</name>
+   <x>890</x>
+   <y>235</y>
+  </instrument>
+
+  <instrument include="../../Instruments/autopilot.xml">
+   <name>Autopilot</name>
+   <x>890</x>
+   <y>191</y>
+  </instrument>
+
+<!-- end radio stack -->
+
+<!-- Fictional second VOR -->	
+
+  <instrument include="../../Instruments/nav1.xml">
+  <name>VOR 2 Gauge</name>
+  <params>
+   <nav-to-flag>/instrumentation/nav[1]/to-flag</nav-to-flag>
+   <nav-from-flag>/instrumentation/nav[1]/from-flag</nav-from-flag>
+   <nav-radial-selected>/instrumentation/nav[1]/radials/selected-deg</nav-radial-selected>
+   <nav-gs-needle-deflection>/instrumentation/nav[1]/gs-needle-deflection</nav-gs-needle-deflection>
+   <nav-heading-needle-deflection>/instrumentation/nav[1]/heading-needle-deflection</nav-heading-needle-deflection>
+    <nav-has-gs-needle>/sim/instrument-options/nav[1]/has-gs-needle</nav-has-gs-needle>
+    <nav-needles-pivot>/sim/instrument-options/nav[1]/needles-pivot</nav-needles-pivot>
+  </params>
+  <x>775</x>
+  <y>75</y>
+  <w>125</w>
+  <h>125</h>
+  </instrument> 
+
+ </instruments>
+
+</PropertyList>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<!-- vertical speed indicator -->
+
+<PropertyList>
+
+ <path>vsi.ac</path>
+
+<animation>
+  <type>rotate</type>
+  <object-name>vsi-Needle1</object-name>
+  <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+  <interpolation>
+   <entry><ind>-4000</ind><dep>-243</dep></entry>
+   <entry><ind>-3000</ind><dep>-223</dep></entry>
+   <entry><ind>-2000</ind><dep>-197</dep></entry>
+   <entry><ind>-1000</ind><dep>-158</dep></entry>
+   <entry><ind>-500</ind><dep>-130</dep></entry>
+   <entry><ind>0</ind><dep>-90</dep></entry>
+   <entry><ind>500</ind><dep>-50</dep></entry>
+   <entry><ind>1000</ind><dep>-22</dep></entry>
+   <entry><ind>2000</ind><dep>20</dep></entry>
+   <entry><ind>3000</ind><dep>47</dep></entry>
+   <entry><ind>4000</ind><dep>67</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>
