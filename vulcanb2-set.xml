@@ -28,6 +28,23 @@ Started June 6 2006 by Stuart Buchanan,
 
   <help>
    <title>Avro Vulcan B.2</title>
+   <key>
+    <name>C</name>
+    <desc>Tail Brake Parachute (TBC) control</desc>
+   </key>
+   <key>
+    <name>D</name>
+    <desc>Toggle Bomb Bay door</desc>
+   </key>
+   <key>
+    <name>E</name>
+    <desc>Toggle crew hatch</desc>
+   </key>
+   <key>
+    <name>k/j</name>
+    <desc>raise/lower 2-position speedbrakes</desc>
+   </key>
+
    <line>Speeds (AUW 180,000lbs)</line>
    <line></line>
    <line>Rotation: 148 kts</line>
@@ -38,12 +55,6 @@ Started June 6 2006 by Stuart Buchanan,
    <line>Approach: 166 kts</line>
    <line>Threshhold: 151 kts</line>
    <line>TBC: 145 kts</line>
-   <line></line>
-   <line>Keys:</line>
-   <line>C - Tail Brake Parachute (TBC) control</line>
-   <line>D - Toggle Bomb Bay door</line>
-   <line>E - Toggle crew hatch</line>
-   <line>k/j - 2-position speedbrakes</line>
   </help>
  
   <panel>
@@ -51,6 +62,8 @@ Started June 6 2006 by Stuart Buchanan,
    <visibility>false</visibility>
   </panel>
   
+  <!-- big plane, so extend chase view offset a bit -->
+  <chase-distance-m type="double" archive="y">-75.0</chase-distance-m>
 
   <!-- position the pilot viewpoint and angle -->
   <view n="0">
@@ -72,19 +85,19 @@ Started June 6 2006 by Stuart Buchanan,
      <y-offset-m archive="y">-1.32</y-offset-m>
      <z-offset-m archive="y">5.04</z-offset-m>
      <pitch-offset-deg>0.0</pitch-offset-deg>
-   </config>
-  </view>
-  <view n="2">
-   <config>
-     <!-- big plane, so extend chase view offset a bit -->
-     <z-offset-m type="double" archive="y">-75.0</z-offset-m>
+     <target-z-offset-m type="double" archive="y">16.7</target-z-offset-m>
    </config>
   </view>
 
-  <view n="3">
+  <view n="2">
    <config>
-     <!-- big plane, so extend chase view offset a bit -->
-     <z-offset-m type="double" archive="y">-75.0</z-offset-m>
+     <target-z-offset-m type="double" archive="y">16.7</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="5">
+   <config>
+     <target-z-offset-m type="double" archive="y">16.7</target-z-offset-m>
    </config>
   </view>
 
