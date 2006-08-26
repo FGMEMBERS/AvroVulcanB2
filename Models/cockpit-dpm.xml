@@ -64,7 +64,7 @@
 
 
   <model>
-    <path>Aircraft/vulcanb2/Models/Instruments/mach.xml</path>
+    <path>Aircraft/vulcanb2/Models/Instruments/seavixen_mach.xml</path>
     <offsets>
       <x-m>0.35</x-m>
       <y-m>-0.45</y-m>
@@ -201,7 +201,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Instruments-3d/vor/vor.xml</path>
+    <path>Aircraft/vulcanb2/Models/Instruments/rmi.xml</path>
     <offsets>
       <x-m>0.35</x-m>
       <y-m>0.0</y-m>
@@ -286,7 +286,7 @@
 <!-- Co-pilot Instruments -->
 
   <model>
-    <path>Aircraft/vulcanb2/Models/Instruments/mach.xml</path>
+    <path>Aircraft/vulcanb2/Models/Instruments/seavixen_mach.xml</path>
     <offsets>
       <x-m>0.35</x-m>
       <y-m>0.45</y-m>
@@ -349,6 +349,43 @@
     </offsets>
   </model>
 
+<!-- Fuel guages above the throttles -->
+  <model>
+    <path>Aircraft/vulcanb2/Models/Instruments/fuel-1.xml</path>
+    <offsets>
+      <x-m>0.38</x-m>
+      <y-m>-0.12</y-m>
+      <z-m>0.47</z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/vulcanb2/Models/Instruments/fuel-2.xml</path>
+    <offsets>
+      <x-m>0.38</x-m>
+      <y-m>-0.04</y-m>
+      <z-m>0.47</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/vulcanb2/Models/Instruments/fuel-3.xml</path>
+    <offsets>
+      <x-m>0.38</x-m>
+      <y-m>0.04</y-m>
+      <z-m>0.47</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/vulcanb2/Models/Instruments/fuel-4.xml</path>
+    <offsets>
+      <x-m>0.38</x-m>
+      <y-m>0.12</y-m>
+      <z-m>0.47</z-m>
+    </offsets>
+  </model>
+  
  
 <!-- All the objects are listed here, and are only visible when in the cockpit -->
 <animation>
@@ -378,12 +415,12 @@
   <factor>-75</factor>
   <offset-deg>0</offset-deg>   
   <axis>
-   <x1-m>0.4</x1-m>
+   <x1-m>0.42</x1-m>
    <y1-m>-1.0</y1-m>
-   <z1-m>0.35</z1-m>  
-   <x2-m>0.4</x2-m>
+   <z1-m>0.37</z1-m>  
+   <x2-m>0.42</x2-m>
    <y2-m>1.0</y2-m>
-   <z2-m>0.35</z2-m>  
+   <z2-m>0.37</z2-m>  
   </axis>
  </animation>
 
@@ -394,12 +431,12 @@
   <factor>-75</factor>
   <offset-deg>0</offset-deg>   
   <axis>
-   <x1-m>0.4</x1-m>
+   <x1-m>0.42</x1-m>
    <y1-m>-1.0</y1-m>
-   <z1-m>0.35</z1-m>  
-   <x2-m>0.4</x2-m>
+   <z1-m>0.37</z1-m>  
+   <x2-m>0.42</x2-m>
    <y2-m>1.0</y2-m>
-   <z2-m>0.35</z2-m>  
+   <z2-m>0.37</z2-m>  
   </axis>
  </animation>
 
@@ -410,12 +447,12 @@
   <factor>-75</factor>
   <offset-deg>0</offset-deg>   
   <axis>
-   <x1-m>0.4</x1-m>
+   <x1-m>0.42</x1-m>
    <y1-m>-1.0</y1-m>
-   <z1-m>0.35</z1-m>  
-   <x2-m>0.4</x2-m>
+   <z1-m>0.37</z1-m>  
+   <x2-m>0.42</x2-m>
    <y2-m>1.0</y2-m>
-   <z2-m>0.35</z2-m>  
+   <z2-m>0.37</z2-m>  
   </axis>
  </animation>
 
@@ -426,12 +463,12 @@
   <factor>-75</factor>
   <offset-deg>0</offset-deg>   
   <axis>
-   <x1-m>0.4</x1-m>
+   <x1-m>0.42</x1-m>
    <y1-m>-1.0</y1-m>
-   <z1-m>0.35</z1-m>  
-   <x2-m>0.4</x2-m>
+   <z1-m>0.37</z1-m>  
+   <x2-m>0.42</x2-m>
    <y2-m>1.0</y2-m>
-   <z2-m>0.35</z2-m>  
+   <z2-m>0.37</z2-m>  
   </axis>
  </animation>
 

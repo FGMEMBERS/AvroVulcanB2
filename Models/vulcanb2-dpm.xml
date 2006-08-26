@@ -9,7 +9,7 @@
   <name>Cockpit</name>
   <path>Aircraft/vulcanb2/Models/cockpit-dpm.xml</path>
   <offsets>
-   <x-m>3.82</x-m>
+   <x-m>3.9</x-m>
    <y-m>0.00</y-m>
    <z-m>0.2</z-m>
   </offsets>
@@ -988,7 +988,6 @@
 <animation>
   <type>select</type>
   <object-name>Chute</object-name>
-  <object-name>ChuteStrings</object-name>
   <condition>
     <greater-than>
       <property>controls/chute-pos-norm</property>
@@ -1000,9 +999,8 @@
  <animation>
   <type>scale</type>
   <object-name>Chute</object-name>      
-  <object-name>ChuteStrings</object-name>
   <property>controls/chute-pos-norm</property>
-  <x-factor>1.0</x-factor>
+  <x-factor>0.0</x-factor>
   <y-factor>1.0</y-factor>
   <z-factor>1.0</z-factor>
  </animation>      

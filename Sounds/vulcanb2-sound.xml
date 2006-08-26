@@ -5,7 +5,7 @@
  <fx>
   <engine>
    <name>engine</name>
-   <path>Sounds/jet.wav</path>
+   <path>Aircraft/vulcanb2/Sounds/jet.wav</path>
    <mode>looped</mode>
    <condition>
     <or>

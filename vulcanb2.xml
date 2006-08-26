@@ -57,9 +57,9 @@
      <z>  80.00 </z>
    </location>
    <location name="VRP" unit="IN">
-     <x>0</x>
-     <y>0</y>
-     <z>0</z>
+     <x> 0.00 </x>
+     <y> 0.00 </y>
+     <z> 0.00 </z>
    </location>
  </metrics>
 
@@ -84,7 +84,7 @@
    <location unit="IN">
      <x> 380.00 </x>
      <y>   0.00 </y>
-     <z> -113.70 </z>
+     <z> -113.78 </z>
    </location>
    <static_friction>  0.80 </static_friction>
    <dynamic_friction> 0.50 </dynamic_friction>
@@ -98,7 +98,7 @@
 
   <contact type="BOGEY" name="LEFT_MAIN">
    <location unit="IN">
-     <x> 734.00 </x>
+     <x> 747.00 </x>
      <y> -189.00 </y>
      <z> -113.70 </z>
    </location>
@@ -114,7 +114,7 @@
 
   <contact type="BOGEY" name="RIGHT_MAIN">
    <location unit="IN">
-     <x> 734.00 </x>
+     <x> 747.00 </x>
      <y>  189.00 </y>
      <z> -113.70 </z>
    </location>
@@ -152,11 +152,11 @@
     <damping_coeff unit="LBS/FT/SEC"> 40792.50 </damping_coeff>
  </contact>
 
-  <contact type="STRUCTURE" name="TAIL_CONE">
+  <contact type="STRUCTURE" name="TAIL">
     <location unit="IN">
-     <x> 1156.00 </x>
+     <x> 1162.00 </x>
      <y>  0.0 </y>
-     <z> -31.5 </z>
+     <z> -29.0   </z>
     </location>
     <static_friction>  0.80 </static_friction>
     <dynamic_friction> 0.50 </dynamic_friction>
@@ -298,7 +298,7 @@
     </thruster>
   </engine>
   
-  <!-- Simplification of fuel tanks - there should be 16 (!) with cross-feeds -->
+  <!-- Simplification of fuel tanks - there should be 14 (!) with cross-feeds -->
 
   <tank type="FUEL" number="0">
      <location unit="IN">
@@ -306,7 +306,7 @@
        <y> -160.00 </y>
        <z> -29.97 </z>
      </location>
-     <capacity unit="LBS"> 19500.0 </capacity>
+     <capacity unit="LBS"> 18500.0 </capacity>
      <contents unit="LBS"> 15500.0 </contents>
   </tank>
 
@@ -316,7 +316,7 @@
        <y> -160.00 </y>
        <z> -29.97 </z>
      </location>
-     <capacity unit="LBS"> 19500.0 </capacity>
+     <capacity unit="LBS"> 18500.0 </capacity>
      <contents unit="LBS"> 15500.0 </contents>
   </tank>
 
@@ -326,7 +326,7 @@
        <y>  160.00 </y>
        <z> -29.97 </z>
      </location>
-     <capacity unit="LBS"> 19500.0 </capacity>
+     <capacity unit="LBS"> 18500.0 </capacity>
      <contents unit="LBS"> 15500.0 </contents>
   </tank>
 
@@ -336,7 +336,7 @@
        <y>  160.00 </y>
        <z> -29.97 </z>
      </location>
-     <capacity unit="LBS"> 19500.0 </capacity>
+     <capacity unit="LBS"> 18500.0 </capacity>
      <contents unit="LBS"> 15500.0 </contents>
   </tank>
 
@@ -660,7 +660,7 @@
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>fcs/speedbrake-pos-norm</property>
-           <value>0.017</value>
+           <value>0.05</value>
          </product>
     </function>
 
@@ -669,8 +669,8 @@
          <product>
            <property>aero/qbar-psf</property>
            <!-- <property>metrics/Sw-sqft</property> -->
-           <property>/sim/spoilers/chute-pos-norm</property>
-           <value>10000.035</value>
+           <property>/controls/chute-pos-norm</property>
+           <value>5000.0</value> <!-- a complete guess -->
          </product>
     </function>
 

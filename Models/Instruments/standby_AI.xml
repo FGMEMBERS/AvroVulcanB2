@@ -71,7 +71,7 @@
         <value type="int">-40</value>
       </greater-than>
       <less-than>
-        <property>orientationpitch-deg</property>
+        <property>orientation/pitch-deg</property>
         <value type="int">40</value>
       </less-than>
     </and>

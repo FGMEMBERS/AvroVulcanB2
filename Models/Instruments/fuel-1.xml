@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<path>fuel.ac</path>
+	<animation>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>/consumables/fuel/tank[0]/level-gal_us</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-215</dep></entry>
+			<entry><ind>1250</ind><dep>-90</dep></entry>
+			<entry><ind>2500</ind><dep>35</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation>
+  
+<!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+  
+</PropertyList>
