@@ -1,3 +1,5 @@
+
+var config_dialog = nil;
 setprop("controls/doors/chute-switch-pos", 0);
 
 toggle_cockpit_door = func {
@@ -104,7 +106,7 @@ updateRollingSpeed = func {
   # OK, we have the speed, now apply it to all the wheels on the ground.
   # For wheels in the air we look at whether brakes are applied or simply
   # reduce the speed.
-  vfriction = 1;
+  vfriction = 5;
   
   if (lmain)
   {
@@ -140,3 +142,66 @@ updateRollingSpeed = func {
 }
 
 settimer(updateRollingSpeed, 0);
+
+fire = func {
+
+  var variant = getprop("/sim/variant");
+
+  if (variant == "XM597")
+  {
+    var fired = 0;  
+    for (var i = 1; (i <= 4) and (fired == 0); i=i+1)
+    {
+      var prop = "/controls/armament/triggershrike" ~ i;
+      
+      if (getprop(prop) != 1)
+      {
+        setprop(prop, 1);
+        fired = 1;
+      }
+    }
+  }
+  elsif (variant == "XM607")
+  {
+    setprop("/controls/armament/triggerbomb1", 1);
+  }
+  elsif (variant == "XM603")
+  {
+    setprop("/controls/armament/triggerredbeard", 1);
+  }
+}
+
+# Function to re-load armaments
+reload = func {
+
+ # Reload bombs - 21 of them.
+ setprop("ai/submodels/submodel[0]/count", 21);
+ 
+ # Shrike missiles
+ setprop("ai/submodels/submodel[1]/count", 1);
+ setprop("ai/submodels/submodel[2]/count", 1);
+ setprop("ai/submodels/submodel[3]/count", 1);
+ setprop("ai/submodels/submodel[4]/count", 1);
+ 
+ # Red Beard
+ setprop("ai/submodels/submodel[5]/count", 1);
+ 
+ # Make them visible on the aircraft
+ setprop("/controls/armament/triggerbomb1", 0);
+ setprop("/controls/armament/triggershrike1", 0);
+ setprop("/controls/armament/triggershrike2", 0);
+ setprop("/controls/armament/triggershrike3", 0);
+ setprop("/controls/armament/triggershrike4", 0);
+ setprop("/controls/armament/triggerredbeard", 0);
+}
+
+settimer(func {
+  #
+	config_dialog = gui.Dialog.new("/sim/gui/dialogs/vulcanb2/config/dialog",
+			"Aircraft/vulcanb2/Dialogs/config.xml");
+  
+  # Update the aircraft texture based on the variant    
+  setlistener("sim/variant", func {
+	  setprop("sim/texture", cmdarg().getValue() ~  ".rgb");
+  });
+}, 0);

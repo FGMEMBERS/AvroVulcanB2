@@ -15,6 +15,373 @@
   </offsets>
  </model>
 
+  <!-- Exhaust -->
+  <model>
+   <name>Exhaust1</name>
+   <path>Aircraft/vulcanb2/Models/exhaust1.xml</path>
+   <offsets>
+     <x-m>26.63</x-m>
+     <y-m>-3.25</y-m>
+     <z-m>-0.5</z-m>
+   </offsets>
+ </model>
+
+  <model>
+   <name>Exhaust2</name>
+   <path>Aircraft/vulcanb2/Models/exhaust2.xml</path>
+   <offsets>
+     <x-m>26.63</x-m>
+     <y-m>-2</y-m>
+     <z-m>-0.5</z-m>
+   </offsets>
+ </model>
+
+  <model>
+   <name>Exhaust3</name>
+   <path>Aircraft/vulcanb2/Models/exhaust3.xml</path>
+   <offsets>
+     <x-m>26.63</x-m>
+     <y-m>2</y-m>
+     <z-m>-0.5</z-m>
+   </offsets>
+ </model>
+
+  <model>
+   <name>Exhaust4</name>
+   <path>Aircraft/vulcanb2/Models/exhaust4.xml</path>
+   <offsets>
+     <x-m>26.63</x-m>
+     <y-m>3.25</y-m>
+     <z-m>-0.5</z-m>
+   </offsets>
+ </model>
+  
+ 
+  <model>
+   <name>ShrikeMount2</name>
+   <path>Aircraft/vulcanb2/Models/shrikemount.xml</path>
+   <offsets>
+     <x-m>19.0</x-m>
+     <y-m>11.0</y-m>
+     <z-m>-0.3</z-m>
+   </offsets>
+ </model>
+
+ <!-- Dash-10 SAM jammer -->
+ 
+ <model>
+   <name>Dash10</name>
+   <path>Aircraft/vulcanb2/Models/dash10.xml</path>
+   <offsets>
+     <x-m>17.0</x-m>
+     <y-m>7.5</y-m>
+     <z-m>-0.25</z-m>
+   </offsets>
+ </model>
+
+ 
+ <!-- Shrike Missiles x4 - two on each wing pylon -->
+ 
+ <model>
+   <name>ShrikeMount1</name>
+   <path>Aircraft/vulcanb2/Models/shrikemount.xml</path>
+   <offsets>
+     <x-m>19.0</x-m>
+     <y-m>-11.0</y-m>
+     <z-m>-0.3</z-m>
+   </offsets>
+ </model>
+
+ <model>
+   <name>Shrike1</name>
+   <path>Aircraft/vulcanb2/Models/shrike1.xml</path>
+   <offsets>
+     <x-m>19.0</x-m>
+     <y-m>-10.6</y-m>
+     <z-m>-0.75</z-m>
+   </offsets>
+ </model>
+
+ <model>
+   <name>Shrike2</name>
+   <path>Aircraft/vulcanb2/Models/shrike2.xml</path>
+   <offsets>
+     <x-m>19.5</x-m>
+     <y-m>-11.4</y-m>
+     <z-m>-0.75</z-m>
+   </offsets>
+ </model>
+ 
+ 
+ <model>
+   <name>ShrikeMount2</name>
+   <path>Aircraft/vulcanb2/Models/shrikemount.xml</path>
+   <offsets>
+     <x-m>18.5</x-m>
+     <y-m>11.0</y-m>
+     <z-m>-0.3</z-m>
+   </offsets>
+ </model>
+ 
+  <model>
+   <name>Shrike3</name>
+   <path>Aircraft/vulcanb2/Models/shrike3.xml</path>
+   <offsets>
+     <x-m>18.5</x-m>
+     <y-m>10.6</y-m>
+     <z-m>-0.75</z-m>
+   </offsets>
+ </model>
+
+ <model>
+   <name>Shrike4</name>
+   <path>Aircraft/vulcanb2/Models/shrike4.xml</path>
+   <offsets>
+     <x-m>19.5</x-m>
+     <y-m>11.4</y-m>
+     <z-m>-0.75</z-m>
+   </offsets>
+ </model>
+
+ 
+ <!-- Bomb load 21 1,000lb bombs in 7 groups of 3 
+ 
+     Relative to the (0,0,0) point at the nose, the bomb bay starts at point 
+     (15,0,0.5) and is 7.8m long, 1.8m wide and 1.4m deep.
+     
+     Each bomb is 2m long. They are mounted as a 
+     layer of 3 with a layer of 4 above, 3 deep. I.e from the front:
+     
+     x x x x
+      x x x
+  -->
+  
+ <model>
+  <name>Bomb1</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>15.5</x-m>
+   <y-m>0.5</y-m>
+   <z-m>-0.65</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb2</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>15.5</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.65</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb3</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>15.5</x-m>
+   <y-m>-0.5</y-m>
+   <z-m>-0.65</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb4</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>15.5</x-m>
+   <y-m>-0.75</y-m>
+   <z-m>-0.25</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb5</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>15.5</x-m>
+   <y-m>-0.25</y-m>
+   <z-m>-0.25</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb6</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>15.5</x-m>
+   <y-m> 0.25</y-m>
+   <z-m>-0.25</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb7</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>15.5</x-m>
+   <y-m> 0.75</y-m>
+   <z-m>-0.25</z-m>
+  </offsets>
+ </model>
+ 
+<!-- Second frame -->
+
+ <model>
+  <name>Bomb8</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>18</x-m>
+   <y-m>0.5</y-m>
+   <z-m>-0.65</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb9</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>18</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.65</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb10</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>18</x-m>
+   <y-m>-0.5</y-m>
+   <z-m>-0.65</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb11</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>18</x-m>
+   <y-m>-0.75</y-m>
+   <z-m>-0.25</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb12</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>18</x-m>
+   <y-m>-0.25</y-m>
+   <z-m>-0.25</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb13</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>18</x-m>
+   <y-m> 0.25</y-m>
+   <z-m>-0.25</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb14</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>18</x-m>
+   <y-m> 0.75</y-m>
+   <z-m>-0.25</z-m>
+  </offsets>
+ </model>
+
+<!-- Third frame -->
+
+ <model>
+  <name>Bomb15</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>20.5</x-m>
+   <y-m>0.5</y-m>
+   <z-m>-0.65</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb16</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>20.5</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.65</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb17</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>20.5</x-m>
+   <y-m>-0.5</y-m>
+   <z-m>-0.65</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb18</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>20.5</x-m>
+   <y-m>-0.75</y-m>
+   <z-m>-0.25</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb19</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>20.5</x-m>
+   <y-m>-0.25</y-m>
+   <z-m>-0.25</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb20</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>20.5</x-m>
+   <y-m> 0.25</y-m>
+   <z-m>-0.25</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Bomb21</name>
+  <path>Aircraft/vulcanb2/Models/bomb.xml</path>
+  <offsets>
+   <x-m>20.5</x-m>
+   <y-m> 0.75</y-m>
+   <z-m>-0.25</z-m>
+  </offsets>
+ </model>
+ 
+ 
+ <!-- Red Beard Nuclear bomb (XM603)-->
+ <model>
+  <name>RedBeard</name>
+  <path>Aircraft/vulcanb2/Models/RedBeard.xml</path>
+  <offsets>
+   <x-m>18.0</x-m>
+   <y-m> 0.0</y-m>
+   <z-m>-0.5</z-m>
+  </offsets>
+ </model>
+ 
 
 <!-- Make the various components disappear when not required -->
 <animation>
@@ -814,12 +1181,12 @@
   <object-name>RightBBDoor</object-name>      
   <property>controls/doors/bb-door-pos-norm</property>
   <axis>
-   <x1-m>14.93</x1-m>
-   <y1-m>-0.99</y1-m>
-   <z1-m>-0.39</z1-m>	
-   <x2-m>23.00</x2-m>
-   <y2-m>-0.99</y2-m>
-   <z2-m>-0.16</z2-m>	   
+   <x1-m>15.02</x1-m>
+   <y1-m>-1.09</y1-m>
+   <z1-m>-0.66</z1-m>	
+   <x2-m>22.91</x2-m>
+   <y2-m>-0.95</y2-m>
+   <z2-m>-0.60</z2-m>	   
   </axis>
    <interpolation>
      <entry>
@@ -828,15 +1195,15 @@
      </entry>
      <entry>
       <ind>0.1</ind>
-      <dep>-5</dep>
+      <dep>-10</dep>
      </entry>
      <entry>
       <ind>0.9</ind>
-      <dep>-55</dep>
+      <dep>-80</dep>
      </entry>
      <entry>
       <ind>1.0</ind>
-      <dep>-60</dep>
+      <dep>-90</dep>
      </entry>
    </interpolation>   
  </animation>      
@@ -846,12 +1213,12 @@
   <object-name>LeftBBDoor</object-name>      
   <property>controls/doors/bb-door-pos-norm</property>
   <axis>
-   <x1-m>14.93</x1-m>
-   <y1-m>0.99</y1-m>
-   <z1-m>-0.39</z1-m>	
-   <x2-m>23.00</x2-m>
-   <y2-m>0.99</y2-m>
-   <z2-m>-0.16</z2-m>	   
+   <x1-m>15.02</x1-m>
+   <y1-m>1.09</y1-m>
+   <z1-m>-0.66</z1-m>	
+   <x2-m>22.91</x2-m>
+   <y2-m>0.95</y2-m>
+   <z2-m>-0.60</z2-m>	   
   </axis>
    <interpolation>
      <entry>
@@ -860,15 +1227,15 @@
      </entry>
      <entry>
       <ind>0.1</ind>
-      <dep>5</dep>
+      <dep>10</dep>
      </entry>
      <entry>
       <ind>0.9</ind>
-      <dep>55</dep>
+      <dep>80</dep>
      </entry>
      <entry>
       <ind>1.0</ind>
-      <dep>60</dep>
+      <dep>90</dep>
      </entry>
    </interpolation>   
  </animation>      
@@ -959,7 +1326,8 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>ChuteDoor</object-name>      
+  <object-name>ChuteDoor_0</object-name>      
+  <object-name>ChuteDoor_1</object-name>      
   <property>controls/doors/chute-door-pos-norm</property>
   <axis>
    <x1-m>27.78</x1-m>
@@ -1005,4 +1373,14 @@
   <z-factor>1.0</z-factor>
  </animation>      
 
+ <!-- Texture controlled by variant -->
+<animation>
+	<type>material</type>
+	<global type="bool">true</global>
+	<object-name>Fuselage</object-name>
+	<texture-prop>/sim/texture</texture-prop>
+</animation>
+
 </PropertyList>
+
+

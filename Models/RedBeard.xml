@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<path>RedBeard.ac</path>
+  RedBeardAi
+	<animation>
+    <type>select</type>
+    <object-name>RedBeardAi</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>controls/doors/bb-door-pos-norm</property>
+          <value>0.05</value>
+        </greater-than>
+        <equals>
+          <property>controls/armament/triggerredbeard</property>
+          <value>false</value>
+        </equals>
+        <equals>
+          <property>sim/variant</property>
+          <value>XM603</value>
+        </equals>
+      </and>
+    </condition>
+  
+	</animation>
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10000</max-m>
+	</animation>
+</PropertyList>

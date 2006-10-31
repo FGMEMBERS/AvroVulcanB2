@@ -24,12 +24,24 @@ Started June 6 2006 by Stuart Buchanan,
 
   <model>
    <path archive="y">Aircraft/vulcanb2/Models/vulcanb2-dpm.xml</path>
+   <vulcanb2>
+     <texture>skin.rgb</texture>
+   </vulcanb2>
    <offsets>
     <x-m>-15.0</x-m>
     <y-m>0.0</y-m>
     <z-m>0.0</z-m>
    </offsets>
   </model>
+
+  <!-- Variant and texture. Controlled by aircraft dialog -->
+  <variant>XM597</variant>
+  <texture>XM597.rgb</texture>
+
+  <submodels> 
+    <serviceable type="bool">true</serviceable>
+    <path>Aircraft/vulcanb2/Models/submodels.xml</path>
+  </submodels>
 
   <sound>
    <path>Aircraft/vulcanb2/Sounds/vulcanb2-sound.xml</path>
@@ -52,7 +64,9 @@ Started June 6 2006 by Stuart Buchanan,
    <line>C - Tail Brake Parachute (TBC) control</line>
    <line>D - Toggle Bomb Bay door</line>
    <line>E - Toggle crew hatch</line>
+   <line>E - Fire weaponry</line>
    <line>k/j - 2-position speedbrakes</line>
+   <line>TAB - Configuration menu</line>
   </help>
  
   <panel>
@@ -219,6 +233,16 @@ Started June 6 2006 by Stuart Buchanan,
 <!-- Key mappings -->
   <input>
     <keyboard>
+    
+			<key n="9">
+				<name>Tab</name>
+				<desc>Show configuration dialog</desc>
+				<binding n="0">
+					<command>nasal</command>
+					<script>vulcanb2.config_dialog.toggle()</script>
+				</binding>
+			</key>
+    
       <key n="67">
         <name>C</name>
         <desc>Toggle Chute</desc>
@@ -246,8 +270,18 @@ Started June 6 2006 by Stuart Buchanan,
         </binding>
       </key>
 
+      <key n="74">
+        <name>J</name>
+        <desc>Fire weaponry</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>vulcanb2.fire()</script>
+        </binding>
+      </key>
+
     </keyboard>
   </input>
+  
   
 <!-- Aircraft limits -->  
  <limits>
@@ -255,7 +289,6 @@ Started June 6 2006 by Stuart Buchanan,
    <vne>400</vne> 
  </limits>
   
- 
 <!-- Nasal files/scripts -->
   <nasal>
     <vulcanb2>

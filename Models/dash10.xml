@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>dash10.ac</path>
+ 
+  <!-- 
+  Dash-10 pod used on Black Buck missions to jam SAM
+  -->
+  <animation>
+    <type>select</type>
+    <object-name>Dash10</object-name>      
+    <condition>
+      <or>
+        <equals>
+          <property>sim/variant</property>
+          <value>XM607</value>
+        </equals>
+        <equals>
+          <property>sim/variant</property>
+          <value>XM597</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+</PropertyList>

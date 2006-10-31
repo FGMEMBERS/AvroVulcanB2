@@ -386,7 +386,6 @@
     </offsets>
   </model>
   
- 
 <!-- All the objects are listed here, and are only visible when in the cockpit -->
 <animation>
   <name>InteriorGroup</name>
