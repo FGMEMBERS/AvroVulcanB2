@@ -20,12 +20,12 @@
           <value>0.05</value>
         </greater-than>
         <equals>
-          <property>controls/armament/triggerbomb1</property>
+          <property>controls/armament/triggerbomb</property>
           <value>false</value>
         </equals>
         <equals>
-          <property>sim/variant</property>
-          <value>XM607</value>
+          <property>sim/armament</property>
+          <value>BlackBuck1</value>
         </equals>
       </and>
     </condition>

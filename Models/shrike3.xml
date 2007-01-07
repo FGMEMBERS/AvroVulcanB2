@@ -13,8 +13,8 @@
     <condition>
       <and>
         <equals>
-          <property>sim/variant</property>
-          <value>XM597</value>
+          <property>sim/armament</property>
+          <value>BlackBuck6</value>
         </equals>
         <equals>
           <property>controls/armament/triggershrike3</property>

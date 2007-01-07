@@ -27,7 +27,12 @@ Red Beard nuclear bomb of that era. Now at the Avro Heritage Trust in Woodford.
 XM607 - The most famous Vulcan - used in Black Buck 1 & 2. Armed with 21 1,000lb bombs, plus a Dash-10 
 ECM pod. Now at RAF Waddington.
 
-You can swap between them within FlightGear using the Configuration menu (TAB key).
+You can swap between them within FlightGear using the Configuration menu (TAB key). This also allows
+you to specify the armament as you wish.
+
+Note that the Blue Steel missile was designed to fall clear of the aircraft before firing, hence
+it simply drops from the bomb bay. Unfortunately the currently limitations in sub-models
+mean that we cannot model the firing sequence.
 
 Systems
 =======
@@ -55,7 +60,7 @@ upon.
 
 AJ for the Lighning, which I borrowed many dials and JSBSim code from.
 
-Jon Stockill for the XM602 re-paint.
+Jon Stockill for the XM602 re-paint and nuclear weapons other than Red Beard.
 
 Lee Elliott for the Red Beard bomb I've copied from the Canberra.
 
@@ -67,7 +72,7 @@ To Do
 - Fuel System - I've simplified the fuel system from 14 tanks to 4. The fuel
                 system is very complex and needs it's own panel
 - Airbrakes - These have been simplified too. They should have two positions
-              35 and 55 degrees, with the 55 degrees becomeing 85 when
+              35 and 55 degrees, with the 55 degrees becoming 85 when
               the undercarriage is down
 - Electrical - There is currently no electrical system
 - Textures   - They look pretty rough, don't they...              

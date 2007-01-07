@@ -145,9 +145,17 @@ settimer(updateRollingSpeed, 0);
 
 fire = func {
 
-  var variant = getprop("/sim/variant");
-
-  if (variant == "XM597")
+  var armament = getprop("/sim/armament");
+  var bbpos = getprop("controls/doors/bb-door-pos-norm");
+  
+  # Check if the bomb-bay doors are open if required.
+  if((armament != "BlackBuck6") and (armament != "BlueSteel") and (bbpos != 1))
+  {
+    setprop("/sim/messages/copilot", "Sir, the bomb bay doors are still closed!");
+    return;
+  }    
+  
+  if (armament == "BlackBuck6")
   {
     var fired = 0;  
     for (var i = 1; (i <= 4) and (fired == 0); i=i+1)
@@ -158,16 +166,44 @@ fire = func {
       {
         setprop(prop, 1);
         fired = 1;
+        setprop("/sim/messages/copilot", "Shrike " ~ i ~ " fired");
       }
     }
   }
-  elsif (variant == "XM607")
+  elsif ((armament == "BlackBuck1") and
+         (getprop("/controls/armament/triggerbomb") != 1))
   {
-    setprop("/controls/armament/triggerbomb1", 1);
+    setprop("/controls/armament/triggerbomb", 1);
+    setprop("/sim/messages/copilot", "Bomb number 1 dropped");
+    
+    settimer(func {
+      # Bombing completed
+      setprop("/sim/messages/copilot", "Bombs away");
+      }, 21);
   }
-  elsif (variant == "XM603")
+  elsif ((armament == "WE177A") and
+         (getprop("/controls/armament/triggerwe177a") != 1))
+  {
+    setprop("/controls/armament/triggerwe177a", 1);
+    setprop("/sim/messages/copilot", "Bombs away");
+  }
+  elsif ((armament == "WE177B") and
+         (getprop("/controls/armament/triggerwe177b") != 1))
+  {
+    setprop("/sim/messages/copilot", "Bombs away");
+    setprop("/controls/armament/triggerwe177b", 1);
+  }
+  elsif ((armament == "RedBeard") and
+         (getprop("/controls/armament/triggerredbeard") != 1))
   {
     setprop("/controls/armament/triggerredbeard", 1);
+    setprop("/sim/messages/copilot", "Bombs away");
+  }
+  elsif ((armament == "BlueSteel") and
+         (getprop("/controls/armament/triggerbluesteel") != 1))
+  {
+    setprop("/controls/armament/triggerbluesteel", 1);
+    setprop("/sim/messages/copilot", "Bombs away");
   }
 }
 
@@ -185,14 +221,26 @@ reload = func {
  
  # Red Beard
  setprop("ai/submodels/submodel[5]/count", 1);
+
+ # Blue Steel
+ setprop("ai/submodels/submodel[6]/count", 1);
+
+ # WE177A
+ setprop("ai/submodels/submodel[7]/count", 1);
+
+ # WE177B
+ setprop("ai/submodels/submodel[8]/count", 1);
  
- # Make them visible on the aircraft
- setprop("/controls/armament/triggerbomb1", 0);
+ # Make them visible on the aircraft by "untriggering" them
+ setprop("/controls/armament/triggerbomb", 0);
  setprop("/controls/armament/triggershrike1", 0);
  setprop("/controls/armament/triggershrike2", 0);
  setprop("/controls/armament/triggershrike3", 0);
  setprop("/controls/armament/triggershrike4", 0);
  setprop("/controls/armament/triggerredbeard", 0);
+ setprop("/controls/armament/triggerbluesteel", 0);
+ setprop("/controls/armament/triggerwe177a", 0);
+ setprop("/controls/armament/triggerwe177b", 0);
 }
 
 settimer(func {

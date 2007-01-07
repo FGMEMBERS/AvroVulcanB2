@@ -3,10 +3,11 @@
 <PropertyList>
 	<name>vulcanb2-config</name>
 	<layout>vbox</layout>
-	<x>-40</x>
-	<y>-40</y>
+	<x>-100</x>
+	<y>-100</y>
+  <pref-width>300</pref-width>
 
-	<group>
+  <group>
 		<layout>hbox</layout>
 		<empty><stretch>1</stretch></empty>
 
@@ -39,20 +40,58 @@
 	<group>
 		<layout>hbox</layout>
 		<empty><pref-width>4</pref-width></empty>
-    <label>Aircraft</label>
-		<combo>
+    <text>
+      <label>Aircraft</label>
+    </text>
+    <combo>
       <property>/sim/variant</property>
       <value>XM597</value>
       <value>XM603</value>
       <value>XM607</value>
-      <stretch>1</stretch>
     </combo>
-		<empty><stretch>1</stretch></empty>
-	</group>
+    <empty>
+      <stretch>1</stretch>
+    </empty>
+  </group>
 
-	<group>
-		<layout>hbox</layout>
-		<empty><pref-width>4</pref-width></empty>
+  <group>
+    <layout>hbox</layout>
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+    <text>
+      <label>Armament </label>
+    </text>
+    <combo>
+      <property>/sim/armament</property>
+      <value>WE177A</value>
+      <value>WE177B</value>
+      <value>RedBeard</value>
+      <value>BlueSteel</value>
+      <value>BlackBuck1</value>
+      <value>BlackBuck6</value>
+    </combo>
+    <empty>
+      <stretch>1</stretch>
+    </empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+
+    <button>
+      <halign>center</halign>
+      <legend>Fire</legend>
+      <binding>
+        <command>nasal</command>
+        <script>vulcanb2.fire()</script>
+      </binding>
+    </button>
+
+    <empty><pref-width>4</pref-width></empty>
 
 		<button>
 			<halign>center</halign>
@@ -66,7 +105,60 @@
 		<empty><stretch>1</stretch></empty>
 	</group>
 
-	<group>
+  <group>
+    <layout>hbox</layout>
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+
+    <button>
+      <halign>center</halign>
+      <legend>Open Bomb Bay</legend>
+      <binding>
+        <command>nasal</command>
+        <script>vulcanb2.toggle_bb_doors()</script>
+      </binding>
+    </button>
+
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+
+    <button>
+      <halign>center</halign>
+      <legend>Open Crew Door</legend>
+      <binding>
+        <command>nasal</command>
+        <script>vulcanb2.toggle_cockpit_door()</script>
+      </binding>
+    </button>
+
+    <empty>
+      <stretch>1</stretch>
+    </empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+
+    <button>
+      <halign>center</halign>
+      <legend>Deploy Chute</legend>
+      <binding>
+        <command>nasal</command>
+        <script>vulcanb2.toggle_chute()</script>
+      </binding>
+    </button>
+
+    <empty>
+      <stretch>1</stretch>
+    </empty>
+  </group>
+
+  <group>
 		<layout>hbox</layout>
 		<empty><pref-width>4</pref-width></empty>
 
@@ -83,8 +175,17 @@
 			</binding>
 		</button>
 
+    <button>
+      <halign>center</halign>
+      <legend>Apply</legend>
+      <pref-width>64</pref-width>
+      <pref-height>24</pref-height>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+    </button>
 
-		<button>
+    <button>
 			<halign>center</halign>
 			<legend>Cancel</legend>
 			<pref-width>64</pref-width>

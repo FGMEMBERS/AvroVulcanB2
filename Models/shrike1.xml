@@ -13,11 +13,11 @@
     <condition>
       <and>
         <equals>
-          <property>sim/variant</property>
-          <value>XM597</value>
+          <property>/sim/armament</property>
+          <value>BlackBuck6</value>
         </equals>
         <equals>
-          <property>controls/armament/triggershrike1</property>
+          <property>/controls/armament/triggershrike1</property>
           <value>false</value>
         </equals>
       </and>
@@ -31,7 +31,7 @@
     <condition>
       <and>
         <equals>
-          <property>sim/variant</property>
+          <property>/sim/variant</property>
           <value>wibble</value>
         </equals>
       </and>

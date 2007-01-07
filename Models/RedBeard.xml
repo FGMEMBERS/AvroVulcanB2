@@ -2,7 +2,7 @@
 
 <PropertyList>
 	<path>RedBeard.ac</path>
-  RedBeardAi
+  
 	<animation>
     <type>select</type>
     <object-name>RedBeardAi</object-name>
@@ -17,8 +17,8 @@
           <value>false</value>
         </equals>
         <equals>
-          <property>sim/variant</property>
-          <value>XM603</value>
+          <property>sim/armament</property>
+          <value>RedBeard</value>
         </equals>
       </and>
     </condition>
