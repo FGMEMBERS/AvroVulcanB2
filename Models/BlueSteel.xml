@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<path>BlueSteel.ac</path>  
+	<animation>
+    <type>select</type>
+    <object-name>BlueSteel</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>controls/armament/triggerbluesteel</property>
+          <value>false</value>
+        </equals>
+        <equals>
+          <property>sim/armament</property>
+          <value>BlueSteel</value>
+        </equals>
+      </and>
+    </condition>
+  
+	</animation>
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10000</max-m>
+	</animation>
+</PropertyList>
