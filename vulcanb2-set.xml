@@ -128,6 +128,14 @@ Started June 6 2006 by Stuart Buchanan,
       </config>
     </view>
 
+    <view n="6">
+      <config>
+        <!-- big plane, so extend chase view offset a bit -->
+        <z-offset-m type="double" archive="y">-50</z-offset-m>
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+      </config>
+    </view>
+
     <!-- No flaps on this aircraft -->
     <flaps>
       <setting>0.000</setting>
