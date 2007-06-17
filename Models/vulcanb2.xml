@@ -1422,6 +1422,9 @@
     <x-factor>0.0</x-factor>
     <y-factor>1.0</y-factor>
     <z-factor>1.0</z-factor>
+    <x-offset>1.0</x-offset>
+    <y-offset>1.0</y-offset>
+    <z-offset>1.0</z-offset>
   </animation>
 
   <!-- Texture controlled by variant -->
