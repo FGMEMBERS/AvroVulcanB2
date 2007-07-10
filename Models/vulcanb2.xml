@@ -712,7 +712,7 @@
   <animation>
     <type>translate</type>
     <object-name>NoseWheel</object-name>
-    <property>/gear/gear[0]/compression-norm</property>
+    <property>gear/gear[0]/compression-norm</property>
     <factor>0.2</factor>
     <axis>
       <x>0</x>
@@ -727,7 +727,7 @@
   <animation>
     <type>spin</type>
     <object-name>NoseWheel</object-name>
-    <property>/gear/gear[0]/groundspeed-fps</property>
+    <property>gear/gear[0]/groundspeed-fps</property>
     <factor>5</factor>
     <center>
       <x-m>9.673</x-m>
@@ -921,7 +921,7 @@
     <type>spin</type>
     <object-name>RightGearWheel1</object-name>
     <!-- 60 / (1.06m * pi) -->
-    <property>/gear/gear[0]/groundspeed-fps</property>
+    <property>gear/gear[0]/groundspeed-fps</property>
     <!-- 1ft radius * pi * 2  = 6.28 ft circumference -->
     <factor>-5</factor>
     <center>
@@ -938,7 +938,7 @@
     <type>spin</type>
     <object-name>RightGearWheel2</object-name>
     <!-- 60 / (1.06m * pi) -->
-    <property>/gear/gear[0]/groundspeed-fps</property>
+    <property>gear/gear[0]/groundspeed-fps</property>
     <!-- 1ft radius * pi * 2  = 6.28 ft circumference -->
     <factor>-5</factor>
     <center>
@@ -1137,7 +1137,7 @@
   <animation>
     <type>spin</type>
     <object-name>LeftGearWheel1</object-name>
-    <property>/gear/gear[0]/groundspeed-fps</property>
+    <property>gear/gear[0]/groundspeed-fps</property>
     <!-- 1ft radius * pi * 2  = 6.28 ft circumference -->
     <factor>-5</factor>
     <center>
@@ -1153,7 +1153,7 @@
   <animation>
     <type>spin</type>
     <object-name>LeftGearWheel2</object-name>
-    <property>/gear/gear[0]/groundspeed-fps</property>
+    <property>gear/gear[0]/groundspeed-fps</property>
     <!-- 1ft radius * pi * 2  = 6.28 ft circumference -->
     <factor>-5</factor>
     <center>
