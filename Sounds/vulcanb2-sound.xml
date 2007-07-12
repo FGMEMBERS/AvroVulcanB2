@@ -16,13 +16,13 @@
    <volume>
     <property>/engines/engine[0]/thrust_lb[0]</property>
     <type>ln</type>
-    <factor>0.10</factor>
+    <factor>0.5</factor>
     <offset>0.05</offset>
    </volume>
    <volume>
     <property>/engines/engine[1]/thrust_lb[0]</property>
     <type>ln</type>
-    <factor>0.10</factor>
+    <factor>0.5</factor>
     <offset>0.05</offset>
    </volume>    
   </engine>
@@ -152,9 +152,9 @@
    <name>flaps</name>
    <mode>in-transit</mode>
    <path>Sounds/flaps.wav</path>
-   <property>/surface-positions/flap-pos-norm</property>
+   <property>/controls/doors/bb-door-pos-norm</property>
    <volume>
-    <factor>0.45</factor>
+    <factor>0.75</factor>
    </volume>
   </flap>
 

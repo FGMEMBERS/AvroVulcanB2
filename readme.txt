@@ -2,7 +2,7 @@ A. V. Roe Vulcan B.2
 ====================
 
 The Avro Vulcan was probably the most famous of the U.K. V-force aircraft,
-originally deisgned to deliver atomic weapson in the early 1950s. A huge
+originally deisgned to deliver atomic weapons in the early 1950s. A huge
 four-engined, subsonic delta bomber, it was originally designed for high-level
 delivery. Due to improvements in Russion AA technology, the V-force was
 re-trained for low-level flying, for which the Vulcan proved to have a much more

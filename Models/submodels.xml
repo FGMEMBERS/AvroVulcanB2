@@ -9,7 +9,7 @@
     <trigger>/controls/armament/triggerbomb</trigger>
     <speed>0</speed>
     <repeat>true</repeat>
-    <delay>1</delay>
+    <delay>0.5</delay>
     <count>21</count>
     <x-offset>-60.0</x-offset>
     <y-offset>0</y-offset>
@@ -23,8 +23,10 @@
     <contents>/sim/armament/contents</contents>
     <life>60</life>
     <buoyancy>0</buoyancy>
-    <wind>true</wind>
+    <wind>false</wind>
     <aero-stabilised>true</aero-stabilised>
+    <impact>true</impact>
+    <impact-reports>/sim/armament/weapons/impact</impact-reports>
   </submodel>
 
   <!-- Black Buck 6 Shrike missiles (4) -->

@@ -100,8 +100,9 @@ Started June 6 2006 by Stuart Buchanan,
     <view n="2">
       <config>
         <!-- big plane, so extend chase view offset a bit -->
-        <z-offset-m type="double" archive="y">-30</z-offset-m>
+        <z-offset-m type="double" archive="y">-50</z-offset-m>
         <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+        <pitch-offset-deg>-8.0</pitch-offset-deg>
       </config>
     </view>
 
@@ -160,7 +161,6 @@ Started June 6 2006 by Stuart Buchanan,
         <path>Aircraft/vulcanb2/Systems/vulcanb2-electrical.xml</path>
       </electrical>
     </systems>
-
   </sim>
 
   <consumables>
