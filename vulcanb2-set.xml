@@ -61,15 +61,31 @@ Started June 6 2006 by Stuart Buchanan,
       <line>Pattern: 181 kts</line>
       <line>Approach: 166 kts</line>
       <line>Threshhold: 151 kts</line>
-      <line>TBC: 145 kts</line>
-      <line></line>
-      <line>Keys:</line>
-      <line>C - Tail Brake Parachute (TBC) control</line>
-      <line>D - Toggle Bomb Bay door</line>
-      <line>E - Toggle crew hatch</line>
-      <line>J - Fire weaponry</line>
-      <line>k/j - 2-position speedbrakes</line>
-      <line>TAB - Configuration menu</line>
+      <line>Tail Chute: 145 kts</line>
+      <key>
+        <name>C</name>
+        <desc>Tail brake chute (TBC) control</desc>
+      </key>
+      <key>
+        <name>D</name>
+        <desc>Toggle bomb bay door</desc>
+      </key>
+      <key>
+        <name>E</name>
+        <desc>Toggle crew door</desc>
+      </key>
+      <key>
+        <name>J</name>
+        <desc>Fire weaponry</desc>
+      </key>
+      <key>
+        <name>j/k</name>
+        <desc>2 position speedbrakes</desc>
+      </key>
+      <key>
+        <name>Tab</name>
+        <desc>Configuration menu</desc>
+      </key>
     </help>
 
     <panel>
