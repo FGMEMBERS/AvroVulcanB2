@@ -28,7 +28,7 @@ OBJECT poly
 name "LeftGearHinge"
 data 4
 Cube
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 8
@@ -88,7 +88,7 @@ OBJECT poly
 name "BrakeLowerRight"
 data 8
 Cube.004
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 24
@@ -248,7 +248,7 @@ OBJECT poly
 name "RightGearDoorRear"
 data 12
 Door 4 H.001
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 8
@@ -308,7 +308,7 @@ OBJECT poly
 name "Cylinder"
 data 12
 Cylinder.001
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 33
@@ -559,7 +559,7 @@ OBJECT poly
 name "LeftGearPistonHead"
 data 18
 Gear 2 strut H.005
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 16
@@ -5152,7 +5152,7 @@ OBJECT poly
 name "RightGearWheel1"
 data 12
 Cylinder.004
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 264
@@ -7858,7 +7858,7 @@ OBJECT poly
 name "RightGearWheel2"
 data 12
 Cylinder.003
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 264
@@ -10564,7 +10564,7 @@ OBJECT poly
 name "OuterElevonLeft"
 data 8
 Mesh.022
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 13
@@ -10679,7 +10679,7 @@ OBJECT poly
 name "Nacelle.004"
 data 15
 Nacelle 1 H.005
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 66
@@ -11283,7 +11283,7 @@ OBJECT poly
 name "Rudder"
 data 8
 Mesh.017
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 12
@@ -11390,7 +11390,7 @@ OBJECT poly
 name "RightGearStrut"
 data 8
 Cylinder
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 48
@@ -11616,7 +11616,7 @@ OBJECT poly
 name "RightGearHinge"
 data 8
 Cube.001
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 8
@@ -11676,7 +11676,7 @@ OBJECT poly
 name "RightGearDoor"
 data 8
 Door 3 H
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 8
@@ -11736,7 +11736,7 @@ OBJECT poly
 name "LeftGearBogey"
 data 18
 Gear 4 strut H.003
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 14
@@ -11874,7 +11874,7 @@ OBJECT poly
 name "InsideCanopy"
 data 10
 Sphere.004
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 97
@@ -12629,7 +12629,7 @@ OBJECT poly
 name "ChuteDoor_1"
 data 10
 Sphere.001
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 158
@@ -13781,7 +13781,7 @@ OBJECT poly
 name "Nacelle.003"
 data 15
 Nacelle 1 H.004
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 66
@@ -14385,7 +14385,7 @@ OBJECT poly
 name "Nacelle"
 data 15
 Nacelle 1 H.006
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 66
@@ -14989,7 +14989,7 @@ OBJECT poly
 name "LeftGearPistonBody"
 data 18
 Gear 2 strut H.004
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 16
@@ -15071,7 +15071,7 @@ OBJECT poly
 name "Mesh"
 data 8
 Mesh.018
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 17
@@ -15192,7 +15192,7 @@ OBJECT poly
 name "OuterElevonRight"
 data 8
 Mesh.019
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 13
@@ -15539,7 +15539,7 @@ OBJECT poly
 name "TailScraper"
 data 10
 Sphere.002
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 79
@@ -16120,7 +16120,7 @@ OBJECT poly
 name "RightGearLeg"
 data 14
 Gear 4 strut H
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 24
@@ -16287,7 +16287,7 @@ OBJECT poly
 name "BrakeUpperOuter"
 data 8
 Cube.007
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 48
@@ -16597,7 +16597,7 @@ OBJECT poly
 name "LeftGearWheel1"
 data 12
 Cylinder.005
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 264
@@ -19303,7 +19303,7 @@ OBJECT poly
 name "LeftGearWheel2"
 data 12
 Cylinder.006
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 264
@@ -22036,7 +22036,7 @@ OBJECT poly
 name "InnerElevonLeft_1"
 data 4
 Mesh
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 22
@@ -22242,7 +22242,7 @@ OBJECT poly
 name "LeftGearDoorRear"
 data 8
 Door 4 H
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 8
@@ -22302,7 +22302,7 @@ OBJECT poly
 name "RightGearBogey"
 data 18
 Gear 4 strut H.001
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 14
@@ -22440,7 +22440,7 @@ OBJECT poly
 name "NoseWheel"
 data 12
 Cylinder.007
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 132
@@ -23798,7 +23798,7 @@ OBJECT poly
 name "NoseWheelStrut"
 data 14
 Gear 1 strut H
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 36
@@ -24066,7 +24066,7 @@ OBJECT poly
 name "LeftGearLeg"
 data 18
 Gear 4 strut H.002
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 24
@@ -24233,7 +24233,7 @@ OBJECT poly
 name "LadderUpper"
 data 8
 Mesh.021
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 72
@@ -24693,7 +24693,7 @@ OBJECT poly
 name "LeftGearDoor"
 data 12
 Door 3 H.002
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 8
@@ -24753,7 +24753,7 @@ OBJECT poly
 name "Nacelle.001"
 data 11
 Nacelle 1 H
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 66
@@ -25357,7 +25357,7 @@ OBJECT poly
 name "RightBBDoor"
 data 12
 BombBayDoorL
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 16
@@ -25474,7 +25474,7 @@ OBJECT poly
 name "VStab"
 data 13
 VStab 1 H.001
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 34
@@ -25730,7 +25730,7 @@ OBJECT poly
 name "Fuselage"
 data 8
 Mesh.025
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 237
@@ -27852,7 +27852,7 @@ OBJECT poly
 name "InnerElevonRight_1"
 data 8
 Mesh.001
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 21
@@ -28050,7 +28050,7 @@ OBJECT poly
 name "LeftGearStrut"
 data 12
 Cylinder.002
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 48
@@ -28276,7 +28276,7 @@ OBJECT poly
 name "BombAimer"
 data 10
 Sphere.003
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 97
@@ -29031,7 +29031,7 @@ OBJECT poly
 name "ECMAriel"
 data 8
 Cube.002
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 8
@@ -29091,7 +29091,7 @@ OBJECT poly
 name "RightGearPistonHead"
 data 14
 Gear 2 strut H
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 16
@@ -29173,7 +29173,7 @@ OBJECT poly
 name "NoseDoorRight"
 data 8
 Door 7 H
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 8
@@ -29233,7 +29233,7 @@ OBJECT poly
 name "NoseDoorLeft"
 data 12
 Door 7 H.001
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 8
@@ -29293,7 +29293,7 @@ OBJECT poly
 name "LadderLower"
 data 8
 Mesh.027
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 56
@@ -29653,7 +29653,7 @@ OBJECT poly
 name "RightGearPistonBody"
 data 18
 Gear 2 strut H.003
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 16
@@ -29735,7 +29735,7 @@ OBJECT poly
 name "Wing"
 data 8
 Mesh.029
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 407
@@ -33784,7 +33784,7 @@ OBJECT poly
 name "LeftBBDoor"
 data 11
 BomBayDoorR
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 16
@@ -33901,7 +33901,7 @@ OBJECT poly
 name "BrakeUpperInner"
 data 8
 Cube.006
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 48
@@ -34211,7 +34211,7 @@ OBJECT poly
 name "BrakeLowerLeft"
 data 8
 Cube.005
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 24
@@ -34371,7 +34371,7 @@ OBJECT poly
 name "GearCover1"
 data 5
 Plane
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 32
@@ -34581,7 +34581,7 @@ OBJECT poly
 name "CockpitDoor"
 data 8
 Mesh.031
-texture "//XM597.rgb"
+texture "XM597.rgb"
 texrep 1 1
 crease 30
 numvert 19

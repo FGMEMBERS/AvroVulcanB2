@@ -60,7 +60,7 @@
       <pref-width>4</pref-width>
     </empty>
     <text>
-      <label>Armament </label>
+      <label>Armament</label>
     </text>
     <combo>
       <property>/sim/armament</property>

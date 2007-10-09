@@ -24,9 +24,11 @@ Started June 6 2006 by Stuart Buchanan,
 
     <model>
       <path archive="y">Aircraft/vulcanb2/Models/vulcanb2.xml</path>
-      <vulcanb2>
-        <texture>skin.rgb</texture>
-      </vulcanb2>
+      <livery>
+        <material>
+          <texture>XM597.rgb</texture>
+        </material>
+      </livery>
       <offsets>
         <x-m>-15.0</x-m>
         <y-m>0.0</y-m>
@@ -36,7 +38,6 @@ Started June 6 2006 by Stuart Buchanan,
 
     <!-- Initial variant and texture. Controlled by aircraft dialog. -->
     <variant>XM597</variant>
-    <texture>XM597.rgb</texture>
 
     <!-- Initial armament. Controlled by aircraft dialog -->
     <armament>BlackBuck6</armament>

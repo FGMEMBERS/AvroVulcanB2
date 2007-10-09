@@ -1430,73 +1430,10 @@
   <!-- Texture controlled by variant -->
   <animation>
     <type>material</type>
-    <object-name>LeftGearHinge</object-name>
-    <object-name>BrakeLowerRight</object-name>
-    <object-name>RightGearDoorRear</object-name>
-    <object-name>OuterElevonLeft</object-name>
-    <object-name>Nacelle.004</object-name>
-    <object-name>Rudder</object-name>
-    <object-name>RightGearHinge</object-name>
-    <object-name>RightGearDoor</object-name>
-    <object-name>ChuteDoor_1</object-name>
-    <object-name>Nacelle.003</object-name>
-    <object-name>Nacelle</object-name>
-    <object-name>Mesh</object-name>
-    <object-name>OuterElevonRight</object-name>
-    <object-name>ChuteDoor_0</object-name>
-    <!--    <object-name>Cube</object-name> -->
-    <object-name>TailScraper</object-name>
-    <object-name>BrakeUpperOuter</object-name>
-    <object-name>InnerElevonLeft</object-name>
-    <object-name>InnerElevonLeft_0</object-name>
-    <object-name>InnerElevonLeft_1</object-name>
-    <object-name>LeftGearDoorRear</object-name>
-    <object-name>LeftGearDoor</object-name>
-    <object-name>Nacelle.001</object-name>
-    <object-name>RightBBDoor</object-name>
-    <object-name>VStab</object-name>
     <object-name>Fuselage</object-name>
-    <object-name>InnerElevonRight</object-name>
-    <object-name>InnerElevonRight_0</object-name>
-    <object-name>InnerElevonRight_1</object-name>
-    <object-name>BombAimer</object-name>
-    <object-name>ECMAriel</object-name>
-    <object-name>NoseDoorRight</object-name>
-    <object-name>NoseDoorLeft</object-name>
-    <object-name>Wing</object-name>
-    <object-name>LeftBBDoor</object-name>
-    <object-name>BrakeUpperInner</object-name>
-    <object-name>BrakeLowerLeft</object-name>
-    <object-name>GearCover1</object-name>
-    <object-name>CockpitDoor</object-name>
-    <texture-prop>/sim/texture</texture-prop>
-    <!-- Objects that don't (normally) change with texture -->
-    <!--
-    <object-name>Cylinder</object-name>
-    <object-name>LeftGearPistonHead</object-name>
-    <object-name>Chute</object-name>
-    <object-name>RightGearStrut</object-name>
-    <object-name>RightGearWheel1</object-name>
-    <object-name>RightGearWheel2</object-name>
-    <object-name>RightGearPistonBody</object-name>
-    <object-name>RightGearLeg</object-name>
-    <object-name>LeftGearPistonBody</object-name>
-    <object-name>LadderLower</object-name>
-    <object-name>RightGearPistonHead</object-name>
-    <object-name>LeftGearStrut</object-name>
-    <object-name>RightGearBogey</object-name>
-    <object-name>NoseWheel</object-name>
-    <object-name>NoseWheelStrut</object-name>
-    <object-name>LeftGearLeg</object-name>
-    <object-name>LeftGearWheel1</object-name>
-    <object-name>LeftGearWheel2</object-name>
-    <object-name>LadderUpper</object-name>
-    <object-name>LeftGearBogey</object-name>
-    <object-name>InsideCanopy</object-name>
-    
-    
-    -->
-    
+    <property-base>sim/model/livery/material</property-base>
+    <texture-prop>texture</texture-prop>
+    <global>true</global>
   </animation>
 
 </PropertyList>

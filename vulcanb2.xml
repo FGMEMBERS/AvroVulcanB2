@@ -76,6 +76,14 @@
      <y>   0.00 </y>
      <z> -29.97 </z>
    </location>
+   <pointmass name="dummy">
+     <weight unit="LBS">1</weight>
+     <location name="dumm2" unit="IN">
+       <x> 659.38</x>
+       <y> 0.0</y>
+       <z> -29.97</z>
+     </location>     
+   </pointmass>
  </mass_balance>
 
  <ground_reactions>

@@ -250,7 +250,7 @@ settimer(func {
   
   # Update the aircraft texture based on the variant    
   setlistener("sim/variant", func {
-	  setprop("sim/texture", cmdarg().getValue() ~  ".rgb");
+	  setprop("sim/model/livery/material/texture", cmdarg().getValue() ~  ".rgb");
   });
 
   # Add listener for bomb impact
