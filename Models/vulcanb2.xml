@@ -1433,7 +1433,6 @@
     <object-name>Fuselage</object-name>
     <property-base>sim/model/livery/material</property-base>
     <texture-prop>texture</texture-prop>
-    <global>true</global>
   </animation>
 
 </PropertyList>
