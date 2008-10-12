@@ -249,13 +249,13 @@ settimer(func {
 			"Aircraft/vulcanb2/Dialogs/config.xml");
   
   # Update the aircraft texture based on the variant    
-  setlistener("sim/variant", func {
-	  setprop("sim/model/livery/material/texture", cmdarg().getValue() ~  ".rgb");
+  setlistener("sim/variant", func(n) {
+	  setprop("sim/model/livery/material/texture", n.getValue() ~  ".rgb");
   });
 
   # Add listener for bomb impact
-  setlistener("sim/armament/weapons/impact", func {
-    var impact = cmdarg().getValue();
+  setlistener("sim/armament/weapons/impact", func(n) {
+    var impact = n.getValue();
     var solid = getprop(impact ~ "/material/solid");
     
     if (solid)
