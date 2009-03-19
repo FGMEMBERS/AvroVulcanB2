@@ -253,6 +253,12 @@ Started June 6 2006 by Stuart Buchanan,
     <path>Aircraft/vulcanb2/Systems/vulcanb2-instrumentation.xml</path>
   </instrumentation>
 
+  <systems>
+    <refuel>
+      <type>boom</type>
+    </refuel>
+  </systems>
+  
   <ai>
     <scenario>refueling_demo_1</scenario>
   </ai>
