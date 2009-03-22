@@ -1,17 +1,25 @@
 <?xml version="1.0"?>
 
+<!-- Control Positions -->
+
+<!-- 
+
+Notes:
+
+1) The controls are elevons, so we use two rotations: one for aileron and
+one for elevator
+
+2) The model allows a maximum roation of +/- 35 degrees
+
+3) We choose _not_ to show the outer/inner control ratio is 5:4.
+
+So, we allow +/- 16 for each of the the elevators and ailerons,
+
+-->
+ 
+
 <PropertyList>
 
-  <!-- Control Positions -->
-  
-  <!--
-      Notes:
-      1) The controls are elevons, so we use two rotations: one for aileron and
-      one for elevator
-      2) The model allows a maximum roation of +/- 35 degrees
-      3) We choose _not_ to show the outer/inner control ratio as 5:4.
-      So, we allow +/- 16 for each of the the elevators and ailerons,
-  -->
  <path>control_pos.ac</path>
 
 <!-- Trim for left elevons -->
@@ -186,7 +194,7 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>Rudder</object-name>
+  <object-name>RudderPos</object-name>
   <property>/controls/flight/rudder</property>
   <factor>35</factor>
   <center>

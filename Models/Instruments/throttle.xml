@@ -147,4 +147,31 @@
    </axis>
  </animation>
 
+ <!-- Airbrake Handle -->
+
+ <animation>
+   <type>translate</type>
+   <object-name>AirbrakeHandle</object-name>
+   <property>/controls/flight/spoilers</property>
+   <interpolation>
+     <entry>
+       <ind>0</ind>
+       <dep>0</dep>
+     </entry>
+     <entry>
+       <ind>1.0</ind>
+       <dep>-0.033</dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x1-m>0.0</x1-m>
+     <y1-m>0.0</y1-m>
+     <z1-m>-1.0</z1-m>
+     <x2-m>0.0</x2-m>
+     <y2-m>0.0</y2-m>
+     <z2-m>1.0</z2-m>
+   </axis>
+ </animation>
+
+
 </PropertyList>
