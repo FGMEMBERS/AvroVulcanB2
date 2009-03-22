@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!-- Rudder Adjustment Control (inop)-->
+
+<PropertyList>
+
+ <path>rudder_adjustment.ac</path>
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>

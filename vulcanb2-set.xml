@@ -99,9 +99,9 @@ Started June 6 2006 by Stuart Buchanan,
     <view n="0">
       <internal archive="y">true</internal>
       <config>
-        <x-offset-m archive="y">-0.42</x-offset-m>
-        <y-offset-m archive="y">1.42</y-offset-m>
-        <z-offset-m archive="y">5.14</z-offset-m>
+        <x-offset-m archive="y">-0.25</x-offset-m>
+        <y-offset-m archive="y">1.07</y-offset-m>
+        <z-offset-m archive="y">4.83</z-offset-m>
         <pitch-offset-deg>-5.0</pitch-offset-deg>
       </config>
     </view>
