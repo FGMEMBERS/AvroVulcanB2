@@ -214,6 +214,9 @@
       <yaw>   0.00 </yaw>
     </orient>
     <feed>0</feed>
+    <feed>3</feed>
+    <feed>4</feed>
+    <feed>6</feed>
     <thruster file="direct">
      <location unit="IN">
       <x> 1064.00 </x>
@@ -240,6 +243,8 @@
       <yaw>   0.00 </yaw>
     </orient>
     <feed>1</feed>
+    <feed>2</feed>
+    <feed>5</feed>
     <thruster file="direct">
      <location unit="IN">
       <x> 1064.00 </x>
@@ -265,7 +270,10 @@
       <roll>   0.00 </roll>
       <yaw>   0.00 </yaw>
     </orient>
-    <feed>2</feed>
+    <feed>7</feed>
+    <feed>10</feed>
+    <feed>11</feed>
+    <feed>13</feed>
     <thruster file="direct">
      <location unit="IN">
       <x> 1064.00 </x>
@@ -291,7 +299,9 @@
       <roll>   0.00 </roll>
       <yaw>   0.00 </yaw>
     </orient>
-    <feed>3</feed>
+    <feed>8</feed>
+    <feed>9</feed>
+    <feed>12</feed>
     <thruster file="direct">
      <location unit="IN">
       <x> 1064.00 </x>
@@ -306,48 +316,174 @@
     </thruster>
   </engine>
   
-  <!-- Simplification of fuel tanks - there should be 14 (!) with cross-feeds -->
+  <!-- Fuel System
+
+  Tank  Name   Engine  Capacity (lbs)
+  0     Port1  0        5040
+  1     Port2  1        7600
+  2     Port3  1        5040
+  3     Port4  0        5040
+  4     Port5  0        4104
+  5     Port6  1        5896
+  6     Port7  0        4400
+
+  -->
 
   <tank type="FUEL" number="0">
+    <!-- Port #1, feeding engine 0 -->
      <location unit="IN">
-       <x> 759.38 </x>
-       <y> -160.00 </y>
+       <x> 259.38 </x>
+       <y> -50.00 </y>
        <z> -29.97 </z>
      </location>
-     <capacity unit="LBS"> 18500.0 </capacity>
-     <contents unit="LBS"> 15500.0 </contents>
+     <capacity unit="LBS"> 5040.0 </capacity>
+     <contents unit="LBS"> 5000.0 </contents>
   </tank>
 
   <tank type="FUEL" number="1">
+    <!-- Port #2, feeding engine 1 -->
      <location unit="IN">
-       <x> 759.38 </x>
-       <y> -160.00 </y>
+       <x> 300.38 </x>
+       <y> -50.00 </y>
        <z> -29.97 </z>
      </location>
-     <capacity unit="LBS"> 18500.0 </capacity>
-     <contents unit="LBS"> 15500.0 </contents>
+     <capacity unit="LBS"> 7600.0 </capacity>
+     <contents unit="LBS"> 7600.0 </contents>
   </tank>
 
   <tank type="FUEL" number="2">
+     <!-- Port #3, feeding engine 1 -->
      <location unit="IN">
-       <x> 759.38 </x>
-       <y>  160.00 </y>
+       <x> 659.38 </x>
+       <y> -160.00 </y>
        <z> -29.97 </z>
      </location>
-     <capacity unit="LBS"> 18500.0 </capacity>
-     <contents unit="LBS"> 15500.0 </contents>
+     <capacity unit="LBS"> 5040.0 </capacity>
+     <contents unit="LBS"> 5040.0 </contents>
   </tank>
 
   <tank type="FUEL" number="3">
+    <!-- Port #4, feeding engine 0 -->
      <location unit="IN">
-       <x> 759.38 </x>
-       <y>  160.00 </y>
+       <x> 720.38 </x>
+       <y> -160.00 </y>
        <z> -29.97 </z>
      </location>
-     <capacity unit="LBS"> 18500.0 </capacity>
-     <contents unit="LBS"> 15500.0 </contents>
+     <capacity unit="LBS"> 5040.0 </capacity>
+     <contents unit="LBS"> 5040.0 </contents>
   </tank>
 
+  <tank type="FUEL" number="4">
+    <!-- Port #5, feeding engine 0 -->
+    <location unit="IN">
+      <x> 720.38 </x>
+      <y> -200.00 </y>
+      <z> -29.97 </z>
+    </location>
+    <capacity unit="LBS"> 4104.0 </capacity>
+    <contents unit="LBS"> 4104.0 </contents>
+  </tank>
+
+  <tank type="FUEL" number="5">
+    <!-- Port #6, feeding engine 1 -->
+    <location unit="IN">
+      <x> 759.38 </x>
+      <y>-160.00 </y>
+      <z> -29.97 </z>
+    </location>
+    <capacity unit="LBS"> 5896.0 </capacity>
+    <contents unit="LBS"> 5896.0 </contents>
+  </tank>  
+
+  <tank type="FUEL" number="6">
+    <!-- Port #7, feeding engine 0 -->
+    <location unit="IN">
+      <x> 759.38 </x>
+      <y>-200.00 </y>
+      <z> -29.97 </z>
+    </location>
+    <capacity unit="LBS"> 4400.0 </capacity>
+    <contents unit="LBS"> 4400.0 </contents>
+  </tank>
+
+
+  <tank type="FUEL" number="7">
+    <!-- Starboard #1, feeding engine 3 -->
+    <location unit="IN">
+      <x> 259.38 </x>
+      <y>  50.00 </y>
+      <z> -29.97 </z>
+    </location>
+    <capacity unit="LBS"> 5040.0 </capacity>
+    <contents unit="LBS"> 5000.0 </contents>
+  </tank>
+  
+  <tank type="FUEL" number="8">
+    <!-- Starboard #2, feeding engine 2 -->
+    <location unit="IN">
+      <x> 300.38 </x>
+      <y>  50.00 </y>
+      <z> -29.97 </z>
+    </location>
+    <capacity unit="LBS"> 7600.0 </capacity>
+    <contents unit="LBS"> 7600.0 </contents>
+  </tank>
+  
+  <tank type="FUEL" number="9">
+    <!-- Starboard #3, feeding engine 2 -->
+    <location unit="IN">
+      <x> 659.38 </x>
+      <y>  160.00 </y>
+      <z> -29.97 </z>
+    </location>
+    <capacity unit="LBS"> 5040.0 </capacity>
+    <contents unit="LBS"> 5040.0 </contents>
+  </tank>
+  
+  <tank type="FUEL" number="10">
+    <!-- Starboard #4, feeding engine 3 -->
+    <location unit="IN">
+      <x> 720.38 </x>
+      <y>  160.00 </y>
+      <z> -29.97 </z>
+    </location>
+    <capacity unit="LBS"> 5040.0 </capacity>
+    <contents unit="LBS"> 5040.0 </contents>
+  </tank>
+  
+  <tank type="FUEL" number="11">
+    <!-- Starboard #5, feeding engine 3 -->
+    <location unit="IN">
+      <x> 720.38 </x>
+      <y>  200.00 </y>
+      <z> -29.97 </z>
+    </location>
+    <capacity unit="LBS"> 4104.0 </capacity>
+    <contents unit="LBS"> 4104.0 </contents>
+  </tank>
+  
+  <tank type="FUEL" number="12">
+    <!-- Starboard #6, feeding engine 2 -->
+    <location unit="IN">
+      <x> 759.38 </x>
+      <y> 160.00 </y>
+      <z> -29.97 </z>
+    </location>
+    <capacity unit="LBS"> 5896.0 </capacity>
+    <contents unit="LBS"> 5896.0 </contents>
+  </tank>
+  
+  <tank type="FUEL" number="13">
+    <!-- Starboard #7, feeding engine 3 -->
+    <location unit="IN">
+      <x> 759.38 </x>
+      <y> 200.00 </y>
+      <z> -29.97 </z>
+    </location>
+    <capacity unit="LBS"> 4400.0 </capacity>
+    <contents unit="LBS"> 4400.0 </contents>
+  </tank>
+    
  </propulsion>
 
  <flight_control name="FCS: Vulcan B2">

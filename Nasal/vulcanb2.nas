@@ -143,6 +143,41 @@ updateRollingSpeed = func {
 
 settimer(updateRollingSpeed, 0);
 
+
+# Functions for fuel cross-feed and calculations. Only updates once per second;
+
+updateFuel = func {
+
+  # Calculate the fuel group totals.
+  var tank1 = props.globals.getNode("/consumables/fuel/tank[0]/level-lbs", 1);
+  var tank2 = props.globals.getNode("/consumables/fuel/tank[1]/level-lbs", 1);
+  var tank3 = props.globals.getNode("/consumables/fuel/tank[2]/level-lbs", 1);
+  var tank4 = props.globals.getNode("/consumables/fuel/tank[3]/level-lbs", 1);
+  var tank5 = props.globals.getNode("/consumables/fuel/tank[4]/level-lbs", 1);
+  var tank6 = props.globals.getNode("/consumables/fuel/tank[5]/level-lbs", 1);
+  var tank7 = props.globals.getNode("/consumables/fuel/tank[6]/level-lbs", 1);
+  var tank8 = props.globals.getNode("/consumables/fuel/tank[7]/level-lbs", 1);
+  var tank9 = props.globals.getNode("/consumables/fuel/tank[8]/level-lbs", 1);
+  var tank10 = props.globals.getNode("/consumables/fuel/tank[9]/level-lbs", 1);
+  var tank11 = props.globals.getNode("/consumables/fuel/tank[10]/level-lbs", 1);
+  var tank12 = props.globals.getNode("/consumables/fuel/tank[11]/level-lbs", 1);
+  var tank13 = props.globals.getNode("/consumables/fuel/tank[12]/level-lbs", 1);
+  var tank14 = props.globals.getNode("/consumables/fuel/tank[13]/level-lbs", 1);
+
+  # The tanks are split into 4 groups, each of which by default feeds one engine
+  setprop("consumables/fuel/group1-lbs",
+          tank1.getValue() + tank4.getValue() + tank5.getValue() + tank7.getValue());
+  setprop("consumables/fuel/group2-lbs", tank2.getValue() + tank3.getValue() + tank6.getValue());
+  setprop("consumables/fuel/group3-lbs", tank9.getValue() + tank10.getValue() + tank13.getValue());
+  setprop("consumables/fuel/group4-lbs",
+          tank8.getValue() + tank11.getValue() + tank12.getValue() + tank14.getValue());
+
+
+  settimer(updateFuel, 1.0);
+}
+
+setlistener("sim/signals/fdm-initialized", updateFuel);
+
 fire = func {
 
   var armament = getprop("/sim/armament");
