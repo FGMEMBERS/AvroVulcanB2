@@ -178,6 +178,11 @@ Started June 6 2006 by Stuart Buchanan,
         <path>Aircraft/vulcanb2/Systems/vulcanb2-electrical.xml</path>
       </electrical>
     </systems>
+
+    <instrumentation>
+      <path>Aircraft/vulcanb2/Systems/vulcanb2-instrumentation.xml</path>
+    </instrumentation>
+    
   </sim>
 
   <consumables>
@@ -264,7 +269,6 @@ Started June 6 2006 by Stuart Buchanan,
 
   </controls>
 
-
   <instrumentation>
     <tacan n="0">
       <name>tacan</name>
@@ -272,7 +276,76 @@ Started June 6 2006 by Stuart Buchanan,
       <serviceable type="bool" archive="y">true</serviceable>
       <switch-position type="int" archive="y">1</switch-position>
     </tacan>
+    <!-- radar-altimeter should come before air-ground-radar -->
+    
 
+    <air-ground-radar>
+      <serviceable type="bool">true</serviceable>
+      <switch type="string">ON</switch>
+      <threshold>0.18</threshold>
+      <mode-control type="int">5</mode-control>
+      <scan-sec type="double">1</scan-sec>
+      <display-controls>
+        <WX type="bool">false</WX>
+        <pos type="bool">true</pos>
+        <data type="bool">false</data>
+        <symbol type="bool">false</symbol>
+      </display-controls>
+      <range type="int">30</range>
+      <mode type="string">SV</mode>
+      <lightning type="bool">false</lightning>
+      <display-mode type="string">arc</display-mode>
+      <minimized type="bool">false</minimized>
+      <echo-texture-path>Aircraft/Instruments/Textures/wxecho-orange.rgb</echo-texture-path>
+      <antenna>
+        <x-offset-m type="double">0</x-offset-m>
+        <y-offset-m type="double">-0.5</y-offset-m>
+        <z-offset-m type="double">0</z-offset-m>
+      </antenna>
+      <terrain-warning>
+        <elev-limit-deg type="double">2</elev-limit-deg>
+        <elev-step-deg type="double">2</elev-step-deg>
+        <az-limit-deg type="double">1</az-limit-deg>
+        <az-step-deg type="double">1</az-step-deg>
+        <max-range-m type="double">4000</max-range-m>
+        <min-range-m type="double">250</min-range-m>
+        <tilt type="double">-2</tilt>
+        <stabilisation>
+          <roll type="bool">true</roll>
+          <pitch type="bool">false</pitch>
+        </stabilisation>
+        <scan-sec type="double">0</scan-sec>
+        <beamwidth-deg>1</beamwidth-deg>
+      </terrain-warning>
+      <surveillance>
+        <elev-limit-deg type="double">1.25</elev-limit-deg>
+        <elev-step-deg type="double">0.125</elev-step-deg>
+        <az-limit-deg type="double">45</az-limit-deg>
+        <az-step-deg type="double">2.5</az-step-deg>
+        <max-range-m type="double">120000</max-range-m>
+        <min-range-m type="double">1000</min-range-m>
+        <tilt type="double">-2.5</tilt>
+        <stabilisation>
+          <roll type="bool">true</roll>
+          <pitch type="bool">true</pitch>
+        </stabilisation>
+        <scan-sec type="double">0.001</scan-sec>
+        <persistance-sec type="double">18</persistance-sec>
+        <beamwidth-deg>5</beamwidth-deg>
+      </surveillance>
+    </air-ground-radar>
+    <radar-altimeter>
+      <switch type="string">ON</switch>
+      <serviceable type="bool">true</serviceable>
+      <antenna>
+        <x-offset-m type="double">-2.660540</x-offset-m>
+        <y-offset-m type="double">0</y-offset-m>
+        <z-offset-m type="double">-0.6275650</z-offset-m>
+      </antenna>
+      <set-height-ft>1000</set-height-ft>
+      <set-excursion-percent>5</set-excursion-percent>
+      <beamwidth-deg>10</beamwidth-deg>
+    </radar-altimeter>
     <radar>
       <!-- Used for Air-to-Air Refueling -->
       <range type="int" archive="y">20</range>

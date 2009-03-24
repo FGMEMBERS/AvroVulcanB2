@@ -118,7 +118,7 @@
   </model>
 
   <model>
-    <path>Aircraft/vulcanb2/Models/Instruments/ILS.xml</path>
+    <path>Aircraft/vulcanb2/Models/Instruments/radar-altimeter.xml</path>
     <offsets>
       <x-m>0.24</x-m>
       <y-m>-0.25</y-m>
@@ -198,7 +198,7 @@
     <offsets>
       <x-m>0.24</x-m>
       <y-m>0.0</y-m>
-      <z-m>0.45</z-m>
+      <z-m>0.42</z-m>
     </offsets>
   </model>
   
@@ -244,7 +244,7 @@
     <offsets>
       <x-m>0.24</x-m>
       <y-m>0.0</y-m>
-      <z-m>0.54</z-m>
+      <z-m>0.51</z-m>
     </offsets>
   </model>
 
@@ -290,8 +290,8 @@
     <path>Aircraft/vulcanb2/Models/Instruments/chute.xml</path>
     <offsets>
       <x-m>0.24</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.65</z-m>
+      <y-m>-0.02</y-m>
+      <z-m>0.61</z-m>
     </offsets>
   </model>
 
@@ -318,6 +318,24 @@
     <offsets>
       <x-m>0.24</x-m>
       <y-m>0.0</y-m>
+      <z-m>0.66</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/vulcanb2/Models/Instruments/airbrake-indicator.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.05</y-m>
+      <z-m>0.72</z-m>
+    </offsets>
+  </model>
+    
+  <model>
+    <path>Aircraft/vulcanb2/Models/Instruments/bomb-bay-indicator.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>0.05</y-m>
       <z-m>0.72</z-m>
     </offsets>
   </model>

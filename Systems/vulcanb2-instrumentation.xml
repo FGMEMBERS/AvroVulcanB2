@@ -138,6 +138,17 @@ file, these values will be used (they are hardcoded).
 		<switch-position type="int" archive="y">1</switch-position>
 	</tacan>
 
+        <radar-altimeter>
+          <serviceable type="bool" archive="y">true</serviceable>
+          <name>radar-altimeter</name>
+          <number>0</number>
+        </radar-altimeter>
+
+        <air-ground-radar>
+          <name>air-ground-radar</name>
+          <number>0</number>
+        </air-ground-radar>
+
   <radar>
    <!-- Used for Air-to-Air Refueling -->
    <range type="int" archive="y">20</range>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<!-- Bomb Bay indicator -->
+
+<PropertyList>
+
+ <path>bomb-bay-indicator.ac</path>
+
+ <animation>
+   <type>select</type>
+   <object-name>Open</object-name>
+   <condition>
+     <not>
+       <equals>
+         <property>controls/doors/bb-door-pos-norm</property>
+         <value>0</value>
+       </equals>
+     </not>
+   </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>Close</object-name>
+   <condition>
+      <equals>
+        <property>controls/doors/bb-door-pos-norm</property>
+        <value>0</value>
+      </equals>
+   </condition>
+ </animation>
+ 
+<!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+</PropertyList>
