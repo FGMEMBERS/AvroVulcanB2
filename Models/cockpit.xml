@@ -57,6 +57,33 @@
  </model>
 
  <model>
+   <name>ConsoleStarboard</name>
+   <path>Aircraft/vulcanb2/Models/Instruments/console-starboard.xml</path>
+   <offsets>
+     <x-m>0.3</x-m>
+     <y-m>-0.65</y-m>
+     <z-m>0.27</z-m>
+   </offsets>
+
+   <animation>
+      <type>rotate</type>
+      <factor>90</factor>
+      <center>
+        <x-m>-0.0</x-m>
+        <y-m> 0.0</y-m>
+        <z-m> 0.0</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>0</y>
+        <z>-1</z>
+      </axis>
+    </animation>
+   
+ </model>
+ 
+
+ <model>
    <name>PilotE2B</name>
    <path>Aircraft/vulcanb2/Models/Instruments/e2b.xml</path>
    <offsets>

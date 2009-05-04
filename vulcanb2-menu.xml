@@ -1,0 +1,29 @@
+<PropertyList>
+  <default>
+    <menu n="10">
+      <label>Vulcan B2</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Configuration</label>
+        <binding>
+          <command>nasal</command>
+          <script>vulcanb2.config_dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+        <label>Auto-start</label>
+        <binding>
+          <command>nasal</command>
+          <script>starter.autoStart()</script>
+        </binding>
+      </item>
+      <item>
+        <label>Open/Close Entrance Hatch</label>
+        <binding>
+          <command>nasal</command>
+          <script>vulcanb2.toggle_cockpit_door()</script>
+        </binding>
+      </item>
+    </menu>
+  </default>
+</PropertyList>

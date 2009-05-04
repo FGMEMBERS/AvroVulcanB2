@@ -154,6 +154,22 @@ Started June 6 2006 by Stuart Buchanan,
       </config>
     </view>
 
+    <view n="100">
+      <name>Co-pilot View</name>
+      <internal archive="y">true</internal>
+      <type>lookfrom</type>
+      <config>
+        <from-model type="bool">true</from-model>
+        <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+        <x-offset-m archive="y">0.25</x-offset-m>
+        <y-offset-m archive="y">1.07</y-offset-m>
+        <z-offset-m archive="y">4.83</z-offset-m>
+        <pitch-offset-deg>-5.0</pitch-offset-deg>
+        <default-field-of-view-deg>60</default-field-of-view-deg>
+        <dynamic-view type="bool">true</dynamic-view>
+      </config>
+    </view>
+
     <!-- No flaps on this aircraft -->
     <flaps>
       <setting>0.000</setting>
@@ -182,6 +198,8 @@ Started June 6 2006 by Stuart Buchanan,
     <instrumentation>
       <path>Aircraft/vulcanb2/Systems/vulcanb2-instrumentation.xml</path>
     </instrumentation>
+
+    <menubar include="vulcanb2-menu.xml"/>
     
   </sim>
 
@@ -234,16 +252,24 @@ Started June 6 2006 by Stuart Buchanan,
   
   <engines>
     <engine n="0">
-      <running>true</running>
+      <running>false</running>
+      <magnetos>3</magnetos>
+      <cutoff>false</cutoff>
     </engine>
     <engine n="1">
-      <running>true</running>
+      <running>false</running>
+      <magnetos>3</magnetos>
+      <cutoff>false</cutoff>
     </engine>
     <engine n="2">
-      <running>true</running>
+      <running>false</running>
+      <magnetos>3</magnetos>
+      <cutoff>false</cutoff>
     </engine>
     <engine n="3">
-      <running>true</running>
+      <running>false</running>
+      <magnetos>3</magnetos>
+      <cutoff>false</cutoff>
     </engine>
   </engines>
 
@@ -258,6 +284,14 @@ Started June 6 2006 by Stuart Buchanan,
       <bb-door-pos-norm type="float">0.0</bb-door-pos-norm>
       <chute-door-pos-norm type="float">0.0</chute-door-pos-norm>
     </doors>
+
+    <!-- Currently selected engine for starter -->
+    <engines>
+      <starter-selected>0</starter-selected>
+      <master>0</master>
+    </engines>
+
+    <chute-pos-norm>0.0</chute-pos-norm>
 
 
     <!-- trim for level cruise -->
@@ -431,6 +465,9 @@ Started June 6 2006 by Stuart Buchanan,
     <vulcanb2>
       <file>Aircraft/vulcanb2/Nasal/vulcanb2.nas</file>
     </vulcanb2>
+    <starter>
+      <file>Aircraft/vulcanb2/Nasal/starter.nas</file>
+    </starter>
     <failures>
       <file>Aircraft/Generic/limits.nas</file>
     </failures>

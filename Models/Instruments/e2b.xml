@@ -8,12 +8,12 @@
 
 <animation>
 	<type>rotate</type>
-	<object-name>segments</object-name>
+	<object-name>Ring</object-name>
 	<property>instrumentation/magnetic-compass/indicated-heading-deg</property>
 	<center>
-		<x-m>2.99046</x-m>
-		<y-m>0.158092</y-m>
-		<z-m>1.19359</z-m>
+		<x-m>0</x-m>
+		<y-m>0</y-m>
+		<z-m>0</z-m>
 	</center>
 	<axis>
 		<x>0</x>
@@ -26,7 +26,7 @@
 <animation>
 	<type>range</type>
 	<min-m>0</min-m>
-	<max-m>15</max-m>
+	<max-m>5</max-m>
 </animation>
 
 </PropertyList>

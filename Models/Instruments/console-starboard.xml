@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+
+<!-- U/C switches -->
+
+<PropertyList>
+  
+  <path>console-starboard.ac</path>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>EngineSelector</object-name>
+    <property>/controls/engines/starter-selected</property>
+    <factor>20</factor>
+    <center>
+      <x-m> 0.511</x-m>
+      <y-m> 0.0</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>-1</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>EngineSelector</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          starter.incStarter()
+        </script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>EngineStarter</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          starter.pressStarter();
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>EngineStarter</object-name>
+    <property>/controls/engines/starter-engaged</property>
+    <factor>-0.003</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>EngineMaster</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          starter.toggleMaster()
+        </script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>EngineMaster</object-name>
+    <property>/controls/engines/master</property>
+    <factor>-40</factor>
+    <center>
+      <x-m> 0.47</x-m>
+      <y-m> 0.0</y-m>
+      <z-m> 0.057</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <!-- *** LoD *** -->
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>5</max-m>
+  </animation>
+</PropertyList>
