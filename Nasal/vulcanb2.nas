@@ -1,5 +1,6 @@
 
 var config_dialog = nil;
+
 setprop("controls/doors/chute-switch-pos", 0);
 
 toggle_cockpit_door = func {
@@ -9,7 +10,7 @@ toggle_cockpit_door = func {
     interpolate("controls/doors/cockpit-door-pos-norm", 1, 4);
   }
 }
-#--------------------------------------------------------------------
+
 toggle_chute = func {
   
   chute_state = getprop("/controls/doors/chute-switch-pos");
@@ -44,15 +45,110 @@ toggle_chute = func {
   
   setprop("/controls/doors/chute-switch-pos", chute_state);
 }
-#--------------------------------------------------------------------
+
+# Normal BB doors have 3 positions - Close, Auto, Open.
+# controls/doors/bb-doors therefore has 3 values:
+# Close : -1
+# Auto  : 0
+# Open  : 1
+# Note that the toggle_bb_doors function only selects Close and Open
+
+open_doors = func { interpolate("controls/doors/bb-door-pos-norm", 1, 5) };
+close_doors = func { interpolate("controls/doors/bb-door-pos-norm", 0, 5) };
+
 toggle_bb_doors = func {
-  if(getprop("controls/doors/bb-door-pos-norm") > 0) {
-    interpolate("controls/doors/bb-door-pos-norm", 0, 5);
+  if(getprop("controls/doors/bb-door-pos") > 0.1) {
+    setprop("controls/doors/bb-door-pos", -1);
+    close_doors();
   } else {
-    interpolate("controls/doors/bb-door-pos-norm", 1, 5);
+    setprop("controls/doors/bb-door-pos", 1);
+    open_doors();
   }
 }
-#--------------------------------------------------------------------
+
+incr_bb_doors = func {
+  if (getprop("controls/doors/bb-door-pos") < 0.0) {
+    # Close to Auto
+    setprop("controls/doors/bb-door-pos", 0);
+  } else if (getprop("controls/doors/bb-door-pos") < 0.1) {
+    # Auto to Open
+    setprop("controls/doors/bb-door-pos", 1);
+    open_doors()
+  } else {
+    # Open to Close
+    setprop("controls/doors/bb-door-pos", -1);
+    close_doors()
+  }
+}
+
+emerg_toggle_bb_doors = func {
+  if (getprop("controls/doors/emergency-bb-door-pos") > 0) {
+    setprop("controls/doors/emergency-bb-door-pos", 0);
+    close_doors();
+  } else {
+    setprop("controls/doors/emergency-bb-door-pos", 1);
+    open_doors();
+  }
+}
+
+# Emergency jettison function:
+# 1) Opens the BB doors
+# 2) Jettisons all stores
+# 3) Closes the BB doors
+#
+# Over-ride is possible by selecting the switch.
+# Note that this is not available for nuclear weapons (see pilots notes)
+# or Shrikes, which are mounted on the wings.
+emerg_jettison = func {
+  if (getprop("/sim/armament") == "BlackBuck1") {
+    if (getprop("controls/doors/emergency-bb-jettison-pos") > 0) {
+      # Over-ride
+      setprop("controls/doors/emergency-bb-jettison-pos", 0);
+      interpolate("controls/doors/bb-door-pos-norm", 0, 5);
+    } else {
+      # Jettison
+      setprop("controls/doors/emergency-bb-jettison-pos", 1);
+      interpolate("controls/doors/bb-door-pos-norm", 1, 5);
+      settimer(func {
+        if (getprop("controls/doors/emergency-bb-jettison-pos")) {
+          setprop("/controls/armament/triggerbomb", 1);
+          interpolate("controls/doors/bb-door-pos-norm", 0, 5);
+          setprop("controls/doors/emergency-bb-jettison-pos", 0);
+        }
+      }, 6);
+    }
+  }
+}
+
+# Radar Altimeter Limiter Lights
+limiter_lights = func {
+  var delta = getprop("/instrumentation/radar-altimeter/radar-altitude-ft") -
+              getprop("/controls/radar/limiter-height");
+  
+  if (getprop("/controls/radar/limiter-active")) {
+    if (math.abs(delta) < 25.0) {
+      setprop("/controls/radar/limiter-light-green", 1);
+      setprop("/controls/radar/limiter-light-amber", 0);
+      setprop("/controls/radar/limiter-light-red", 0);
+    } else if (delta < 0) {
+      setprop("/controls/radar/limiter-light-green", 0);
+      setprop("/controls/radar/limiter-light-amber", 0);
+      setprop("/controls/radar/limiter-light-red", 1);
+    } else {
+      setprop("/controls/radar/limiter-light-green", 0);
+      setprop("/controls/radar/limiter-light-amber", 1);
+      setprop("/controls/radar/limiter-light-red", 0);
+    }
+  } else {
+      setprop("/controls/radar/limiter-light-green", 0);
+      setprop("/controls/radar/limiter-light-amber", 0);
+      setprop("/controls/radar/limiter-light-red", 0);
+  }
+
+  settimer(limiter_lights, 1);
+}
+
+settimer(limiter_lights, 1);
 
 # =============================== Pilot G stuff (taken from hurricane.nas) =================================
 pilot_g = props.globals.getNode("fdm/jsbsim/accelerations/a-pilot-z-ft_sec2", 1);

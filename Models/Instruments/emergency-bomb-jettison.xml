@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<!-- U/C switches -->
+
+<PropertyList>
+  
+  <path>bar-switch-warning.ac</path>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch</object-name>
+    <property>/controls/doors/emergency-bb-jettison-pos</property>
+    <factor>-90</factor>
+    <center>
+      <x-m> 0.0</x-m>
+      <y-m> 0.0</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Switch</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          vulcanb2.emerg_jettison()
+        </script>
+      </binding>
+    </action>
+  </animation>
+  
+  <!-- *** LoD *** -->
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>5</max-m>
+  </animation>
+</PropertyList>

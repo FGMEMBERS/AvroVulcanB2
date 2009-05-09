@@ -67,21 +67,45 @@
 
    <animation>
       <type>rotate</type>
-      <factor>90</factor>
+      <factor>80</factor>
       <center>
-        <x-m>-0.0</x-m>
+        <x-m> 0.0</x-m>
         <y-m> 0.0</y-m>
         <z-m> 0.0</z-m>
       </center>
       <axis>
         <x>0</x>
         <y>0</y>
-        <z>-1</z>
+        <z>1</z>
       </axis>
     </animation>
    
  </model>
  
+ <model>
+   <name>LimiterLights</name>
+   <path>Aircraft/vulcanb2/Models/Instruments/limiter-lights.xml</path>
+   <offsets>
+     <x-m>0.24</x-m>
+     <y-m>-0.63</y-m>
+     <z-m>0.43</z-m>
+   </offsets>
+   
+   <animation>
+     <type>rotate</type>
+     <factor>-20</factor>
+     <center>
+       <x-m>-0.0</x-m>
+       <y-m> 0.0</y-m>
+       <z-m> 0.0</z-m>
+     </center>
+     <axis>
+       <x>0</x>
+       <y>0</y>
+       <z>1</z>
+     </axis>
+   </animation>
+ </model>
 
  <model>
    <name>PilotE2B</name>

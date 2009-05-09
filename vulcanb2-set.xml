@@ -282,8 +282,21 @@ Started June 6 2006 by Stuart Buchanan,
     <doors>
       <cockpit-door-pos-norm type="float">0.0</cockpit-door-pos-norm>
       <bb-door-pos-norm type="float">0.0</bb-door-pos-norm>
+      <bb-door-pos type="float">0.0</bb-door-pos>
+      <emergency-bb-door-pos type="float">0.0</emergency-bb-door-pos>
+      <emergency-bb-jettison-pos type="float">0.0</emergency-bb-jettison-pos>
       <chute-door-pos-norm type="float">0.0</chute-door-pos-norm>
     </doors>
+
+    <radar>
+      <limiter-light-green>0</limiter-light-green>
+      <limiter-light-amber>0</limiter-light-amber>
+      <limiter-light-red>0</limiter-light-red>
+      <limiter-height>50.0</limiter-height>
+      <sensitivity-five-thousand>0</sensitivity-five-thousand>
+      <limiter-active>0</limiter-active>
+      <limiter-test>0</limiter-test>
+    </radar>
 
     <!-- Currently selected engine for starter -->
     <engines>

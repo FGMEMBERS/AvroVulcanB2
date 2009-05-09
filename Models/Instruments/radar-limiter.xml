@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+
+<!-- U/C switches -->
+
+<PropertyList>
+  
+  <path>radar-limiter.ac</path>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch</object-name>
+    <property>/controls/radar/limiter-height</property>
+    <!-- Rotates 270 degrees from 50 to 500 -->
+    <factor>-0.6</factor>
+    <center>
+      <x-m> 0.0</x-m>
+      <y-m> 0.0</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Switch</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/radar/limiter-height</property>
+        <step>50</step>
+        <min>50</min>
+        <max>510</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>Switch</object-name>
+    <visible>true</visible>
+    <action>
+      <button>3</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/radar/limiter-height</property>
+        <step>-50</step>
+        <min>50</min>
+        <max>510</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Switch</object-name>
+    <visible>true</visible>
+    <action>
+      <button>4</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/radar/limiter-height</property>
+        <step>50</step>
+        <min>50</min>
+        <max>510</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <!-- *** LoD *** -->
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>5</max-m>
+  </animation>
+</PropertyList>
