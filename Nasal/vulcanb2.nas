@@ -121,34 +121,52 @@ emerg_jettison = func {
 }
 
 # Radar Altimeter Limiter Lights
-limiter_lights = func {
-  var delta = getprop("/instrumentation/radar-altimeter/radar-altitude-ft") -
-              getprop("/controls/radar/limiter-height");
-  
-  if (getprop("/controls/radar/limiter-active")) {
-    if (math.abs(delta) < 25.0) {
-      setprop("/controls/radar/limiter-light-green", 1);
-      setprop("/controls/radar/limiter-light-amber", 0);
-      setprop("/controls/radar/limiter-light-red", 0);
-    } else if (delta < 0) {
-      setprop("/controls/radar/limiter-light-green", 0);
-      setprop("/controls/radar/limiter-light-amber", 0);
-      setprop("/controls/radar/limiter-light-red", 1);
+var radar_low_pass = aircraft.lowpass.new(1.5);
+var radar_alt = props.globals.getNode("/instrumentation/radar-altimeter/radar-altitude-ft", 1);
+var radar_alt_lowpass = props.globals.getNode("/instrumentation/radar-altimeter/radar-altitude-lowpass-ft", 1);
+var red = props.globals.getNode("/controls/radar/limiter-light-red", 1);
+var amber = props.globals.getNode("/controls/radar/limiter-light-amber", 1);
+var green = props.globals.getNode("/controls/radar/limiter-light-green", 1);
+var limit = props.globals.getNode("/controls/radar/limiter-height");
+var limit_active = props.globals.getNode("/controls/radar/limiter-active");
+
+radar_altimeter = func {
+
+  if (radar_alt.getValue() != nil)
+  {
+    radar_low_pass.filter(radar_alt.getValue());
+    radar_alt_lowpass.setValue(radar_low_pass.get());
+    
+    var delta = radar_alt.getValue() != nil ? radar_low_pass.get() - limit.getValue() : 0;
+
+    if (limit_active.getValue()) {
+      if (math.abs(delta) > 25.0) {
+        green.setValue(1);
+        amber.setValue(0);
+        red.setValue(0);
+      } else if (delta < 0) {
+        green.setValue(0);
+        amber.setValue(0);
+        red.setValue(1);
+      } else {
+        green.setValue(0);
+        amber.setValue(1);
+        red.setValue(0);
+      }
     } else {
-      setprop("/controls/radar/limiter-light-green", 0);
-      setprop("/controls/radar/limiter-light-amber", 1);
-      setprop("/controls/radar/limiter-light-red", 0);
+        green.setValue(0);
+        amber.setValue(0);
+        red.setValue(0);
     }
-  } else {
-      setprop("/controls/radar/limiter-light-green", 0);
-      setprop("/controls/radar/limiter-light-amber", 0);
-      setprop("/controls/radar/limiter-light-red", 0);
   }
 
-  settimer(limiter_lights, 1);
+  settimer(radar_altimeter, 0);
 }
 
-settimer(limiter_lights, 1);
+settimer(radar_altimeter, 0);
+
+
+
 
 # =============================== Pilot G stuff (taken from hurricane.nas) =================================
 pilot_g = props.globals.getNode("fdm/jsbsim/accelerations/a-pilot-z-ft_sec2", 1);
@@ -239,7 +257,6 @@ updateRollingSpeed = func {
 
 settimer(updateRollingSpeed, 0);
 
-
 # Functions for fuel cross-feed and calculations. Only updates once per second;
 
 updateFuel = func {
@@ -261,13 +278,12 @@ updateFuel = func {
   var tank14 = props.globals.getNode("/consumables/fuel/tank[13]/level-lbs", 1);
 
   # The tanks are split into 4 groups, each of which by default feeds one engine
-  setprop("consumables/fuel/group1-lbs",
+  setprop("/consumables/fuel/group1-lbs",
           tank1.getValue() + tank4.getValue() + tank5.getValue() + tank7.getValue());
-  setprop("consumables/fuel/group2-lbs", tank2.getValue() + tank3.getValue() + tank6.getValue());
-  setprop("consumables/fuel/group3-lbs", tank9.getValue() + tank10.getValue() + tank13.getValue());
-  setprop("consumables/fuel/group4-lbs",
+  setprop("/consumables/fuel/group2-lbs", tank2.getValue() + tank3.getValue() + tank6.getValue());
+  setprop("/consumables/fuel/group3-lbs", tank9.getValue() + tank10.getValue() + tank13.getValue());
+  setprop("/consumables/fuel/group4-lbs",
           tank8.getValue() + tank11.getValue() + tank12.getValue() + tank14.getValue());
-
 
   settimer(updateFuel, 1.0);
 }

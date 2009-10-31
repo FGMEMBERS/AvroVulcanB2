@@ -12,7 +12,7 @@
  <animation>
   <type>rotate</type>
   <object-name>needle</object-name>
-  <property>instrumentation/radar-altimeter/radar-altitude-ft</property>
+  <property>instrumentation/radar-altimeter/radar-altitude-lowpass-ft</property>
   
   <center>
    <x-m>0</x-m>
@@ -45,7 +45,7 @@
  <animation>
    <type>rotate</type>
    <object-name>needle</object-name>
-   <property>instrumentation/radar-altimeter/radar-altitude-ft</property>
+   <property>instrumentation/radar-altimeter/radar-altitude-lowpass-ft</property>
    
    <center>
      <x-m>0</x-m>

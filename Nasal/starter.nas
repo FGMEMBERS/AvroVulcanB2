@@ -40,17 +40,22 @@ var toggleMaster = func {
 # Function to release the starter, once the engine is running (approx 14 seconds)
 var releaseStarter = func {
   engaged.setBoolValue(0);
-  controls.engines[currentEngine.getValue()].controls.getNode("cutoff").setBoolValue(0);
   controls.engines[currentEngine.getValue()].controls.getNode("starter").setBoolValue(0);
 }
 
+# Function to disengage cut-off, once we reach 25% N2 (approx 14 seconds)
+var disengageCutOff = func {
+  controls.engines[currentEngine.getValue()].controls.getNode("cutoff").setBoolValue(0);
+  settimer(releaseStarter, 20);
+}
+
 # Start the current engine. Note that we don't use the controls.nas methods
-# as there is an interconnect between the engine starer and the selector.
+# as there is an interconnect between the engine starter and the selector.
 var pressStarter = func {
   engaged.setBoolValue(1);
   controls.engines[currentEngine.getValue()].controls.getNode("cutoff").setBoolValue(1);
   controls.engines[currentEngine.getValue()].controls.getNode("starter").setBoolValue(1);
-  settimer(releaseStarter, 10 + rand() * 8);
+  settimer(disengageCutOff, 20);
 }
 
 # External auto-start of all engines
@@ -74,15 +79,21 @@ var autoStart = func {
     settimer( func { controls.engines[2].controls.getNode("starter").setBoolValue(1); }, 6);
     settimer( func { controls.engines[3].controls.getNode("starter").setBoolValue(1); }, 8);
 
+    settimer( func {
+      foreach (var e; controls.engines)
+      {
+        e.controls.getNode("cutoff").setBoolValue(0);
+      }
+    }, 20);
+
     # Switch off all the starters
     settimer( func {
       foreach (var e; controls.engines)
       {
         e.controls.getNode("starter").setValue(0);
-        e.controls.getNode("cutoff").setBoolValue(0);
       }
       
-      setprop("/sim/messages/ground", "Engine Start complete.");
-    }, 12);
+      setprop("/sim/messages/ground", "Engine start complete.");
+    }, 40);
 }
 
