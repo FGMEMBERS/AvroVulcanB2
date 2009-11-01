@@ -1,0 +1,4 @@
+<PropertyList>
+  <tutorial include="startup.xml"/>
+  <tutorial include="cockpit-tour.xml"/>
+</PropertyList>

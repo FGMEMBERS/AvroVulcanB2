@@ -4,6 +4,12 @@
 
   <path>vulcanb2.ac</path>
 
+  <!-- Marker used by tutorial system -->
+  <model>
+    <path>Models/Aircraft/marker.xml</path>
+  </model>
+
+
   <!-- Include the cockpit -->
   <model>
     <name>Cockpit</name>

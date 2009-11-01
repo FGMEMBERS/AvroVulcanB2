@@ -31,48 +31,17 @@
         <value>true</value>
       </equals>
       <equals>
-        <property>/controls/radar/sensitivity-five-thousand</property>
+        <property>controls/radar/sensitivity-five-thousand</property>
         <value>false</value>
       </equals>
     </and>
   </condition>
-  <factor>0.63</factor>
-  <min>0</min>
-  <max>315</max>
+  <interpolation>
+    <entry><ind>0</ind><dep>0</dep></entry>
+    <entry><ind>500</ind><dep>315</dep></entry>
+  </interpolation>
 </animation>
 
-<!-- Needle 5000ft sensitivity -->
- <animation>
-   <type>rotate</type>
-   <object-name>needle</object-name>
-   <property>instrumentation/radar-altimeter/radar-altitude-lowpass-ft</property>
-   
-   <center>
-     <x-m>0</x-m>
-     <y-m>0</y-m>
-     <z-m>0</z-m>
-   </center>
-   <axis>
-     <x>-1</x>
-     <y>0</y>
-     <z>0</z>
-   </axis>
-   <condition>
-     <and>
-       <equals>
-         <property>instrumentation/radar-altimeter/serviceable</property>
-         <value>true</value>
-       </equals>
-       <equals>
-         <property>/controls/radar/sensitivity-five-thousand</property>
-         <value>true</value>
-       </equals>
-     </and>
-   </condition>
-   <factor>0.063</factor>
-   <min>0</min>
-   <max>315</max>
- </animation>
 
 <!-- *** LoD *** -->
  <animation>

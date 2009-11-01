@@ -1,0 +1,673 @@
+<PropertyList>
+  <name>Cockpit Tour</name>
+  <description>
+This tutorial will guide you around the instrumentation of the Vulcan Bomber.
+  </description>
+  <audio-dir>Aircraft/vulcanb2/Tutorials/</audio-dir>
+  <timeofday>morning</timeofday>
+<!--  
+  <presets>
+    <airport-id>KLVK</airport-id>
+    <on-ground>1</on-ground>
+    <runway>12</runway>
+    <altitude-ft>-9999</altitude-ft>
+    <latitude-deg>37.6952</latitude-deg>
+    <longitude-deg>-121.8167</longitude-deg>
+    <heading-deg>175.0</heading-deg>
+    <airspeed-kt>0</airspeed-kt>
+    <glideslope-deg>0</glideslope-deg>
+    <offset-azimuth-deg>0</offset-azimuth-deg>
+    <offset-distance-nm>0</offset-distance-nm>
+  </presets>
+-->
+  <presets/>
+  
+  <init>
+    <set>
+      <property>/controls/gear/brake-parking</property>
+      <value>1</value>
+    </set>
+    <set>
+      <property>/controls/flight/flaps</property>
+      <value>0.0</value>
+    </set>
+    <set>
+      <property>/controls/engines/engine/magnetos</property>
+      <value>0</value>
+    </set>
+    <set>
+      <property>/controls/engines/engine/throttle</property>
+      <value>0.0</value>
+    </set>
+    <set>
+      <property>/engines/engine/running</property>
+      <value>false</value>
+    </set>
+    <set>
+      <property>/instrumentation/adf/frequencies/selected-khz</property>
+      <value>340</value>
+    </set>
+    <set>
+      <property>/controls/flight/elevator-trim</property>
+      <value>0.17</value>
+    </set>
+  </init>
+  
+  <step>
+    <message>In this tutorial, we'll go through the cockpit instrumentation of this Avro Vulcan B.2 bomber.</message>
+  </step>
+  
+  <step>
+    <message>This is the engine start console. An separate tutorial describes how to start the engines.</message>
+    <view>
+      <heading-offset-deg>68.9</heading-offset-deg>
+      <pitch-offset-deg>-58.5</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.3</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>26.4</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.6875</x-m>
+      <y-m>-0.6358</y-m>
+      <z-m>0.5442</z-m>
+      <scale>4.9833</scale>
+    </marker>
+  </step>
+  
+  <step>
+    <message>Pilot's bomb bay control console.</message>
+    <view>
+      <heading-offset-deg>50.0</heading-offset-deg>
+      <pitch-offset-deg>-45.3</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>12.7</field-of-view>
+    </view>
+  </step>
+
+  <step>
+    <message>Normal bomb bay controls. The pilot may select between Closed, Auto (controlled by the bombing computer), or Open.</message>
+
+    <view>
+      <heading-offset-deg>50.0</heading-offset-deg>
+      <pitch-offset-deg>-45.3</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>12.7</field-of-view>
+    </view>
+    <marker>
+      <x-m>4.4417</x-m>
+      <y-m>-0.6592</y-m>
+      <z-m>0.5392</z-m>
+      <scale>2.4667</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Emergency bomb bay door control.</message>
+    <view>
+      <heading-offset-deg>50.0</heading-offset-deg>
+      <pitch-offset-deg>-45.3</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>12.7</field-of-view>
+    </view>
+    <marker>
+      <x-m>4.4417</x-m>
+      <y-m>-0.6367</y-m>
+      <z-m>0.5375</z-m>
+      <scale>1.8000</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Emergency jettison control.</message>
+    <view>
+      <heading-offset-deg>50.0</heading-offset-deg>
+      <pitch-offset-deg>-45.3</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>12.7</field-of-view>
+    </view>
+    <marker>
+      <x-m>4.4417</x-m>
+      <y-m>-0.6200</y-m>
+      <z-m>0.5375</z-m>
+      <scale>1.8000</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Radio altimeter console. As well as displaying the radar altitude to the pilot, this can be configured to provide a simple traffic-light to aid flying at a particular height.</message>
+    <view>
+      <heading-offset-deg>43.8</heading-offset-deg>
+      <pitch-offset-deg>-40.9</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>12.7</field-of-view>
+    </view>
+  </step>
+
+  <step>
+    <message>Radio altimeter switch.</message>
+    <view>
+      <heading-offset-deg>43.8</heading-offset-deg>
+      <pitch-offset-deg>-40.9</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>12.7</field-of-view>
+    </view>
+    <marker>
+      <x-m>4.3333</x-m>
+      <y-m>-0.6833</y-m>
+      <z-m>0.5325</z-m>
+      <scale>1.0333</scale>
+    </marker>
+  </step>
+  
+  <step>
+    <message>Limit set. Note that while this is labeled from 50 to 500ft, it is affected by the range switch.</message>
+    <view>
+      <heading-offset-deg>43.8</heading-offset-deg>
+      <pitch-offset-deg>-40.9</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>12.7</field-of-view>
+    </view>
+    <marker>
+      <x-m>4.3333</x-m>
+      <y-m>-0.6625</y-m>
+      <z-m>0.5325</z-m>
+      <scale>1.0333</scale>
+    </marker>
+  </step>
+  
+  <step>
+    <message>Test switch. This is used to check that the altimeter limit lights aren't broken.</message>
+    <view>
+      <heading-offset-deg>43.8</heading-offset-deg>
+      <pitch-offset-deg>-40.9</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>12.7</field-of-view>
+    </view>
+    <marker>
+      <x-m>4.3333</x-m>
+      <y-m>-0.6308</y-m>
+      <z-m>0.5325</z-m>
+      <scale>1.0333</scale>
+    </marker>
+  </step>
+  
+  <step>
+    <message>Radio altimeter range switch. This allows the pilot to toggle between a limit range of 50-500ft and 500-5000ft.</message>
+    <view>
+      <heading-offset-deg>43.8</heading-offset-deg>
+      <pitch-offset-deg>-40.9</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>12.7</field-of-view>
+    </view>
+    <marker>
+      <x-m>4.3333</x-m>
+      <y-m>-0.6167</y-m>
+      <z-m>0.5325</z-m>
+      <scale>1.0333</scale>
+    </marker>
+  </step>
+  
+  <step>
+    <message>Radio altimeter limit lights. A simple traffic-light display showing the rader altitude. Yellow - too high, green - just right, red - too low.</message>
+    <view>
+      <heading-offset-deg>33.5</heading-offset-deg>
+      <pitch-offset-deg>-28.1</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>12.7</field-of-view>
+    </view>
+  </step>
+  
+  <step>
+    <message>Starboard panel</message>
+    <view>
+      <heading-offset-deg>9.6</heading-offset-deg>
+      <pitch-offset-deg>-24.4</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>35.7</field-of-view>
+    </view>
+  </step>
+  
+  <step>
+    <message>Airspeed Indicator (ASI)</message>
+    <view>
+      <heading-offset-deg>9.6</heading-offset-deg>
+      <pitch-offset-deg>-24.4</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>35.7</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.1542</x-m>
+      <y-m>-0.4450</y-m>
+      <z-m>0.8508</z-m>
+      <scale>4.7167</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Barometric Altimeter</message>
+    <view>
+      <heading-offset-deg>9.6</heading-offset-deg>
+      <pitch-offset-deg>-24.4</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>35.7</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.1542</x-m>
+      <y-m>-0.4450</y-m>
+      <z-m>0.7583</z-m>
+      <scale>4.7167</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Machometer. While the Vulcan is sub-sonic, it has very powerful engines.</message>
+    <view>
+      <heading-offset-deg>9.6</heading-offset-deg>
+      <pitch-offset-deg>-24.4</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>35.7</field-of-view>
+    </view>
+
+    <marker>
+      <x-m>4.1517</x-m>
+      <y-m>-0.3475</y-m>
+      <z-m>0.8992</z-m>
+      <scale>3.7667</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Attitude Indicator (AI)</message>
+    <view>
+      <heading-offset-deg>9.6</heading-offset-deg>
+      <pitch-offset-deg>-24.4</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>35.7</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.1517</x-m>
+      <y-m>-0.3475</y-m>
+      <z-m>0.8033</z-m>
+      <scale>4.8000</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Horizontal Situation Indicator (HSI)</message>
+    <view>
+      <heading-offset-deg>9.6</heading-offset-deg>
+      <pitch-offset-deg>-24.4</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>35.7</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.1517</x-m>
+      <y-m>-0.3475</y-m>
+      <z-m>0.7033</z-m>
+      <scale>4.8000</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Radar Altimeter</message>
+    <view>
+      <heading-offset-deg>9.6</heading-offset-deg>
+      <pitch-offset-deg>-24.4</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>35.7</field-of-view>
+    </view>
+
+    <marker>
+      <x-m>4.1517</x-m>
+      <y-m>-0.2525</y-m>
+      <z-m>0.8483</z-m>
+      <scale>4.8000</scale>
+    </marker>
+  </step>
+  
+  <step>
+    <message>Vertical Situation Indicator (VSI).</message>
+    <view>
+      <heading-offset-deg>9.6</heading-offset-deg>
+      <pitch-offset-deg>-24.4</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>35.7</field-of-view>
+    </view>
+
+    <marker>
+      <x-m>4.1517</x-m>
+      <y-m>-0.2525</y-m>
+      <z-m>0.7558</z-m>
+      <scale>4.8000</scale>
+    </marker>
+  </step>
+  
+  <step>
+    <message>Backup Attitude Indicator (AI)</message>
+    <view>
+      <heading-offset-deg>9.6</heading-offset-deg>
+      <pitch-offset-deg>-24.4</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>35.7</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.1517</x-m>
+      <y-m>-0.2492</y-m>
+      <z-m>0.6567</z-m>
+      <scale>4.0500</scale>
+    </marker>
+  </step>
+  
+  <step>
+    <message>Centre Console</message>
+    <view>
+      <heading-offset-deg>339.2</heading-offset-deg>
+      <pitch-offset-deg>-20.1</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>48.3</field-of-view>
+    </view>
+  </step>
+
+  <step>
+    <message>Accelerometer, including maximum and minimum G-forces</message>
+    <view>
+      <heading-offset-deg>340.9</heading-offset-deg>
+      <pitch-offset-deg>-19.8</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>35.7</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.1467</x-m>
+      <y-m>-0.1450</y-m>
+      <z-m>0.8967</z-m>
+      <scale>3.3000</scale>
+    </marker>
+  </step>
+  
+  <step>
+    <message>Airbrake Position Indicator. Stripes indicate that the airbrake has been deployed, white that it is stowed. Note that the airbrake has three positions.</message>
+    <view>
+      <heading-offset-deg>335.5</heading-offset-deg>
+      <pitch-offset-deg>-15.7</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>48.3</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.2467</x-m>
+      <y-m>-0.0783</y-m>
+      <z-m>0.9508</z-m>
+      <scale>2.7667</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Bomb Bay Door Indicator. White indicates that the doors are closed. Striped indicates that they are open.</message>
+    <view>
+      <heading-offset-deg>335.5</heading-offset-deg>
+      <pitch-offset-deg>-15.7</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>48.3</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.2467</x-m>
+      <y-m>0.0075</y-m>
+      <z-m>0.9508</z-m>
+      <scale>2.7667</scale>
+    </marker>
+  </step>
+  
+  <step>
+    <message>Control Surface Indicator. Shows the position of the various control surfaces, including trim.</message>
+    <view>
+      <heading-offset-deg>335.5</heading-offset-deg>
+      <pitch-offset-deg>-15.7</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>48.3</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.1750</x-m>
+      <y-m>-0.0042</y-m>
+      <z-m>0.8700</z-m>
+      <scale>5.6167</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Drag Chute controls. Activate the drag chute by using C.</message>
+    <view>
+      <heading-offset-deg>335.5</heading-offset-deg>
+      <pitch-offset-deg>-15.7</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>48.3</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.1583</x-m>
+      <y-m>-0.0158</y-m>
+      <z-m>0.8042</z-m>
+      <scale>4.4000</scale>
+    </marker>
+  </step>
+  
+  <step>
+    <message>TACAN Indicator</message>
+    <view>
+      <heading-offset-deg>335.5</heading-offset-deg>
+      <pitch-offset-deg>-15.7</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>48.3</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.1583</x-m>
+      <y-m>0.0025</y-m>
+      <z-m>0.7158</z-m>
+      <scale>4.4000</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Gear controls, with switch cover.</message>
+    <view>
+      <heading-offset-deg>339.4</heading-offset-deg>
+      <pitch-offset-deg>-29.6</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>48.3</field-of-view>
+    </view>
+    <marker>
+      <x-m>4.1583</x-m>
+      <y-m>0.0025</y-m>
+      <z-m>0.6250</z-m>
+      <scale>4.4000</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Each of the 4 engines has an identical set of guages.</message>
+    <view>
+      <heading-offset-deg>347.6</heading-offset-deg>
+      <pitch-offset-deg>-28.7</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>23.2</field-of-view>
+    </view>
+  </step>
+  
+  <step>
+    <message>Engine 1 Exhaust temperature.</message>
+    <view>
+      <heading-offset-deg>347.6</heading-offset-deg>
+      <pitch-offset-deg>-28.7</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>23.2</field-of-view>
+    </view>
+    <marker>
+      <x-m>4.1467</x-m>
+      <y-m>-0.1383</y-m>
+      <z-m>0.7992</z-m>
+      <scale>3.1667</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Engine 1 N1 RPM Gauge</message>
+    <view>
+      <heading-offset-deg>347.6</heading-offset-deg>
+      <pitch-offset-deg>-28.7</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>23.2</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.1467</x-m>
+      <y-m>-0.1383</y-m>
+      <z-m>0.7208</z-m>
+      <scale>3.1667</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Engine 1 Oil Pressure</message>
+    <view>
+      <heading-offset-deg>347.6</heading-offset-deg>
+      <pitch-offset-deg>-28.7</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>23.2</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.1467</x-m>
+      <y-m>-0.1383</y-m>
+      <z-m>0.6508</z-m>
+      <scale>3.1667</scale>
+    </marker>
+  </step>
+
+  <step>
+    <message>Engine 1 Fuel Gauge</message>
+    <view>
+      <heading-offset-deg>339.2</heading-offset-deg>
+      <pitch-offset-deg>-38.8</pitch-offset-deg>
+      <roll-offset-deg>0.0</roll-offset-deg>
+      <x-offset-m>-0.2</x-offset-m>
+      <y-offset-m>1.1</y-offset-m>
+      <z-offset-m>4.8</z-offset-m>
+      <field-of-view>34.2</field-of-view>
+    </view>
+    
+    <marker>
+      <x-m>4.1892</x-m>
+      <y-m>-0.1475</y-m>
+      <z-m>0.5075</z-m>
+      <scale>3.1667</scale>
+    </marker>
+  </step>
+
+  <end>
+    <message>This is the end of the cockpit tour. Enjoy flying the Vulcan.</message>
+  </end>
+</PropertyList>

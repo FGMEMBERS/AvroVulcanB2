@@ -10,8 +10,8 @@
    <type>rotate</type>
    <object-name>up-guard</object-name>
    <property>/controls/gear/gear-guard</property>
-   <factor>-90</factor>
-   <offset>90</offset>
+   <factor>-180</factor>
+   <offset>180</offset>
    <center>
      <x-m>0.0212157</x-m>
      <y-m>-0.00810573</y-m>

@@ -75,6 +75,6 @@ To Do
               35 and 55 degrees, with the 55 degrees becoming 85 when
               the undercarriage is down
 - Electrical - There is currently no electrical system
-- Textures   - They look pretty rough, don't they...              
+- Textures   - They look pretty rough, don't they...
 
 

@@ -11,10 +11,7 @@ var incStarter = func {
   }
 }
 
-# Toggle the main engine master switch.
-var toggleMaster = func {
-  if (master.getValue())
-  {
+var setMasterOff = func {
     # Toggle master off. All magnetos off.
     foreach (var e; controls.engines)
     {
@@ -23,9 +20,9 @@ var toggleMaster = func {
       e.controls.getNode("fuel-pump").setBoolValue(0);
     }
     master.setValue(0);
-  }
-  else
-  {
+}
+
+var setMasterOn = func {
     # Toggle master on. All magnetos to "both".
     foreach (var e; controls.engines)
     {
@@ -34,6 +31,18 @@ var toggleMaster = func {
       e.controls.getNode("fuel-pump").setBoolValue(1);
     }
     master.setValue(1);
+
+}
+
+# Toggle the main engine master switch.
+var toggleMaster = func {
+  if (master.getValue())
+  {
+    setMasterOff();
+  }
+  else
+  {
+    setMasterOn();
   }
 }
 

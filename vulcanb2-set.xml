@@ -110,14 +110,14 @@ Started June 6 2006 by Stuart Buchanan,
     <!-- This is definitely a dual-control a/c -->
     <view n="1">
       <config>
-        <z-offset-m type="double" archive="y">-30</z-offset-m>
+        <z-offset-m type="double" archive="y">-130</z-offset-m>
         <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
       </config>
     </view>
     <view n="2">
       <config>
         <!-- big plane, so extend chase view offset a bit -->
-        <z-offset-m type="double" archive="y">-50</z-offset-m>
+        <z-offset-m type="double" archive="y">-150</z-offset-m>
         <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
         <pitch-offset-deg>-8.0</pitch-offset-deg>
       </config>
@@ -126,7 +126,7 @@ Started June 6 2006 by Stuart Buchanan,
     <view n="3">
       <config>
         <!-- big plane, so extend chase view offset a bit -->
-        <z-offset-m type="double" archive="y">-40</z-offset-m>
+        <z-offset-m type="double" archive="y">-140</z-offset-m>
         <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
       </config>
     </view>
@@ -141,7 +141,7 @@ Started June 6 2006 by Stuart Buchanan,
     <view n="5">
       <config>
         <!-- big plane, so extend chase view offset a bit -->
-        <z-offset-m type="double" archive="y">-50</z-offset-m>
+        <z-offset-m type="double" archive="y">-150</z-offset-m>
         <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
       </config>
     </view>
@@ -149,7 +149,7 @@ Started June 6 2006 by Stuart Buchanan,
     <view n="6">
       <config>
         <!-- big plane, so extend chase view offset a bit -->
-        <z-offset-m type="double" archive="y">-50</z-offset-m>
+        <z-offset-m type="double" archive="y">-150</z-offset-m>
         <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
       </config>
     </view>
@@ -200,6 +200,7 @@ Started June 6 2006 by Stuart Buchanan,
     </instrumentation>
 
     <menubar include="vulcanb2-menu.xml"/>
+    <tutorials include="Tutorials/vulcanb2-tutorials.xml"/>
     
   </sim>
 
@@ -274,11 +275,6 @@ Started June 6 2006 by Stuart Buchanan,
   </engines>
 
   <controls>
-    <!-- Start with the Parking Brake on, and everything closed up-->
-    <gear>
-      <brake-parking type="float">1.0</brake-parking>
-    </gear>
-
     <doors>
       <cockpit-door-pos-norm type="float">0.0</cockpit-door-pos-norm>
       <bb-door-pos-norm type="float">0.0</bb-door-pos-norm>
@@ -293,7 +289,7 @@ Started June 6 2006 by Stuart Buchanan,
       <limiter-light-amber>0</limiter-light-amber>
       <limiter-light-red>0</limiter-light-red>
       <limiter-height>50.0</limiter-height>
-      <sensitivity-five-thousand>0</sensitivity-five-thousand>
+      <sensitivity-five-thousand>false</sensitivity-five-thousand>
       <limiter-active>0</limiter-active>
       <limiter-test>0</limiter-test>
     </radar>

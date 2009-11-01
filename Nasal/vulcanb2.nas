@@ -129,34 +129,56 @@ var amber = props.globals.getNode("/controls/radar/limiter-light-amber", 1);
 var green = props.globals.getNode("/controls/radar/limiter-light-green", 1);
 var limit = props.globals.getNode("/controls/radar/limiter-height");
 var limit_active = props.globals.getNode("/controls/radar/limiter-active");
+var limit_5k = props.globals.getNode("/controls/radar/sensitivity-five-thousand");
+var limit_test =  props.globals.getNode("/controls/radar/limiter-light-test");
 
 radar_altimeter = func {
 
-  if (radar_alt.getValue() != nil)
+  if ((limit_test.getValue() != nil) and (limit_test.getValue() == 1))
   {
-    radar_low_pass.filter(radar_alt.getValue());
-    radar_alt_lowpass.setValue(radar_low_pass.get());
-    
-    var delta = radar_alt.getValue() != nil ? radar_low_pass.get() - limit.getValue() : 0;
+    # Test switch set
+    green.setValue(1);
+    amber.setValue(1);
+    red.setValue(1);
+  }
+  else
+  {
+    if (radar_alt.getValue() != nil)
+    {
+      radar_low_pass.filter(radar_alt.getValue());
+      radar_alt_lowpass.setValue(radar_low_pass.get());
 
-    if (limit_active.getValue()) {
-      if (math.abs(delta) > 25.0) {
-        green.setValue(1);
-        amber.setValue(0);
-        red.setValue(0);
-      } else if (delta < 0) {
-        green.setValue(0);
-        amber.setValue(0);
-        red.setValue(1);
-      } else {
-        green.setValue(0);
-        amber.setValue(1);
-        red.setValue(0);
+      var l = limit.getValue();
+      var band = 25.0;
+      
+      if ((limit_5k.getValue() != nil) and (limit_5k.getValue()))
+      {
+        # Sensitivity is 5000 rather than 500, so adjust limit and green zone.
+        l = l * 10;
+        band = 250.0;
       }
-    } else {
-        green.setValue(0);
-        amber.setValue(0);
-        red.setValue(0);
+
+      var delta = radar_alt.getValue() != nil ? radar_low_pass.get() - l : 0;
+
+      if (limit_active.getValue()) {
+        if (delta > band) {
+          green.setValue(0);
+          amber.setValue(1);
+          red.setValue(0);
+        } else if (delta < 0) {
+          green.setValue(0);
+          amber.setValue(0);
+          red.setValue(1);
+        } else {
+          green.setValue(1);
+          amber.setValue(0);
+          red.setValue(0);
+        }
+      } else {
+          green.setValue(0);
+          amber.setValue(0);
+          red.setValue(0);
+      }
     }
   }
 
@@ -164,9 +186,6 @@ radar_altimeter = func {
 }
 
 settimer(radar_altimeter, 0);
-
-
-
 
 # =============================== Pilot G stuff (taken from hurricane.nas) =================================
 pilot_g = props.globals.getNode("fdm/jsbsim/accelerations/a-pilot-z-ft_sec2", 1);

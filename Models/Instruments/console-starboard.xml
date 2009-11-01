@@ -42,6 +42,7 @@
   <animation>
     <type>pick</type>
     <object-name>EngineStarter</object-name>
+    <object-name>StarterMount</object-name>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
@@ -69,6 +70,7 @@
   <animation>
     <type>pick</type>
     <object-name>EngineMaster</object-name>
+    <object-name>MasterMount</object-name>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
@@ -103,6 +105,7 @@
   <animation>
     <type>pick</type>
     <object-name>LimitSwitch</object-name>
+    <object-name>LimitSwitchSurround</object-name>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
@@ -133,6 +136,7 @@
   <animation>
     <type>pick</type>
     <object-name>RadarRange</object-name>
+    <object-name>RadarRangeSurround</object-name>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
@@ -160,6 +164,39 @@
       <z>0</z>
     </axis>
   </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>LimitTestSwitch</object-name>
+    <object-name>TestSwitchSurround</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/radar/limiter-light-test</property>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>LimitTestSwitch</object-name>
+    <property>/controls/radar/limiter-light-test</property>
+    <factor>-90</factor>
+    <offset>-90</offset>
+    <center>
+      <x-m> 0.13</x-m>
+      <y-m> 0.0</y-m>
+      <z-m> 0.058</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
 
   <model>
     <name>Limit</name>
