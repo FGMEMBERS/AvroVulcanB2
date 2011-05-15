@@ -8,7 +8,12 @@
   Only display the racked bomb when the doors are open and the
   bomb hasn't been dropped.
   -->
-  <animation>
+
+	<animation>
+		<enable-hot type="bool">false</enable-hot>
+	</animation>
+
+	<animation>
     <type>select</type>
     <object-name>Body</object-name>      
     <object-name>Fin</object-name>      

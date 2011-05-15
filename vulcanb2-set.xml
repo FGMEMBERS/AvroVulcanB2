@@ -483,6 +483,9 @@ Started June 6 2006 by Stuart Buchanan,
     <aar>
       <file>Aircraft/Generic/aar.nas</file>
     </aar>
-  </nasal>
+		<crater>
+			<file>/Models/Geometry/Crater/crater.nas</file>
+		</crater>
+	</nasal>
 
 </PropertyList>

@@ -5,7 +5,7 @@
   <!-- Black Buck 1 bombs -->
   <submodel>
     <name>bomb</name>
-    <model>Aircraft/vulcanb2/Models/bomb.ac</model>
+    <model>Aircraft/vulcanb2/Models/bomb-released.xml</model>
     <trigger>/controls/armament/triggerbomb</trigger>
     <speed>0</speed>
     <repeat>true</repeat>
@@ -26,7 +26,7 @@
     <wind>false</wind>
     <aero-stabilised>true</aero-stabilised>
     <impact>true</impact>
-    <impact-reports>/sim/armament/weapons/impact</impact-reports>
+    <impact-reports>/sim/armament/weapons/bomb</impact-reports>
   </submodel>
 
   <!-- Black Buck 6 Shrike missiles (4) -->
