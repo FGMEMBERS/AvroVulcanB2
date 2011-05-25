@@ -13,7 +13,14 @@ Started June 6 2006 by Stuart Buchanan,
 
     <description>Avro Vulcan B.2</description>
     <author>Stuart Buchanan</author>
-    <status>alpha</status>
+    <status>beta</status>
+    <rating>
+      <FDM type="int">1</FDM>
+      <systems type="int">4</systems>
+      <cockpit type="int">4</cockpit>
+      <model type="int">4</model>
+    </rating>
+
 
     <flight-model archive="y">jsb</flight-model>
     <aero archive="y">vulcanb2</aero>
