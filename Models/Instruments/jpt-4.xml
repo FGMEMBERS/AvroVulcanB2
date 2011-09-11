@@ -9,7 +9,7 @@
  <animation>
   <type>rotate</type>
   <object-name>jpt-Needle1</object-name>
-  <property>engines/engine[3]/egt_degf</property>
+  <property>engines/engine[3]/egt-degf</property>
   <interpolation>
    <entry><ind>32</ind><dep>-90</dep></entry>
    <entry><ind>752</ind><dep>30</dep></entry>

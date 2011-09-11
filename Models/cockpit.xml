@@ -554,7 +554,7 @@
    <object-name>Engine2Bad</object-name>
    <object-name>Engine3Bad</object-name>
     <greater-than>
-      <property>engines/engine[0]/egt_degf</property>
+      <property>engines/engine[0]/egt-degf</property>
       <value>1400.0</value>
     </greater-than>
   </animation>
