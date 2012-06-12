@@ -3,6 +3,13 @@
 <PropertyList>
 
  <path>exhaust.ac</path>
+
+   <!-- Transparent Surfaces for Rembrandt rendering -->
+   <effect>
+      <inherits-from>Effects/model-transparent</inherits-from>
+      <object-name>noshadow.Exhaust</object-name>
+      <object-name>noshadow.Exhaust3</object-name>
+   </effect>
  
    <animation> 
       <type>shader</type>
