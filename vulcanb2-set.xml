@@ -3,7 +3,7 @@
 ************************************************************************
 JSBSim Vulcan B2
 
-Started June 6 2006 by Stuart Buchanan, 
+Started June 6 2006 by Stuart Buchanan,
 ************************************************************************
 -->
 
@@ -182,12 +182,12 @@ Started June 6 2006 by Stuart Buchanan,
       <setting>0.000</setting>
     </flaps>
 
-    <!-- Two-position spoilers. 
+    <!-- Two-position spoilers.
    0 - Fully in
    0.5 - Parially out - 35 degrees
    1.0 - Fully extended - 55/80 degrees undercarriage up/down.
-   
-   We simplify the fully out position 
+
+   We simplify the fully out position
  -->
     <spoilers>
       <setting>0.00</setting>
@@ -208,7 +208,7 @@ Started June 6 2006 by Stuart Buchanan,
 
     <menubar include="vulcanb2-menu.xml"/>
     <tutorials include="Tutorials/vulcanb2-tutorials.xml"/>
-    
+
   </sim>
 
   <consumables>
@@ -257,7 +257,7 @@ Started June 6 2006 by Stuart Buchanan,
       </tank>
     </fuel>
   </consumables>
-  
+
   <engines>
     <engine n="0">
       <running>false</running>
@@ -327,7 +327,7 @@ Started June 6 2006 by Stuart Buchanan,
       <switch-position type="int" archive="y">1</switch-position>
     </tacan>
     <!-- radar-altimeter should come before air-ground-radar -->
-    
+
 
     <air-ground-radar>
       <serviceable type="bool">true</serviceable>
@@ -408,10 +408,13 @@ Started June 6 2006 by Stuart Buchanan,
 
   <systems>
     <refuel>
-      <type>boom</type>
+      <type>probe</type>
+			<offset-x-m>-0.57</offset-x-m>
+			<offset-y-m>0.56</offset-y-m>
+			<offset-z-m>0.13</offset-z-m>
     </refuel>
   </systems>
-  
+
   <ai>
     <scenario>refueling_demo_1</scenario>
   </ai>
