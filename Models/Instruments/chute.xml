@@ -1,0 +1,24 @@
+<?xml version = '1.0' ?>
+<PropertyList>
+
+<!-- Braking Chute -->
+
+<path>chute.ac</path>
+
+<animation>
+	<type>rotate</type>
+	<object-name>switch</object-name>
+        <property>controls/doors/chute-switch-pos</property>
+        <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+        </axis>
+	<interpolation>
+		<entry><ind>0</ind><dep>0</dep></entry>
+		<entry><ind>1</ind><dep>45</dep></entry>
+		<entry><ind>2</ind><dep>-45</dep></entry>
+	</interpolation>
+</animation>        
+
+</PropertyList>

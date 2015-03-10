@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- Buccaneer model config file -->
+<!-- Vivian Meazza 2007/10/1 vivian.meazza@lineone.net -->
+<!-- Ver 0.1.0 -->
+<PropertyList>
+	<path>null.ac</path>
+	
+	<nasal>
+		<load>
+			cmdarg().getNode("sim/model/ac-type", 1).setValue("buccaneer-obs");
+		</load>
+	</nasal>
+
+	<!-- *** LoD for the whole model *** -->
+	
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10000</max-m>
+	</animation>
+
+</PropertyList>

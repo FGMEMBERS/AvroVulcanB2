@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<!-- Standby Slip Indicator -->
+<PropertyList> 
+	<path>slip.ac</path>
+	<animation>
+		<type>translate</type>
+		<object-name>ball</object-name>
+		<property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+		<interpolation>
+			<entry>
+				<ind>-1</ind>
+				<dep>-0.02</dep>
+			</entry>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>0.02</dep>
+			</entry>
+		</interpolation>
+		<axis> 
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+   <animation> 
+      <type>material</type>
+      <emission> 
+        <factor-prop>controls/lighting/panel-norm</factor-prop>
+        <red>0.75</red>
+        <green>0.25</green>
+        <blue>0.25</blue>
+      </emission>
+    </animation>
+  
+  <!-- *** LoD *** -->
+    <animation> 
+      <type>range</type>
+      <min-m>0</min-m>
+      <max-m>5</max-m>
+    </animation>
+</PropertyList>

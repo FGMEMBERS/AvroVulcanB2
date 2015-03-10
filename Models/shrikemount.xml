@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>shrikemount.ac</path>
+ 
+  <!-- 
+  Shrike anti-radar missile mount
+  -->
+  <animation>
+    <type>select</type>
+    <object-name>ShrikeMount</object-name>      
+    <condition>
+      <equals>
+        <property>/sim/armament</property>
+        <value>BlackBuck6</value>
+      </equals>
+    </condition>
+  </animation>
+
+</PropertyList>

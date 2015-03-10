@@ -1,0 +1,562 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>cockpit.ac</path>
+
+
+<!-- Sub-models -->
+ <model>
+  <name>PedalsPilot</name>
+  <path>Aircraft/Instruments-3d/pedals/pedals.xml</path>
+  <offsets>
+   <x-m>0.18</x-m>
+   <y-m>-0.35</y-m>
+   <z-m>0.15</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>PedalsCoPilot</name>
+  <path>Aircraft/Instruments-3d/pedals/pedals.xml</path>
+  <offsets>
+   <x-m>0.18</x-m>
+   <y-m>0.35</y-m>
+   <z-m>0.15</z-m>
+  </offsets>
+ </model>
+
+ <model>
+   <name>RudderAdjustPilot</name>
+   <path>Aircraft/AvroVulcanB2/Models/Instruments/rudder_adjustment.xml</path>
+   <offsets>
+     <x-m>0.245</x-m>
+     <y-m>-0.25</y-m>
+     <z-m>0.35</z-m>
+   </offsets>
+ </model>
+
+ <model>
+   <name>RudderAdjustCopilot</name>
+   <path>Aircraft/AvroVulcanB2/Models/Instruments/rudder_adjustment.xml</path>
+   <offsets>
+     <x-m>0.245</x-m>
+     <y-m>0.25</y-m>
+     <z-m>0.35</z-m>
+   </offsets>
+ </model>
+
+ <model>
+   <name>ThrottleBox</name>
+   <path>Aircraft/AvroVulcanB2/Models/Instruments/throttle.xml</path>
+   <offsets>
+     <x-m>0.38</x-m>
+     <y-m>0.0</y-m>
+     <z-m>0.27</z-m>
+   </offsets>
+ </model>
+
+ <model>
+   <name>ConsoleStarboard</name>
+   <path>Aircraft/AvroVulcanB2/Models/Instruments/console-starboard.xml</path>
+   <offsets>
+     <x-m>0.3</x-m>
+     <y-m>-0.65</y-m>
+     <z-m>0.27</z-m>
+   </offsets>
+
+   <animation>
+      <type>rotate</type>
+      <factor>80</factor>
+      <center>
+        <x-m> 0.0</x-m>
+        <y-m> 0.0</y-m>
+        <z-m> 0.0</z-m>
+      </center>
+      <axis>
+        <x>0</x>
+        <y>0</y>
+        <z>1</z>
+      </axis>
+    </animation>
+   
+ </model>
+ 
+ <model>
+   <name>LimiterLights</name>
+   <path>Aircraft/AvroVulcanB2/Models/Instruments/limiter-lights.xml</path>
+   <offsets>
+     <x-m>0.24</x-m>
+     <y-m>-0.63</y-m>
+     <z-m>0.43</z-m>
+   </offsets>
+   
+   <animation>
+     <type>rotate</type>
+     <factor>-20</factor>
+     <center>
+       <x-m>-0.0</x-m>
+       <y-m> 0.0</y-m>
+       <z-m> 0.0</z-m>
+     </center>
+     <axis>
+       <x>0</x>
+       <y>0</y>
+       <z>1</z>
+     </axis>
+   </animation>
+ </model>
+
+ <model>
+   <name>PilotE2B</name>
+   <path>Aircraft/AvroVulcanB2/Models/Instruments/e2b.xml</path>
+   <offsets>
+     <x-m>0.48</x-m>
+     <y-m>-0.25</y-m>
+     <z-m>1.05</z-m>
+   </offsets>
+ </model>
+
+ <model>
+   <name>CopilotE2B</name>
+   <path>Aircraft/AvroVulcanB2/Models/Instruments/e2b.xml</path>
+   <offsets>
+     <x-m>0.48</x-m>
+     <y-m>0.25</y-m>
+     <z-m>1.05</z-m>
+   </offsets>
+ </model>
+ 
+   
+ 
+
+<!-- LOD for model --> 
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10</max-m>
+ </animation>
+
+<!-- 3-D instruments -->
+
+<!-- Pilots side -->
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/seavixen_mach.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.35</y-m>
+      <z-m>0.7</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/gmeter.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.15</y-m>
+      <z-m>0.7</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/asi.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.45</y-m>
+      <z-m>0.65</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/radar-altimeter.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.25</y-m>
+      <z-m>0.65</z-m>
+    </offsets>
+  </model>
+
+
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/ai.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.35</y-m>
+      <z-m>0.60</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/vsi.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.25</y-m>
+      <z-m>0.55</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/altimeter.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.45</y-m>
+      <z-m>0.55</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/hsi.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.35</y-m>
+      <z-m>0.50</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/standby_AI.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.25</y-m>
+      <z-m>0.45</z-m>
+    </offsets>
+  </model>
+
+<!-- Engine instruments - center console -->
+  
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/oil-1.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.14</y-m>
+      <z-m>0.45</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/oil-2.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.08</y-m>
+      <z-m>0.45</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/undercarriage-up-down.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.42</z-m>
+    </offsets>
+  </model>
+  
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/oil-3.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>0.08</y-m>
+      <z-m>0.45</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/oil-4.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>0.14</y-m>
+      <z-m>0.45</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/rpm-1.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.14</y-m>
+      <z-m>0.52</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/rpm-2.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.08</y-m>
+      <z-m>0.52</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/rmi.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.51</z-m>
+    </offsets>
+  </model>
+
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/rpm-3.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>0.08</y-m>
+      <z-m>0.52</z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/rpm-4.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>0.14</y-m>
+      <z-m>0.52</z-m>
+    </offsets>
+  </model>
+  
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/jpt-1.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.14</y-m>
+      <z-m>0.6</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/jpt-2.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.08</y-m>
+      <z-m>0.6</z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/chute.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.02</y-m>
+      <z-m>0.61</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/jpt-3.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>0.08</y-m>
+      <z-m>0.6</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/jpt-4.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>0.14</y-m>
+      <z-m>0.6</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/control_pos.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.66</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/airbrake-indicator.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>-0.05</y-m>
+      <z-m>0.72</z-m>
+    </offsets>
+  </model>
+    
+  <model>
+    <path>Aircraft/AvroVulcanB2/Models/Instruments/bomb-bay-indicator.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>0.05</y-m>
+      <z-m>0.72</z-m>
+    </offsets>
+  </model>
+
+<!-- Co-pilot Instruments -->
+
+<model>
+  <path>Aircraft/AvroVulcanB2/Models/Instruments/seavixen_mach.xml</path>
+  <offsets>
+    <x-m>0.24</x-m>
+    <y-m>0.35</y-m>
+    <z-m>0.7</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Aircraft/AvroVulcanB2/Models/Instruments/gmeter.xml</path>
+  <offsets>
+    <x-m>0.24</x-m>
+    <y-m>0.15</y-m>
+    <z-m>0.7</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Aircraft/AvroVulcanB2/Models/Instruments/asi.xml</path>
+  <offsets>
+    <x-m>0.24</x-m>
+    <y-m>0.25</y-m>
+    <z-m>0.65</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Aircraft/AvroVulcanB2/Models/Instruments/ILS.xml</path>
+  <offsets>
+    <x-m>0.24</x-m>
+    <y-m>0.45</y-m>
+    <z-m>0.65</z-m>
+  </offsets>
+</model>
+
+
+
+<model>
+  <path>Aircraft/AvroVulcanB2/Models/Instruments/ai.xml</path>
+  <offsets>
+    <x-m>0.24</x-m>
+    <y-m>0.35</y-m>
+    <z-m>0.60</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Aircraft/AvroVulcanB2/Models/Instruments/vsi.xml</path>
+  <offsets>
+    <x-m>0.24</x-m>
+    <y-m>0.45</y-m>
+    <z-m>0.55</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Aircraft/AvroVulcanB2/Models/Instruments/altimeter.xml</path>
+  <offsets>
+    <x-m>0.24</x-m>
+    <y-m>0.25</y-m>
+    <z-m>0.55</z-m>
+  </offsets>
+</model>
+
+<model>
+  <path>Aircraft/AvroVulcanB2/Models/Instruments/hsi.xml</path>
+  <offsets>
+    <x-m>0.24</x-m>
+    <y-m>0.35</y-m>
+    <z-m>0.50</z-m>
+  </offsets>
+</model>
+
+  <model>
+    <path>Aircraft/Instruments-3d/adf/adf.xml</path>
+    <offsets>
+      <x-m>0.24</x-m>
+      <y-m>0.25</y-m>
+      <z-m>0.45</z-m>
+    </offsets>
+  </model>
+
+  
+<!-- All the objects are listed here, and are only visible when in the cockpit -->
+<animation>
+  <name>InteriorGroup</name>
+  <object-name>Cockpit</object-name>
+  <object-name>PanelSurround</object-name>
+  <object-name>Seat1</object-name>
+  <object-name>Seat2</object-name>
+  <object-name>SidePanel1</object-name>
+  <object-name>SidePanel2</object-name>
+  <object-name>Joystick1</object-name>
+  <object-name>Joystick2</object-name>
+  <object-name>JoystickMount1</object-name>
+  <object-name>JoystickMount2</object-name>
+  <object-name>ThrottleSurround</object-name>
+  <object-name>Throttle1</object-name>
+  <object-name>Throttle2</object-name>
+  <object-name>Throttle3</object-name>
+  <object-name>Throttle4</object-name>
+</animation>
+
+
+
+<!-- Joysticks -->
+
+ <animation>
+  <type>translate</type>
+  <object-name>Joystick1</object-name>
+  <object-name>Joystick2</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>-0.1</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Joystick1</object-name>      
+  <property>controls/flight/aileron</property>
+  <factor>-45</factor>
+  <offset-deg>0</offset-deg>   
+  <axis>
+   <x1-m>0.0</x1-m>
+   <y1-m>-0.35</y1-m>
+   <z1-m>0.36</z1-m>
+   <x2-m>1.0</x2-m>
+   <y2-m>-0.35</y2-m>
+   <z2-m>0.36</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Joystick2</object-name>      
+  <property>controls/flight/aileron</property>
+  <factor>-45</factor>
+  <offset-deg>0</offset-deg>   
+  <axis>
+   <x1-m>0.0</x1-m>
+   <y1-m>0.35</y1-m>
+   <z1-m>0.36</z1-m>
+   <x2-m>1.0</x2-m>
+   <y2-m>0.35</y2-m>
+   <z2-m>0.36</z2-m>
+  </axis>
+ </animation>
+
+ <!-- To Do - Engine failure -->
+ <animation>
+   <type>select</type>
+   <object-name>Engine0Bad</object-name>
+   <object-name>Engine1Bad</object-name>
+   <object-name>Engine2Bad</object-name>
+   <object-name>Engine3Bad</object-name>
+    <greater-than>
+      <property>engines/engine[0]/egt_degf</property>
+      <value>1400.0</value>
+    </greater-than>
+  </animation>
+
+</PropertyList>

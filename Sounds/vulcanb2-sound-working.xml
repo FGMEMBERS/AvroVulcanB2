@@ -1,0 +1,346 @@
+<PropertyList>
+
+  <fx>
+  
+	
+  <engine-start>
+      <name>turbine0-start</name>
+      <mode>looped</mode>
+      <path>/vulcan-start.wav</path>
+      <condition>
+	    <property>/engines/engine[0]/starter</property>
+        <not>
+          <property>/sim/current-view/internal</property>
+        </not>
+      </condition>
+      <volume>
+        <property>engines/engine/n2</property>
+        <factor>0.01</factor>
+        <min>0.8</min>
+        <max>0.95</max>
+      </volume>
+     <x>20</x>
+     <y>0</y>
+     <z>-0.5</z>
+   <position>
+    <x>9.4</x>
+	<y>-3.63</y>
+	<z>3.14</z>
+   </position>
+   <orientation>
+	<x>-1.0</x>
+    <y>-0.25</y>
+    <z>0</z>
+    <inner-angle>120.0</inner-angle>
+    <outer-angle>180.0</outer-angle>
+    <outer-gain>0.35</outer-gain>
+   </orientation>
+   <reference-dist>100</reference-dist>
+   <max-dist>5000</max-dist>
+  </engine-start>
+
+    <engine-whine>
+      <name>turbine0</name>
+      <mode>looped</mode>
+      <path>/vulcan-engine-exterior.wav</path>
+      <condition>
+        <not>
+          <property>/sim/current-view/internal</property>
+        </not>
+      </condition>
+      <volume>
+        <property>engines/engine/n2</property>
+        <factor>0.02</factor>
+		<offset>-0.1</offset>
+        <min>0</min>
+        <max>1.0</max>
+      </volume>
+      <pitch>
+        <property>engines/engine/n2</property>
+        <factor>0.0075</factor>
+	    <min>0</min>
+	    <max>10</max>
+		<offset>0.75</offset>
+        </pitch>
+     <x>20</x>
+     <y>0</y>
+     <z>-0.5</z>
+   <position>
+    <x>9.4</x>
+	<y>-3.63</y>
+	<z>3.14</z>
+   </position>
+   <orientation>
+	<x>-1.0</x>
+    <y>-0.25</y>
+    <z>0</z>
+    <inner-angle>120.0</inner-angle>
+    <outer-angle>180.0</outer-angle>
+    <outer-gain>0.35</outer-gain>
+   </orientation>
+   <reference-dist>100</reference-dist>
+   <max-dist>5000</max-dist>
+    </engine-whine>
+  
+  <engine-exhaust>
+   <name>Engine 1 External Exhaust</name>
+   <path>/jet.wav</path>
+   <mode>looped</mode>
+   <delay-sec>0.35</delay-sec>
+   <position>
+    <x>18.6</x>
+	<y>0</y>
+	<z>2.37</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0.0</y>
+    <z>0</z>
+    <inner-angle>35.0</inner-angle>
+    <outer-angle>90</outer-angle>
+    <outer-gain>0.45</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[0]/n2</property>
+    <factor>0.006</factor>
+    <offset>-0.65</offset>
+   </volume>
+   
+   <reference-dist>100</reference-dist>
+   <max-dist>8000</max-dist>
+   
+  </engine-exhaust>
+  
+  <engine-crackle>
+   <name>Engine 1 Distorted Exhaust</name>
+   <path>/vulcan-jetblast.wav</path>
+   <mode>looped</mode>
+   <delay-sec>0.35</delay-sec>
+   <position>
+    <x>18.6</x>
+	<y>0</y>
+	<z>2.37</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0.0</y>
+    <z>0</z>
+    <inner-angle>35.0</inner-angle>
+    <outer-angle>90</outer-angle>
+    <outer-gain>0.45</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[0]/n2</property>
+    <factor>0.015</factor>
+    <offset>-0.95</offset>
+   </volume>
+   
+   <reference-dist>100</reference-dist>
+   <max-dist>8000</max-dist>
+   
+  </engine-crackle>
+  
+ <engine-howl>
+   <name>Engine 1 Howl</name>
+   <path>/vulcan-howel.wav</path>
+   <mode>looped</mode>
+   <delay-sec>0.35</delay-sec>
+   <position>
+    <x>18.6</x>
+	<y>0</y>
+	<z>2.37</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0.0</y>
+    <z>0</z>
+    <inner-angle>35.0</inner-angle>
+    <outer-angle>90</outer-angle>
+    <outer-gain>0.45</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[0]/n2</property>
+    <factor>0.03</factor>
+    <offset>-2.5</offset>
+   </volume>
+   
+   <reference-dist>100</reference-dist>
+   <max-dist>8000</max-dist>
+   
+  </engine-howl>
+  
+   <engine1-wake>
+  <name>Left Engine Wake</name>
+  <mode>looped</mode>
+  <path>wake.wav</path>
+  <position>
+   <x>25</x>
+   <y>-0.5</y>
+   <z>0</z>
+   </position>
+   <orientation>
+	<x>1</x>
+    <y>0</y>
+    <z>0</z>
+    <inner-angle>15.0</inner-angle>
+    <outer-angle>90.0</outer-angle>
+    <outer-gain>0.025</outer-gain>
+   </orientation>
+   <volume>
+    <property>engines/engine[0]/n2</property>
+    <factor>0.025</factor>
+	<offset>-0.3</offset>
+	<min>0.00</min>
+	<max>2.0</max>
+   </volume>
+   <volume>
+    <property>velocities/groundspeed-kt</property>
+    <factor>0.0175</factor>
+	<offset>-0.2</offset>
+	<min>0.00</min>
+	<max>1.0</max>
+   </volume>
+   <reference-dist>50</reference-dist>
+   <max-dist>12000</max-dist>
+  </engine1-wake> 
+  
+  <engine-whine>
+      <name>turbine0</name>
+      <mode>looped</mode>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-engine-exterior.wav</path>
+      <condition>
+        <not>
+          <property>/sim/current-view/internal</property>
+        </not>
+      </condition>
+      <volume>
+        <property>engines/engine/n2</property>
+        <factor>0.02</factor>
+		<offset>-0.1</offset>
+        <min>0</min>
+        <max>1.0</max>
+      </volume>
+      <pitch>
+        <property>engines/engine/n2</property>
+        <factor>0.0075</factor>
+	    <min>0</min>
+	    <max>10</max>
+		<offset>0.75</offset>
+        </pitch>
+     <x>20</x>
+     <y>0</y>
+     <z>-0.5</z>
+   <position>
+    <x>9.4</x>
+	<y>-3.63</y>
+	<z>3.14</z>
+   </position>
+   <orientation>
+	<x>-1.0</x>
+    <y>-0.25</y>
+    <z>0</z>
+    <inner-angle>120.0</inner-angle>
+    <outer-angle>180.0</outer-angle>
+    <outer-gain>0.35</outer-gain>
+   </orientation>
+   <reference-dist>100</reference-dist>
+   <max-dist>5000</max-dist>
+    </engine-whine>
+  
+  <engine-exhaust>
+   <name>Engine 2 External Exhaust</name>
+   <path>Aircraft/AvroVulcanB2/Sounds/jet.wav</path>
+   <mode>looped</mode>
+   <delay-sec>0.35</delay-sec>
+   <position>
+    <x>18.6</x>
+	<y>0</y>
+	<z>2.37</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0.0</y>
+    <z>0</z>
+    <inner-angle>35.0</inner-angle>
+    <outer-angle>90</outer-angle>
+    <outer-gain>0.45</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[1]/n2</property>
+    <factor>0.006</factor>
+    <offset>-0.65</offset>
+   </volume>
+   
+   <reference-dist>100</reference-dist>
+   <max-dist>8000</max-dist>
+   
+  </engine-exhaust>
+  
+  <engine-crackle>
+   <name>Engine 2 Distorted Exhaust</name>
+   <path>Aircraft/AvroVulcanB2/Sounds/vulcan-jetblast.wav</path>
+   <mode>looped</mode>
+   <delay-sec>0.35</delay-sec>
+   <position>
+    <x>18.6</x>
+	<y>0</y>
+	<z>2.37</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0.0</y>
+    <z>0</z>
+    <inner-angle>35.0</inner-angle>
+    <outer-angle>90</outer-angle>
+    <outer-gain>0.45</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[1]/n2</property>
+    <factor>0.015</factor>
+    <offset>-0.95</offset>
+   </volume>
+   
+   <reference-dist>100</reference-dist>
+   <max-dist>8000</max-dist>
+   
+  </engine-crackle>
+  
+ <engine-howl>
+   <name>Engine 2 Howl</name>
+   <path>Aircraft/AvroVulcanB2/Sounds/vulcan-howel.wav</path>
+   <mode>looped</mode>
+   <delay-sec>0.35</delay-sec>
+   <position>
+    <x>18.6</x>
+	<y>0</y>
+	<z>2.37</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0.0</y>
+    <z>0</z>
+    <inner-angle>35.0</inner-angle>
+    <outer-angle>90</outer-angle>
+    <outer-gain>0.45</outer-gain>
+   </orientation>
+   
+   <volume>
+    <property>engines/engine[1]/n2</property>
+    <factor>0.03</factor>
+    <offset>-2.5</offset>
+   </volume>
+   
+   <reference-dist>100</reference-dist>
+   <max-dist>8000</max-dist>
+   
+  </engine-howl>
+	
+  </fx>
+ 
+</PropertyList>
+

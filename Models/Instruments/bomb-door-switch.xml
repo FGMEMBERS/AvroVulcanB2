@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<!-- Bomb Bay Door switch -->
+
+<PropertyList>
+  
+  <path>bomb-door-switch.ac</path>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch</object-name>
+    <property>/controls/doors/bb-door-pos</property>
+    <factor>-30</factor>
+    <center>
+      <x-m> 0.0</x-m>
+      <y-m> 0.0</y-m>
+      <z-m> 0.0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Switch</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>
+          vulcanb2.incr_bb_doors()
+        </script>
+      </binding>
+    </action>
+  </animation>
+  
+  <!-- *** LoD *** -->
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>5</max-m>
+  </animation>
+</PropertyList>

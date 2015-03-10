@@ -1,0 +1,672 @@
+<PropertyList>
+
+  <fx>
+
+    <engine>
+      <name>turbine0</name>
+      <mode>looped</mode>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-engine-exterior.wav</path>
+      <condition>
+        <property>/engines/engine[0]/running</property>
+        <not>
+          <property>/sim/current-view/internal</property>
+        </not>
+      </condition>
+      <orientation>
+        <x>   0 </x>
+        <y>   0 </y>
+        <z> 180 </z>
+        <inner-cone> 180.0 </inner-cone>
+        <outer-cone> 360.0 </outer-cone>
+        <outer-gain>   0.2 </outer-gain>
+      </orientation>
+      <volume>
+        <property>engines/engine/n2</property>
+        <factor>0.09</factor>
+        <min>0.3</min>
+        <max>0.9</max>
+      </volume>
+      <pitch>
+        <property>engines/engine/n2</property>
+        <factor>0.01</factor>
+	<min>0</min>
+	<max>0.9</max>
+      </pitch>
+<x>20</x>
+     <y>-3</y>
+     <z>-0.5</z>
+     <orientation>
+       <x>1</x>
+       <y>0</y>
+       <z>0</z>
+       <inner-angle>45</inner-angle>
+       <outer-angle>90</outer-angle>
+       <outer-gain>0.2</outer-gain>
+     </orientation>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+	
+	<engine>
+      <name>turbine1</name>
+      <mode>looped</mode>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-engine-exterior.wav</path>
+      <condition>
+        <property>/engines/engine[1]/running</property>
+        <not>
+          <property>/sim/current-view/internal</property>
+        </not>
+      </condition>
+      <orientation>
+        <x>   0 </x>
+        <y>   0 </y>
+        <z> 180 </z>
+        <inner-cone> 180.0 </inner-cone>
+        <outer-cone> 360.0 </outer-cone>
+        <outer-gain>   0.2 </outer-gain>
+      </orientation>
+      <volume>
+        <property>engines/engine/n2</property>
+        <factor>0.09</factor>
+        <min>0.3</min>
+        <max>0.9</max>
+      </volume>
+      <pitch>
+        <property>engines/engine/n2</property>
+        <factor>0.01</factor>
+	<min>0</min>
+	<max>0.9</max>
+      </pitch>
+	   <x>20</x>
+      <y>-1.5</y>
+      <z>-0.5</z>
+<orientation>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+        <inner-angle>45</inner-angle>
+        <outer-angle>90</outer-angle>
+        <outer-gain>0.2</outer-gain>
+      </orientation>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+	
+	<engine>
+      <name>turbine2</name>
+      <mode>looped</mode>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-engine-exterior.wav</path>
+      <condition>
+        <property>/engines/engine[2]/running</property>
+        <not>
+          <property>/sim/current-view/internal</property>
+        </not>
+      </condition>
+      <orientation>
+        <x>   0 </x>
+        <y>   0 </y>
+        <z> 180 </z>
+        <inner-cone> 180.0 </inner-cone>
+        <outer-cone> 360.0 </outer-cone>
+        <outer-gain>   0.2 </outer-gain>
+      </orientation>
+      <volume>
+        <property>engines/engine/n2</property>
+        <factor>0.09</factor>
+        <min>0.3</min>
+        <max>0.9</max>
+      </volume>
+      <pitch>
+        <property>engines/engine/n2</property>
+        <factor>0.01</factor>
+	<min>0</min>
+	<max>0.9</max>
+      </pitch>
+	   <x>20</x>
+      <y>-3</y>
+      <z>-0.5</z>
+<orientation>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+        <inner-angle>45</inner-angle>
+        <outer-angle>90</outer-angle>
+        <outer-gain>0.2</outer-gain>
+      </orientation>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+	
+	<engine>
+      <name>turbine3</name>
+      <mode>looped</mode>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-engine-exterior.wav</path>
+      <condition>
+        <property>/engines/engine[3]/running</property>
+        <not>
+          <property>/sim/current-view/internal</property>
+        </not>
+      </condition>
+      <orientation>
+        <x>   0 </x>
+        <y>   0 </y>
+        <z> 180 </z>
+        <inner-cone> 180.0 </inner-cone>
+        <outer-cone> 360.0 </outer-cone>
+        <outer-gain>   0.2 </outer-gain>
+      </orientation>
+      <volume>
+        <property>engines/engine/n2</property>
+        <factor>0.09</factor>
+        <min>0.3</min>
+        <max>0.9</max>
+      </volume>
+      <pitch>
+        <property>engines/engine/n2</property>
+        <factor>0.01</factor>
+	<min>0</min>
+	<max>0.9</max>
+      </pitch>
+	  <x>20</x>
+      <y>-1.5</y>
+      <z>-0.5</z>
+ <orientation>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+        <inner-angle>45</inner-angle>
+        <outer-angle>90</outer-angle>
+        <outer-gain>0.2</outer-gain>
+      </orientation>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+  
+ 
+  <engine>
+      <name>engine0</name>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-jetblast.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[0]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+      <volume>
+        <property>engines/engine[0]/thrust_lb</property>
+        <factor type="double">0.00013</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/n1</property>
+        <factor>0.20</factor>
+      </pitch>
+	  <x>20</x>
+     <y>-3</y>
+     <z>-0.5</z>
+     <orientation>
+       <x>1</x>
+       <y>0</y>
+       <z>0</z>
+       <inner-angle>45</inner-angle>
+       <outer-angle>90</outer-angle>
+       <outer-gain>0.2</outer-gain>
+     </orientation>
+    </engine>
+	
+	
+	<engine>
+      <name>engine1</name>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-jetblast.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[1]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+     <volume>
+        <property>engines/engine[1]/thrust_lb</property>
+        <factor type="double">0.00013</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/n1</property>
+        <factor>0.20</factor>
+      </pitch>
+	  <x>20</x>
+      <y>-1.5</y>
+      <z>-0.5</z>
+      <orientation>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+        <inner-angle>45</inner-angle>
+        <outer-angle>90</outer-angle>
+        <outer-gain>0.2</outer-gain>
+      </orientation>
+    </engine>
+	
+	
+   <engine>
+      <name>engine2</name>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-jetblast.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[2]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+      <volume>
+        <property>engines/engine[2]/thrust_lb</property>
+        <factor type="double">0.00013</factor>
+      </volume>
+       <pitch>
+        <property>/engines/engine[2]/n1</property>
+        <factor>0.20</factor>
+      </pitch>
+	   <x>20</x>
+      <y>-1.5</y>
+      <z>-0.5</z>
+      <orientation>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+        <inner-angle>45</inner-angle>
+        <outer-angle>90</outer-angle>
+        <outer-gain>0.2</outer-gain>
+      </orientation>
+    </engine>
+	
+	 <engine>
+      <name>engine3</name>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-jetblast.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[3]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+     <volume>
+        <property>engines/engine[3]/thrust_lb</property>
+        <factor type="double">0.00013</factor>
+      </volume>
+        <pitch>
+        <property>/engines/engine[3]/n1</property>
+        <factor>0.20</factor>
+      </pitch>
+	    <x>20</x>
+      <y>-1.5</y>
+      <z>-0.5</z>
+      <orientation>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+        <inner-angle>45</inner-angle>
+        <outer-angle>90</outer-angle>
+        <outer-gain>0.2</outer-gain>
+      </orientation>
+    </engine>
+	
+	
+	 <engine>
+      <name>howl0</name>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-howel.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[0]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+  <volume>
+        <property>engines/engine[0]/thrust_lb</property>
+        <factor type="double">0.00053</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/n1</property>
+        <factor>0.20</factor>
+      </pitch> 
+	  <x>20</x>
+     <y>-3</y>
+     <z>-0.5</z>
+     <orientation>
+       <x>1</x>
+       <y>0</y>
+       <z>0</z>
+       <inner-angle>45</inner-angle>
+       <outer-angle>90</outer-angle>
+       <outer-gain>0.2</outer-gain>
+     </orientation>
+    </engine>
+	
+	
+	<engine>
+      <name>howl1</name>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-howel.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[1]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+      <volume>
+        <property>engines/engine[1]/thrust_lb</property>
+        <factor type="double">0.00053</factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/n1</property>
+        <factor>0.20</factor>
+      </pitch>
+	  <x>20</x>
+      <y>-1.5</y>
+      <z>-0.5</z>
+      <orientation>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+        <inner-angle>45</inner-angle>
+        <outer-angle>90</outer-angle>
+        <outer-gain>0.2</outer-gain>
+      </orientation>
+    </engine>
+	
+	
+   <engine>
+      <name>howl2</name>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-howel.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[2]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+      <volume>
+        <property>engines/engine[2]/thrust_lb</property>
+        <factor type="double">0.00053</factor>
+      </volume>
+       <pitch>
+        <property>/engines/engine[2]/n1</property>
+        <factor>0.20</factor>
+      </pitch>
+	   <x>20</x>
+      <y>-1.5</y>
+      <z>-0.5</z>
+      <orientation>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+        <inner-angle>45</inner-angle>
+        <outer-angle>90</outer-angle>
+        <outer-gain>0.2</outer-gain>
+      </orientation>
+    </engine>
+	
+	 <engine>
+      <name>howl3</name>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-howel.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[3]/running</property>
+		<not>
+        	<property>/sim/current-view/internal</property>
+		<property>/engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+     <volume>
+        <property>engines/engine[3]/thrust_lb</property>
+        <factor type="double">0.00053</factor>
+      </volume>
+        <pitch>
+        <property>/engines/engine[3]/n1</property>
+        <factor>0.20</factor>
+      </pitch>
+	    <x>20</x>
+      <y>-1.5</y>
+      <z>-0.5</z>
+      <orientation>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+        <inner-angle>45</inner-angle>
+        <outer-angle>90</outer-angle>
+        <outer-gain>0.2</outer-gain>
+      </orientation>
+    </engine>
+	
+	
+	<!-- flyby -->
+		<flyby>
+			<name>fly-by</name>
+			<mode>once</mode>
+			<path>Aircraft/AvroVulcanB2/Sounds/flyby.wav</path>
+			<condition>
+				<and>
+	    <greater-than>
+	     	<property>/velocities/mach</property>
+	     	<value>0.4</value>
+	    </greater-than>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>6</value>
+				</equals>
+				</and>
+				<not>
+         	<property>/sim/current-view/internal</property>
+	 	<property>/engines/engine/out-of-fuel</property>
+     	</not>
+		</condition>
+			<volume>
+				<property>velocities/airspeed-kt</property>
+				<factor>0.001</factor>
+			</volume>
+			
+		</flyby>
+	
+	<!-- interior sounds -->
+	 <engine>
+      <name>turbine interior</name>
+      <mode>looped</mode>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan-engine-inside.wav</path>
+      <condition>
+        <and>
+          <property>/engines/engine/running</property>
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
+      <orientation>
+        <x>   -0.35 </x>
+        <y>   1.1 </y>
+        <z> 4.8 </z>
+        <inner-cone> 180.0 </inner-cone>
+        <outer-cone> 360.0 </outer-cone>
+        <outer-gain>   0.2 </outer-gain>
+      </orientation>
+      <volume>
+        <property>engines/engine/n2</property>
+        <factor>0.01</factor>
+        <min>1.0</min>
+        <max>6.85</max>
+      </volume>
+      <pitch>
+        <property>engines/engine/n2</property>
+        <factor>0.01</factor>
+        <min>0</min>
+        <max>0.9</max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>  
+	
+    <engine>
+      <name>thrust lowfreq interior</name>
+      <path>Aircraft/AvroVulcanB2/Sounds/engine-lowfreq.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine/running</property>
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
+      <property>engines/engine/thrust-lbs</property>
+      <volume>
+        <property>engines/engine/thrust-lbs</property>
+        <factor>0.00003</factor>         
+        <min>0</min>
+        <max>2.9</max>
+      </volume>		
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+	
+    
+	
+    <wind>
+      <name>wind</name>
+      <mode>looped</mode>
+      <path>Sounds/wind.wav</path>
+      <condition>
+        <not> 
+          <property>/sim/current-view/internal</property>
+        </not>
+      </condition>
+      <property>/velocities/airspeed-kt</property>
+      <volume>
+        <property>/position/altitude-ft</property>
+        <factor>-0.000015</factor>
+        <offset>1.0</offset>
+        <min>0.1</min>
+        <max>0.7</max>
+      </volume>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.015</factor>
+        <min>0.03</min>
+        <max>0.55</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.01</factor>
+        <offset>0.75</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </wind>
+
+    <rumble>
+      <name>rumble</name>
+      <mode>looped</mode>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>.0005</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </rumble>
+
+    <gear>
+      <name>gear</name>
+      <mode>in-transit</mode>
+      <path>Aircraft/AvroVulcanB2/Sounds/gear.wav</path>
+      <property>/gear/gear[0]/position-norm</property>
+      <pitch>
+        <internal>dt_play</internal>
+        <offset>1.0</offset>
+        <factor>-0.001</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </gear>
+
+    <gear>
+     <name>gear-lock</name>
+     <path>Sounds/gear-lck.wav</path>
+     <condition>
+      <equals>
+       <property>/gear/gear[0]/position-norm</property>
+       <value>0</value>
+      </equals>
+     </condition>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </gear>
+
+    <squeal>
+      <name>squeal</name>
+      <path>Sounds/squeal.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/speed-down-fps</property>
+        <factor>0.05</factor>
+      </volume>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.01</factor>
+      </volume>
+      <volume>
+        <internal>dt_stop</internal>
+        <factor>0.05</factor>
+        <max>1.0</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0025</factor>
+        <offset>1.2</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </squeal>
+ 
+    <flap>
+      <name>flaps</name>
+      <mode>in-transit</mode>
+      <path>Sounds/flaps.wav</path>
+      <property>/surface-positions/flap-pos-norm</property>
+      <volume>
+        <max>0.25</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </flap>
+
+    <stall>
+   <name>stall</name>
+   <path>Aircraft/AvroVulcanB2/Sounds/stall.wav</path>
+   <property>/sim/alarms/stall-warning</property>
+   <volume>
+    <property>/velocities/airspeed-kt</property>
+    <min>30.0</min>
+   </volume>
+  </stall>
+
+
+
+
+  </fx>
+ 
+</PropertyList>
+

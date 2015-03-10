@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<name>vulcanb2-config</name>
+	<layout>vbox</layout>
+	<x>-100</x>
+	<y>-100</y>
+  <pref-width>300</pref-width>
+
+  <group>
+		<layout>hbox</layout>
+		<empty><stretch>1</stretch></empty>
+
+		<text>
+			<label>Vulcan B.2 Configuration</label>
+		</text>
+
+		<empty><stretch>1</stretch></empty>
+
+		<button>
+			<pref-width>16</pref-width>
+			<pref-height>16</pref-height>
+			<legend></legend>
+			<default>1</default>
+			<keynum>27</keynum>
+			<border>2</border>
+
+			<binding>
+				<command>nasal</command>
+				<script>vulcanb2.config_dialog.close()</script>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+	</group>
+
+	<hrule><whatever/></hrule>
+<!--
+	<group>
+		<layout>hbox</layout>
+		<empty><pref-width>4</pref-width></empty>
+    <text>
+      <label>Aircraft</label>
+    </text>
+    <combo>
+      <property>/sim/variant</property>
+      <value>XM597</value>
+      <value>XM603</value>
+      <value>XM607</value>
+	  <value>Test</value>
+    </combo>
+    <empty>
+      <stretch>1</stretch>
+    </empty>
+  </group>
+-->
+  <group>
+    <layout>hbox</layout>
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+    <text>
+      <label>Armament</label>
+    </text>
+    <combo>
+      <property>/sim/armament</property>
+      <value>WE177A</value>
+      <value>WE177B</value>
+      <value>RedBeard</value>
+      <value>BlueSteel</value>
+      <value>BlackBuck1</value>
+      <value>BlackBuck6</value>
+    </combo>
+    <empty>
+      <stretch>1</stretch>
+    </empty>
+  </group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+
+    <button>
+      <halign>center</halign>
+      <legend>Fire</legend>
+      <binding>
+        <command>nasal</command>
+        <script>vulcanb2.fire()</script>
+      </binding>
+    </button>
+
+    <empty><pref-width>4</pref-width></empty>
+
+		<button>
+			<halign>center</halign>
+			<legend>Reset Armaments</legend>
+			<binding>
+				<command>nasal</command>
+				<script>vulcanb2.reload()</script>
+			</binding>
+		</button>
+
+		<empty><stretch>1</stretch></empty>
+	</group>
+
+  <group>
+    <layout>hbox</layout>
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+
+    <button>
+      <halign>center</halign>
+      <legend>Open Bomb Bay</legend>
+      <binding>
+        <command>nasal</command>
+        <script>vulcanb2.toggle_bb_doors()</script>
+      </binding>
+    </button>
+
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+
+    <button>
+      <halign>center</halign>
+      <legend>Open Crew Door</legend>
+      <binding>
+        <command>nasal</command>
+        <script>vulcanb2.toggle_cockpit_door()</script>
+      </binding>
+    </button>
+
+    <empty>
+      <stretch>1</stretch>
+    </empty>
+  </group>
+<button>
+      <halign>center</halign>
+      <legend>Select Co-Pilot</legend>
+      <binding>
+        <command>nasal</command>
+        <script>dual_control_tools.copilot_dialog.show(aircraft_dual_control.pilot_type)</script>
+
+      </binding>
+    </button>
+
+  <group>
+    <layout>hbox</layout>
+    <empty>
+      <pref-width>4</pref-width>
+    </empty>
+
+    <button>
+      <halign>center</halign>
+      <legend>Deploy Chute</legend>
+      <binding>
+        <command>nasal</command>
+        <script>vulcanb2.toggle_chute()</script>
+      </binding>
+    </button>
+
+    <empty>
+      <stretch>1</stretch>
+    </empty>
+  </group>
+
+  <group>
+		<layout>hbox</layout>
+		<empty><pref-width>4</pref-width></empty>
+
+		<button>
+			<halign>center</halign>
+			<legend>OK</legend>
+			<pref-width>64</pref-width>
+			<pref-height>24</pref-height>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+
+    <button>
+      <halign>center</halign>
+      <legend>Apply</legend>
+      <pref-width>64</pref-width>
+      <pref-height>24</pref-height>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+    </button>
+
+    <button>
+			<halign>center</halign>
+			<legend>Cancel</legend>
+			<pref-width>64</pref-width>
+			<pref-height>24</pref-height>
+			<binding>
+				<command>nasal</command>
+				<script>vulcanb2.config_dialog.close()</script>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+
+		<empty><stretch>1</stretch></empty>
+	</group>
+
+	<empty><pref-height>3</pref-height></empty>
+</PropertyList>

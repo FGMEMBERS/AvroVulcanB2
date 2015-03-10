@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<!-- Jet Pipe Temperature -->
+
+<PropertyList>
+
+ <path>jpt.ac</path>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>jpt-Needle1</object-name>
+  <property>engines/engine[1]/egt_degf</property>
+  <interpolation>
+   <entry><ind>32</ind><dep>-90</dep></entry>
+   <entry><ind>752</ind><dep>30</dep></entry>
+   <entry><ind>1472</ind><dep>150</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+</PropertyList>

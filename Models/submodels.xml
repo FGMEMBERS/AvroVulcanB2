@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <!-- Black Buck 1 bombs -->
+  <submodel>
+    <name>bomb</name>
+    <model>Aircraft/AvroVulcanB2/Models/bomb.ac</model>
+    <trigger>/controls/armament/triggerbomb</trigger>
+    <speed>0</speed>
+    <repeat>true</repeat>
+    <delay>0.5</delay>
+    <count>21</count>
+    <x-offset>-60.0</x-offset>
+    <y-offset>0</y-offset>
+    <z-offset>-0.5</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>3.00</eda>
+    <cd>0.1</cd>
+    <!-- less than a bullet but more than a tank -->
+    <weight>1000</weight>
+    <contents>/sim/armament/contents</contents>
+    <life>60</life>
+    <buoyancy>0</buoyancy>
+    <wind>false</wind>
+    <aero-stabilised>true</aero-stabilised>
+    <impact>true</impact>
+    <impact-reports>/sim/armament/weapons/impact</impact-reports>
+  </submodel>
+
+  <!-- Black Buck 6 Shrike missiles (4) -->
+  <submodel>
+    <name>shrike1</name>
+    <model>Aircraft/AvroVulcanB2/Models/shrike.ac</model>
+    <trigger>/controls/armament/triggershrike1</trigger>
+    <!-- Max speed is mach4, but we'll start at mach 2-ish -->
+    <speed>1000</speed>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-60.0</x-offset>
+    <y-offset>-34</y-offset>
+    <z-offset>-2</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>0.0</eda>
+    <cd>0.0</cd>
+    <weight>390</weight>
+    <contents>/sim/armament/contents</contents>
+    <life>20</life>
+    <buoyancy>15</buoyancy>
+    <wind>false</wind>
+    <aero-stabilised>true</aero-stabilised>
+  </submodel>
+  
+  <submodel>
+    <name>shrike2</name>
+    <model>Aircraft/AvroVulcanB2/Models/shrike.ac</model>
+    <trigger>/controls/armament/triggershrike2</trigger>
+    <!-- Max speed is mach4, but we'll start at mach 2-ish -->
+    <speed>1000</speed>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-70.0</x-offset>
+    <y-offset>-37</y-offset>
+    <z-offset>-2</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>0.0</eda>
+    <cd>0.0</cd>
+    <weight>390</weight>
+    <contents>/sim/armament/contents</contents>
+    <life>20</life>
+    <buoyancy>15</buoyancy>
+    <wind>false</wind>
+    <aero-stabilised>true</aero-stabilised>
+  </submodel>
+
+  <submodel>
+    <name>shrike3</name>
+    <model>Aircraft/AvroVulcanB2/Models/shrike.ac</model>
+    <trigger>/controls/armament/triggershrike3</trigger>
+    <!-- Max speed is mach4, but we'll start at mach 2-ish -->
+    <speed>1000</speed>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-50.0</x-offset>
+    <y-offset>34</y-offset>
+    <z-offset>-2</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>0.0</eda>
+    <cd>0.0</cd>
+    <weight>390</weight>
+    <contents>/sim/armament/contents</contents>
+    <life>20</life>
+    <buoyancy>15</buoyancy>
+    <wind>false</wind>
+    <aero-stabilised>true</aero-stabilised>
+  </submodel>
+
+  <submodel>
+    <name>shrike4</name>
+    <model>Aircraft/AvroVulcanB2/Models/shrike.ac</model>
+    <trigger>/controls/armament/triggershrike4</trigger>
+    <!-- Max speed is mach4, but we'll start at mach 2-ish -->
+    <speed>1000</speed>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-60.0</x-offset>
+    <y-offset>37</y-offset>
+    <z-offset>-2</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>0.0</eda>
+    <cd>0.0</cd>
+    <weight>390</weight>
+    <contents>/sim/armament/contents</contents>
+    <life>20</life>
+    <buoyancy>15</buoyancy>
+    <wind>false</wind>
+    <aero-stabilised>true</aero-stabilised>
+  </submodel>
+
+  <!-- Red Beard nuclear bomb -->
+  <submodel>
+    <name>RedBeardAi</name>
+    <model>Aircraft/AvroVulcanB2/Models/RedBeard.ac</model>
+    <trigger>/controls/armament/triggerredbeard</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-60.0</x-offset>
+    <y-offset>0</y-offset>
+    <z-offset>0.10</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>9.0</eda>
+    <cd>0.07</cd> <!-- less than a bullet but more than a tank -->
+    <weight>1750</weight>
+    <contents>/sim/armament/contents</contents>
+    <life>60</life>
+    <buoyancy>0</buoyancy>
+    <wind>false</wind>
+    <aero-stabilised>true</aero-stabilised>
+  </submodel>
+
+  <!-- Blue Steel nuclear missile-->
+  <submodel>
+    <name>bluesteel</name>
+    <model>Aircraft/AvroVulcanB2/Models/BlueSteel.ac</model>
+    <trigger>/controls/armament/triggerbluesteel</trigger>
+    <!-- While this is a missile, it falls clear of the aircraft -->
+    <!-- before igniting. Unfortunately we cannot model this so  -->
+    <!-- it just drops out of sight.                             -->
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-60.0</x-offset>
+    <y-offset>0</y-offset>
+    <z-offset>-6.0</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>3.0</eda>
+    <cd>0.045</cd>
+    <!-- less than a bullet but more than a tank -->
+    <weight>1750</weight>
+    <contents>/sim/armament/contents</contents>
+    <life>600</life>
+    <buoyancy>25</buoyancy>
+    <wind>false</wind>
+    <aero-stabilised>true</aero-stabilised>
+  </submodel>
+
+  <!-- WE177A nuclear bomb -->
+  <submodel>
+    <name>WE177A</name>
+    <model>Aircraft/AvroVulcanB2/Models/WE177A.ac</model>
+    <trigger>/controls/armament/triggerwe177a</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-60.0</x-offset>
+    <y-offset>0</y-offset>
+    <z-offset>0.10</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>3.00</eda>
+    <cd>0.07</cd>
+    <!-- less than a bullet but more than a tank -->
+    <weight>600</weight>
+    <contents>/sim/armament/contents</contents>
+    <life>600</life>
+    <buoyancy>0</buoyancy>
+    <wind>false</wind>
+    <aero-stabilised>true</aero-stabilised>
+  </submodel>
+
+  <!-- WE177B nuclear bomb -->
+  <submodel>
+    <name>WE177B</name>
+    <model>Aircraft/AvroVulcanB2/Models/WE177B.ac</model>
+    <trigger>/controls/armament/triggerwe177b</trigger>
+    <speed>0</speed>
+    <repeat>false</repeat>
+    <count>1</count>
+    <x-offset>-60.0</x-offset>
+    <y-offset>0</y-offset>
+    <z-offset>0.10</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>0.0</pitch-offset>
+    <eda>6.00</eda>
+    <cd>0.07</cd>
+    <!-- less than a bullet but more than a tank -->
+    <weight>950</weight>
+    <contents>/sim/armament/contents</contents>
+    <life>60</life>
+    <buoyancy>0</buoyancy>
+    <wind>false</wind>
+    <aero-stabilised>true</aero-stabilised>
+  </submodel>
+
+</PropertyList>

@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+
+<!-- Throttle box -->
+
+<PropertyList>
+
+ <path>throttle.ac</path>
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+ <!-- Fuel gauges in front of the throttles -->
+ <model>
+   <path>Aircraft/vulcanb2/Models/Instruments/fuel-1.xml</path>
+   <offsets>
+     <x-m>-0.1</x-m>
+     <y-m>-0.15</y-m>
+     <z-m> 0.03</z-m>
+   </offsets>
+ </model>
+ 
+ <model>
+   <path>Aircraft/vulcanb2/Models/Instruments/fuel-2.xml</path>
+   <offsets>
+     <x-m>-0.1</x-m>
+     <y-m>-0.07</y-m>
+     <z-m> 0.03</z-m>
+   </offsets>
+ </model>
+ 
+ <model>
+   <path>Aircraft/vulcanb2/Models/Instruments/fuel-3.xml</path>
+   <offsets>
+     <x-m>-0.1</x-m>
+     <y-m> 0.07</y-m>
+     <z-m> 0.03</z-m>
+   </offsets>
+ </model>
+ 
+ <model>
+   <path>Aircraft/vulcanb2/Models/Instruments/fuel-4.xml</path>
+   <offsets>
+     <x-m>-0.1</x-m>
+     <y-m> 0.15</y-m>
+     <z-m> 0.03</z-m>
+   </offsets>
+ </model>
+
+ <!-- Throttles -->
+ <animation>
+   <type>rotate</type>
+   <object-name>Throttle0</object-name>
+   <property>controls/engines/engine[0]/throttle</property>
+   <interpolation>
+     <entry>
+       <ind>0</ind>
+       <dep>75</dep>
+     </entry>
+     <entry>
+       <ind>1.0</ind>
+       <dep>-45.0</dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x1-m>0.0</x1-m>
+     <y1-m>-1.0</y1-m>
+     <z1-m>0.0</z1-m>
+     <x2-m>0.0</x2-m>
+     <y2-m>1.0</y2-m>
+     <z2-m>0.0</z2-m>
+   </axis>
+ </animation>
+ 
+ <animation>
+   <type>rotate</type>
+   <object-name>Throttle1</object-name>
+   <property>controls/engines/engine[1]/throttle</property>
+   <interpolation>
+     <entry>
+       <ind>0</ind>
+       <dep>75</dep>
+     </entry>
+     <entry>
+       <ind>1.0</ind>
+       <dep>-45.0</dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x1-m>0.0</x1-m>
+     <y1-m>-1.0</y1-m>
+     <z1-m>0.0</z1-m>
+     <x2-m>0.0</x2-m>
+     <y2-m>1.0</y2-m>
+     <z2-m>0.0</z2-m>
+   </axis>
+ </animation>
+ 
+ <animation>
+   <type>rotate</type>
+   <object-name>Throttle2</object-name>
+   <property>controls/engines/engine[2]/throttle</property>
+   <interpolation>
+     <entry>
+       <ind>0</ind>
+       <dep>75</dep>
+     </entry>
+     <entry>
+       <ind>1.0</ind>
+       <dep>-45.0</dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x1-m>0.0</x1-m>
+     <y1-m>-1.0</y1-m>
+     <z1-m>0.0</z1-m>
+     <x2-m>0.0</x2-m>
+     <y2-m>1.0</y2-m>
+     <z2-m>0.0</z2-m>
+   </axis>4
+ </animation>
+ 
+ <animation>
+   <type>rotate</type>
+   <object-name>Throttle3</object-name>
+   <property>controls/engines/engine[3]/throttle</property>
+   <interpolation>
+     <entry>
+       <ind>0</ind>
+       <dep>75</dep>
+     </entry>
+     <entry>
+       <ind>1.0</ind>
+       <dep>-45.0</dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x1-m>0.0</x1-m>
+     <y1-m>-1.0</y1-m>
+     <z1-m>0.0</z1-m>
+     <x2-m>0.0</x2-m>
+     <y2-m>1.0</y2-m>
+     <z2-m>0.0</z2-m>
+   </axis>
+ </animation>
+
+ <!-- Airbrake Handle -->
+
+ <animation>
+   <type>translate</type>
+   <object-name>AirbrakeHandle</object-name>
+   <property>/controls/flight/spoilers</property>
+   <interpolation>
+     <entry>
+       <ind>0</ind>
+       <dep>0</dep>
+     </entry>
+     <entry>
+       <ind>1.0</ind>
+       <dep>-0.033</dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x1-m>0.0</x1-m>
+     <y1-m>0.0</y1-m>
+     <z1-m>-1.0</z1-m>
+     <x2-m>0.0</x2-m>
+     <y2-m>0.0</y2-m>
+     <z2-m>1.0</z2-m>
+   </axis>
+ </animation>
+
+
+</PropertyList>

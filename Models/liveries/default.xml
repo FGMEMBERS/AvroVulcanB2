@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+	<sim>
+		<model>
+				<livery>
+					<name type="string">XM597</name>
+					 <index type="int">1</index>
+					  <texture>liveries/XM597.png</texture>
+				</livery>
+	<Tornado>
+	<FuelHose type="bool">true</FuelHose>
+	</Tornado>
+		</model>
+	</sim>
+</PropertyList>

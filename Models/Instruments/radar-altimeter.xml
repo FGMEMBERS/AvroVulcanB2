@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<!-- Radar Altimeter -->
+
+<PropertyList>
+
+ <path>radar-altimeter.ac</path>
+
+<!-- Radar Altimeter -->
+
+ <!-- Needle 500ft sensitivity-->
+ <animation>
+  <type>rotate</type>
+  <object-name>needle</object-name>
+  <property>instrumentation/radar-altimeter/radar-altitude-lowpass-ft</property>
+  
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <condition>
+    <and>
+      <equals>
+        <property>instrumentation/radar-altimeter/serviceable</property>
+        <value>true</value>
+      </equals>
+      <equals>
+        <property>controls/radar/sensitivity-five-thousand</property>
+        <value>false</value>
+      </equals>
+    </and>
+  </condition>
+  <interpolation>
+    <entry><ind>0</ind><dep>0</dep></entry>
+    <entry><ind>500</ind><dep>315</dep></entry>
+  </interpolation>
+</animation>
+
+
+<!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation> 
+
+</PropertyList>
