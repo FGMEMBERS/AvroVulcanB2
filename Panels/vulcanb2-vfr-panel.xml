@@ -13,7 +13,7 @@
 
  <instruments>
 
-  <instrument include="../../Instruments/hsi.xml">
+  <instrument include="Instruments/hsi.xml">
    <name>Heading</name>
    <x>75</x>
    <y>75</y>
@@ -21,7 +21,7 @@
    <h>125</h>
   </instrument>
 
-  <instrument include="../../Instruments/turn.xml">
+  <instrument include="Instruments/turn.xml">
    <name>TurnAndBank</name>
    <x>75</x>
    <y>200</y>
@@ -29,7 +29,7 @@
    <h>125</h>
   </instrument>
 
-  <instrument include="../../Instruments/asi-590-knot-a4c.xml">
+  <instrument include="Instruments/asi-590-knot-a4c.xml">
    <name>Machometer</name>
    <x>75</x>
    <y>325</y>
@@ -45,7 +45,7 @@
    <h>125</h>
   </instrument>
 
-  <instrument include="../../Instruments/vertical-speed-6kfpm.xml">
+  <instrument include="Instruments/vertical-speed-6kfpm.xml">
    <name>Vertical Speed</name>
    <x>225</x>
    <y>200</y>
@@ -61,7 +61,7 @@
    <h>15</h>
   </instrument>
 
-  <instrument include="../../Instruments/altimeter.xml">
+  <instrument include="Instruments/altimeter.xml">
    <name>Altimeter</name>
    <x>225</x>
    <y>365</y>
@@ -71,7 +71,7 @@
 
 <!-- Engine controls central cluster -->
 
-  <instrument include="../../Instruments/throttle-knob.xml">
+  <instrument include="Instruments/throttle-knob.xml">
    <name>Engine 0 throttle quadrant</name>
    <params>
     <engine-throttle-select>/controls/engines/engine[0]/throttle</engine-throttle-select>
@@ -82,7 +82,7 @@
    <h>50</h>
   </instrument>
 
-  <instrument include="../../Instruments/throttle-knob.xml">
+  <instrument include="Instruments/throttle-knob.xml">
    <name>Engine 1 throttle quadrant</name>
    <params>
     <engine-throttle-select>/controls/engines/engine[1]/throttle</engine-throttle-select>
@@ -93,7 +93,7 @@
    <h>50</h>
   </instrument>
 
-  <instrument include="../../Instruments/throttle-knob.xml">
+  <instrument include="Instruments/throttle-knob.xml">
    <name>Engine 2 throttle quadrant</name>
    <params>
     <engine-throttle-select>/controls/engines/engine[2]/throttle</engine-throttle-select>
@@ -104,7 +104,7 @@
    <h>50</h>
   </instrument>
 
-  <instrument include="../../Instruments/throttle-knob.xml">
+  <instrument include="Instruments/throttle-knob.xml">
    <name>Engine 3 throttle quadrant</name>
    <params>
     <engine-throttle-select>/controls/engines/engine[3]/throttle</engine-throttle-select>
@@ -117,7 +117,7 @@
   
 <!-- Engine instruments -->
 
-   <instrument include="../../Instruments/oil.xml">
+   <instrument include="Instruments/oil.xml">
    <name>Oil Temp Engine 0</name>
    <params>
     <engine-oil-temp-select>/engines/engine[0]/oil-temperature-degf</engine-oil-temp-select>
@@ -129,7 +129,7 @@
    <h>100</h>
   </instrument>
 
-   <instrument include="../../Instruments/oil.xml">
+   <instrument include="Instruments/oil.xml">
    <name>Oil Temp Engine 1</name>
    <params>
     <engine-oil-temp-select>/engines/engine[1]/oil-temperature-degf</engine-oil-temp-select>
@@ -141,7 +141,7 @@
    <h>100</h>
   </instrument>
 
-   <instrument include="../../Instruments/oil.xml">
+   <instrument include="Instruments/oil.xml">
    <name>Oil Temp Engine 2</name>
    <params>
     <engine-oil-temp-select>/engines/engine[2]/oil-temperature-degf</engine-oil-temp-select>
@@ -153,7 +153,7 @@
    <h>100</h>
   </instrument>
 
-   <instrument include="../../Instruments/oil.xml">
+   <instrument include="Instruments/oil.xml">
    <name>Oil Temp Engine 3</name>
    <params>
     <engine-oil-temp-select>/engines/engine[3]/oil-temperature-degf</engine-oil-temp-select>
@@ -207,7 +207,7 @@
   
 <!-- controls visual feedback cluster -->
 
-  <instrument include="../../Instruments/gear-indicator.xml">
+  <instrument include="Instruments/gear-indicator.xml">
    <name>Gear Indicator Light</name>
    <x>475</x>
    <y>300</y>
@@ -215,7 +215,7 @@
    <h>17</h>
   </instrument>
 
-  <instrument include="../../Instruments/brakes.xml">
+  <instrument include="Instruments/brakes.xml">
    <name>Brake Indicator Light</name>
    <x>475</x>
    <y>320</y>
@@ -223,7 +223,7 @@
    <h>17</h>
   </instrument>
 
-  <instrument include="../../Instruments/controls.xml">
+  <instrument include="Instruments/controls.xml">
    <name>Control Position Indicators</name>
    <x>550</x>
    <y>300</y>
@@ -231,7 +231,7 @@
    <h>90</h>
   </instrument>
   
-  <instrument include="../../Instruments/dme.xml">
+  <instrument include="Instruments/dme.xml">
    <name>DME Display</name>
    <x>650</x>
    <y>300</y>
@@ -245,7 +245,7 @@
 
 <!-- radio stack -->
 
-  <instrument include="../../Instruments/markerbeacon.xml">
+  <instrument include="Instruments/markerbeacon.xml">
    <name>Marker Beacon Indicators</name>
    <x>798</x>
    <y>450</y>
@@ -253,13 +253,13 @@
    <h>22</h>
   </instrument>
 
-  <instrument include="../../Instruments/navcom-kx155.xml">
+  <instrument include="Instruments/navcom-kx155.xml">
    <name>NavCom 1 Radio</name>
    <x>890</x>
    <y>395</y>
   </instrument>
 
-  <instrument include="../../Instruments/navcom-kx155.xml">
+  <instrument include="Instruments/navcom-kx155.xml">
    <name>NavCom 2 Radio</name>
    <params>
     <comm-freq-selected-prop>/instrumentation/comm[1]/frequencies/selected-mhz</comm-freq-selected-prop>
@@ -273,13 +273,13 @@
    <y>309</y>
   </instrument>
 
-  <instrument include="../../Instruments/adf-radio.xml">
+  <instrument include="Instruments/adf-radio.xml">
    <name>ADF Radio</name>
    <x>890</x>
    <y>235</y>
   </instrument>
 
-  <instrument include="../../Instruments/autopilot.xml">
+  <instrument include="Instruments/autopilot.xml">
    <name>Autopilot</name>
    <x>890</x>
    <y>191</y>
@@ -289,7 +289,7 @@
 
 <!-- Fictional second VOR -->	
 
-  <instrument include="../../Instruments/nav1.xml">
+  <instrument include="Instruments/nav1.xml">
   <name>VOR 2 Gauge</name>
   <params>
    <nav-to-flag>/instrumentation/nav[1]/to-flag</nav-to-flag>
