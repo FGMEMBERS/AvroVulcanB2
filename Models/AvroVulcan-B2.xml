@@ -67,7 +67,7 @@
 </animation>
   <!-- Marker used by tutorial system -->
   <model>
-    <path>Models/Aircraft/marker.xml</path>
+    <path>Models/Aircraft/AvroVulcanB2/Models/Instruments/marker.xml</path>
   </model>
 
 
