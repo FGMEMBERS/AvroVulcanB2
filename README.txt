@@ -1,6 +1,8 @@
 A. V. Roe Vulcan B.2
 ====================
 
+![Splash Screen](https://raw.githubusercontent.com/FGMEMBERS/AvroVulcanB2/master/vulcanb2-splash.png)
+
 The Avro Vulcan was probably the most famous of the U.K. V-force aircraft,
 originally deisgned to deliver atomic weapons in the early 1950s. A huge
 four-engined, subsonic delta bomber, it was originally designed for high-level
@@ -67,14 +69,14 @@ Lee Elliott for the Red Beard bomb I've copied from the Canberra.
 
 To Do
 =====
-- Cockpit - Many of the dials are from the Lightning and so cover very high
+* Cockpit - Many of the dials are from the Lightning and so cover very high
             speeds.
-- Fuel System - I've simplified the fuel system from 14 tanks to 4. The fuel
+* Fuel System - I've simplified the fuel system from 14 tanks to 4. The fuel
                 system is very complex and needs it's own panel
-- Airbrakes - These have been simplified too. They should have two positions
+* Airbrakes - These have been simplified too. They should have two positions
               35 and 55 degrees, with the 55 degrees becoming 85 when
               the undercarriage is down
-- Electrical - There is currently no electrical system
-- Textures   - They look pretty rough, don't they...
+* Electrical - There is currently no electrical system
+* Textures   - They look pretty rough, don't they...
 
 
