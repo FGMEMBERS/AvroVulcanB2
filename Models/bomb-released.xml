@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<!-- wrapper for bomb post-release  -->
+
+
+	<path>bomb.ac</path>
+
+
+	<animation>
+		<enable-hot type="bool">false</enable-hot>
+	</animation>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10000</max-m>
+	</animation>
+</PropertyList>

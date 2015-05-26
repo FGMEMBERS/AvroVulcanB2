@@ -1,0 +1,501 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+JSBSim Vulcan B2
+
+Started June 6 2006 by Stuart Buchanan,
+************************************************************************
+-->
+
+<PropertyList>
+
+  <sim>
+
+    <description>Avro Vulcan B.2</description>
+    <author>Stuart Buchanan</author>
+    <status>beta</status>
+    <rating>
+      <FDM type="int">1</FDM>
+      <systems type="int">4</systems>
+      <cockpit type="int">4</cockpit>
+      <model type="int">4</model>
+    </rating>
+
+
+    <flight-model archive="y">jsb</flight-model>
+    <aero archive="y">vulcanb2</aero>
+
+    <startup>
+      <splash-texture>Aircraft/vulcanb2/vulcanb2-splash.rgb</splash-texture>
+    </startup>
+
+    <model>
+      <path archive="y">Aircraft/vulcanb2/Models/vulcanb2.xml</path>
+      <livery>
+        <material>
+          <texture>XM597.rgb</texture>
+        </material>
+      </livery>
+      <offsets>
+        <x-m>-15.0</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.0</z-m>
+      </offsets>
+    </model>
+
+    <!-- Initial variant and texture. Controlled by aircraft dialog. -->
+    <variant>XM597</variant>
+
+    <!-- Initial armament. Controlled by aircraft dialog -->
+    <armament>BlackBuck6</armament>
+
+    <submodels>
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/vulcanb2/Models/submodels.xml</path>
+    </submodels>
+
+    <sound>
+      <path>Aircraft/vulcanb2/Sounds/vulcanb2-sound.xml</path>
+    </sound>
+
+    <help>
+      <title>Avro Vulcan B.2</title>
+      <line>Speeds (AUW 180,000lbs)</line>
+      <line></line>
+      <line>Rotation: 148 kts</line>
+      <line>Initial Climb: 156 kts</line>
+      <line>Climb (below 20k ft): 250 kts</line>
+      <line>Climb (above 20k ft): 300 kts</line>
+      <line>Pattern: 181 kts</line>
+      <line>Approach: 166 kts</line>
+      <line>Threshhold: 151 kts</line>
+      <line>Tail Chute: 145 kts</line>
+      <key>
+        <name>C</name>
+        <desc>Tail brake chute (TBC) control</desc>
+      </key>
+      <key>
+        <name>D</name>
+        <desc>Toggle bomb bay door</desc>
+      </key>
+      <key>
+        <name>E</name>
+        <desc>Toggle crew door</desc>
+      </key>
+      <key>
+        <name>J</name>
+        <desc>Fire weaponry</desc>
+      </key>
+      <key>
+        <name>j/k</name>
+        <desc>2 position speedbrakes</desc>
+      </key>
+      <key>
+        <name>=</name>
+        <desc>Configuration menu</desc>
+      </key>
+    </help>
+
+    <panel>
+      <path>Aircraft/vulcanb2/Panels/vulcanb2-vfr-panel.xml</path>
+      <visibility>false</visibility>
+    </panel>
+
+
+    <!-- position the pilot viewpoint and angle -->
+    <view n="0">
+      <internal archive="y">true</internal>
+      <config>
+        <x-offset-m archive="y">-0.25</x-offset-m>
+        <y-offset-m archive="y">1.07</y-offset-m>
+        <z-offset-m archive="y">4.83</z-offset-m>
+        <pitch-offset-deg>-5.0</pitch-offset-deg>
+      </config>
+    </view>
+
+    <!-- position the co-pilot viewpoint and angle -->
+    <!-- This is definitely a dual-control a/c -->
+    <view n="1">
+      <config>
+        <z-offset-m type="double" archive="y">-130</z-offset-m>
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+      </config>
+    </view>
+    <view n="2">
+      <config>
+        <!-- big plane, so extend chase view offset a bit -->
+        <z-offset-m type="double" archive="y">-150</z-offset-m>
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+        <pitch-offset-deg>-8.0</pitch-offset-deg>
+      </config>
+    </view>
+
+    <view n="3">
+      <config>
+        <!-- big plane, so extend chase view offset a bit -->
+        <z-offset-m type="double" archive="y">-140</z-offset-m>
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+      </config>
+    </view>
+
+    <view n="4">
+      <config>
+        <!-- big plane, so extend chase view offset a bit -->
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+      </config>
+    </view>
+
+    <view n="5">
+      <config>
+        <!-- big plane, so extend chase view offset a bit -->
+        <z-offset-m type="double" archive="y">-150</z-offset-m>
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+      </config>
+    </view>
+
+    <view n="6">
+      <config>
+        <!-- big plane, so extend chase view offset a bit -->
+        <z-offset-m type="double" archive="y">-150</z-offset-m>
+        <target-z-offset-m type="double" archive="y">15</target-z-offset-m>
+      </config>
+    </view>
+
+    <view n="100">
+      <name>Co-pilot View</name>
+      <internal archive="y">true</internal>
+      <type>lookfrom</type>
+      <config>
+        <from-model type="bool">true</from-model>
+        <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+        <x-offset-m archive="y">0.25</x-offset-m>
+        <y-offset-m archive="y">1.07</y-offset-m>
+        <z-offset-m archive="y">4.83</z-offset-m>
+        <pitch-offset-deg>-5.0</pitch-offset-deg>
+        <default-field-of-view-deg>60</default-field-of-view-deg>
+        <dynamic-view type="bool">true</dynamic-view>
+      </config>
+    </view>
+
+    <!-- No flaps on this aircraft -->
+    <flaps>
+      <setting>0.000</setting>
+    </flaps>
+
+    <!-- Two-position spoilers.
+   0 - Fully in
+   0.5 - Parially out - 35 degrees
+   1.0 - Fully extended - 55/80 degrees undercarriage up/down.
+
+   We simplify the fully out position
+ -->
+    <spoilers>
+      <setting>0.00</setting>
+      <setting>0.5</setting>
+      <setting>1.0</setting>
+      <chute-pos-norm>0.0</chute-pos-norm>
+    </spoilers>
+
+    <systems>
+      <electrical>
+        <path>Aircraft/vulcanb2/Systems/vulcanb2-electrical.xml</path>
+      </electrical>
+    </systems>
+
+    <instrumentation>
+      <path>Aircraft/vulcanb2/Systems/vulcanb2-instrumentation.xml</path>
+    </instrumentation>
+
+    <menubar include="vulcanb2-menu.xml"/>
+    <tutorials include="Tutorials/vulcanb2-tutorials.xml"/>
+
+  </sim>
+
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <level-gal_us archive="y">657</level-gal_us>
+      </tank>
+      <tank n="1">
+        <level-gal_us archive="y">1140</level-gal_us>
+      </tank>
+      <tank n="2">
+        <level-gal_us archive="y">756</level-gal_us>
+      </tank>
+      <tank n="3">
+        <level-gal_us archive="y">657</level-gal_us>
+      </tank>
+      <tank n="4">
+        <level-gal_us archive="y">616</level-gal_us>
+      </tank>
+      <tank n="5">
+        <level-gal_us archive="y">884</level-gal_us>
+      </tank>
+      <tank n="6">
+        <level-gal_us archive="y">660</level-gal_us>
+      </tank>
+      <tank n="7">
+        <level-gal_us archive="y">657</level-gal_us>
+      </tank>
+      <tank n="8">
+        <level-gal_us archive="y">1140</level-gal_us>
+      </tank>
+      <tank n="9">
+        <level-gal_us archive="y">756</level-gal_us>
+      </tank>
+      <tank n="10">
+        <level-gal_us archive="y">657</level-gal_us>
+      </tank>
+      <tank n="11">
+        <level-gal_us archive="y">616</level-gal_us>
+      </tank>
+      <tank n="12">
+        <level-gal_us archive="y">884</level-gal_us>
+      </tank>
+      <tank n="13">
+        <level-gal_us archive="y">660</level-gal_us>
+      </tank>
+    </fuel>
+  </consumables>
+
+  <engines>
+    <engine n="0">
+      <running>false</running>
+      <magnetos>3</magnetos>
+      <cutoff>false</cutoff>
+    </engine>
+    <engine n="1">
+      <running>false</running>
+      <magnetos>3</magnetos>
+      <cutoff>false</cutoff>
+    </engine>
+    <engine n="2">
+      <running>false</running>
+      <magnetos>3</magnetos>
+      <cutoff>false</cutoff>
+    </engine>
+    <engine n="3">
+      <running>false</running>
+      <magnetos>3</magnetos>
+      <cutoff>false</cutoff>
+    </engine>
+  </engines>
+
+  <controls>
+    <doors>
+      <cockpit-door-pos-norm type="float">0.0</cockpit-door-pos-norm>
+      <bb-door-pos-norm type="float">0.0</bb-door-pos-norm>
+      <bb-door-pos type="float">0.0</bb-door-pos>
+      <emergency-bb-door-pos type="float">0.0</emergency-bb-door-pos>
+      <emergency-bb-jettison-pos type="float">0.0</emergency-bb-jettison-pos>
+      <chute-door-pos-norm type="float">0.0</chute-door-pos-norm>
+    </doors>
+
+    <radar>
+      <limiter-light-green>0</limiter-light-green>
+      <limiter-light-amber>0</limiter-light-amber>
+      <limiter-light-red>0</limiter-light-red>
+      <limiter-height>50.0</limiter-height>
+      <sensitivity-five-thousand>false</sensitivity-five-thousand>
+      <limiter-active>0</limiter-active>
+      <limiter-test>0</limiter-test>
+    </radar>
+
+    <!-- Currently selected engine for starter -->
+    <engines>
+      <starter-selected>0</starter-selected>
+      <master>0</master>
+    </engines>
+
+    <chute-pos-norm>0.0</chute-pos-norm>
+
+
+    <!-- trim for level cruise -->
+
+    <flight>
+      <aileron-trim>0.027</aileron-trim>
+      <rudder-trim>0.0</rudder-trim>
+    </flight>
+
+  </controls>
+
+  <instrumentation>
+    <tacan n="0">
+      <name>tacan</name>
+      <number>0</number>
+      <serviceable type="bool" archive="y">true</serviceable>
+      <switch-position type="int" archive="y">1</switch-position>
+    </tacan>
+    <!-- radar-altimeter should come before air-ground-radar -->
+
+
+    <air-ground-radar>
+      <serviceable type="bool">true</serviceable>
+      <switch type="string">ON</switch>
+      <threshold>0.18</threshold>
+      <mode-control type="int">5</mode-control>
+      <scan-sec type="double">1</scan-sec>
+      <display-controls>
+        <WX type="bool">false</WX>
+        <pos type="bool">true</pos>
+        <data type="bool">false</data>
+        <symbol type="bool">false</symbol>
+      </display-controls>
+      <range type="int">30</range>
+      <mode type="string">SV</mode>
+      <lightning type="bool">false</lightning>
+      <display-mode type="string">arc</display-mode>
+      <minimized type="bool">false</minimized>
+      <echo-texture-path>Aircraft/Instruments/Textures/wxecho-orange.rgb</echo-texture-path>
+      <antenna>
+        <x-offset-m type="double">0</x-offset-m>
+        <y-offset-m type="double">-0.5</y-offset-m>
+        <z-offset-m type="double">0</z-offset-m>
+      </antenna>
+      <terrain-warning>
+        <elev-limit-deg type="double">2</elev-limit-deg>
+        <elev-step-deg type="double">2</elev-step-deg>
+        <az-limit-deg type="double">1</az-limit-deg>
+        <az-step-deg type="double">1</az-step-deg>
+        <max-range-m type="double">4000</max-range-m>
+        <min-range-m type="double">250</min-range-m>
+        <tilt type="double">-2</tilt>
+        <stabilisation>
+          <roll type="bool">true</roll>
+          <pitch type="bool">false</pitch>
+        </stabilisation>
+        <scan-sec type="double">0</scan-sec>
+        <beamwidth-deg>1</beamwidth-deg>
+      </terrain-warning>
+      <surveillance>
+        <elev-limit-deg type="double">1.25</elev-limit-deg>
+        <elev-step-deg type="double">0.125</elev-step-deg>
+        <az-limit-deg type="double">45</az-limit-deg>
+        <az-step-deg type="double">2.5</az-step-deg>
+        <max-range-m type="double">120000</max-range-m>
+        <min-range-m type="double">1000</min-range-m>
+        <tilt type="double">-2.5</tilt>
+        <stabilisation>
+          <roll type="bool">true</roll>
+          <pitch type="bool">true</pitch>
+        </stabilisation>
+        <scan-sec type="double">0.001</scan-sec>
+        <persistance-sec type="double">18</persistance-sec>
+        <beamwidth-deg>5</beamwidth-deg>
+      </surveillance>
+    </air-ground-radar>
+    <radar-altimeter>
+      <switch type="string">ON</switch>
+      <serviceable type="bool">true</serviceable>
+      <antenna>
+        <x-offset-m type="double">-2.660540</x-offset-m>
+        <y-offset-m type="double">0</y-offset-m>
+        <z-offset-m type="double">-0.6275650</z-offset-m>
+      </antenna>
+      <set-height-ft>1000</set-height-ft>
+      <set-excursion-percent>5</set-excursion-percent>
+      <beamwidth-deg>10</beamwidth-deg>
+    </radar-altimeter>
+    <radar>
+      <!-- Used for Air-to-Air Refueling -->
+      <range type="int" archive="y">20</range>
+      <range-factor type="double" archive="n">20</range-factor>
+      <minimized type="bool" archive="y">false</minimized>
+    </radar>
+
+    <path>Aircraft/vulcanb2/Systems/vulcanb2-instrumentation.xml</path>
+  </instrumentation>
+
+  <systems>
+    <refuel>
+      <type>probe</type>
+			<offset-x-m>-0.57</offset-x-m>
+			<offset-y-m>0.56</offset-y-m>
+			<offset-z-m>0.13</offset-z-m>
+    </refuel>
+  </systems>
+
+  <ai>
+    <scenario>refueling_demo_1</scenario>
+  </ai>
+
+
+  <!-- Key mappings -->
+  <input>
+    <keyboard>
+
+      <key n="61">
+        <name>=</name>
+        <desc>Show configuration dialog</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>vulcanb2.config_dialog.toggle()</script>
+        </binding>
+      </key>
+
+      <key n="67">
+        <name>C</name>
+        <desc>Toggle Chute</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>vulcanb2.toggle_chute()</script>
+        </binding>
+      </key>
+
+      <key n="68">
+        <name>D</name>
+        <desc>Toggle Bomb Bay Doors</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>vulcanb2.toggle_bb_doors()</script>
+        </binding>
+      </key>
+
+      <key n="69">
+        <name>E</name>
+        <desc>Toggle Entrance Hatch</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>vulcanb2.toggle_cockpit_door()</script>
+        </binding>
+      </key>
+
+      <key n="74">
+        <name>J</name>
+        <desc>Fire weaponry</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>vulcanb2.fire()</script>
+        </binding>
+      </key>
+
+    </keyboard>
+  </input>
+
+
+  <!-- Aircraft limits -->
+  <limits>
+    <max-gear-extension-speed>270</max-gear-extension-speed>
+    <vne>400</vne>
+  </limits>
+
+  <!-- Nasal files/scripts -->
+  <nasal>
+    <vulcanb2>
+      <file>Aircraft/vulcanb2/Nasal/vulcanb2.nas</file>
+    </vulcanb2>
+    <starter>
+      <file>Aircraft/vulcanb2/Nasal/starter.nas</file>
+    </starter>
+    <failures>
+      <file>Aircraft/Generic/limits.nas</file>
+    </failures>
+    <aar>
+      <file>Aircraft/Generic/aar.nas</file>
+    </aar>
+		<crater>
+			<file>/Models/Geometry/Crater/crater.nas</file>
+		</crater>
+	</nasal>
+
+</PropertyList>
