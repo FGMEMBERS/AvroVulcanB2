@@ -6,7 +6,7 @@
 
    <engine>
      <name>engine0</name>
-     <path>Aircraft/vulcanb2/Sounds/vulcan.wav</path>
+     <path>Aircraft/AvroVulcanB2/Sounds/vulcan.wav</path>
      <mode>looped</mode>
      <condition>
        <property>/engines/engine[0]/running</property>
@@ -66,7 +66,7 @@
 
     <engine>
       <name>engine1</name>
-      <path>Aircraft/vulcanb2/Sounds/vulcan.wav</path>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan.wav</path>
       <mode>looped</mode>
       <condition>
         <property>/engines/engine[1]/running</property>
@@ -186,7 +186,7 @@
 
     <engine>
       <name>engine3</name>
-      <path>Aircraft/vulcanb2/Sounds/vulcan.wav</path>
+      <path>Aircraft/AvroVulcanB2/Sounds/vulcan.wav</path>
       <mode>looped</mode>
       <condition>
         <property>/engines/engine[3]/running</property>
@@ -266,7 +266,7 @@
   <gear>
    <name>gear</name>
    <mode>in-transit</mode>
-   <path>Aircraft/vulcanb2/Sounds/gear.wav</path>
+   <path>Aircraft/AvroVulcanB2/Sounds/gear.wav</path>
    <property>/gear/gear[0]/position-norm</property>
    <pitch>
     <internal>dt_play</internal>
@@ -366,7 +366,7 @@
  
   <stall>
    <name>stall</name>
-   <path>Aircraft/vulcanb2/Sounds/stall.wav</path>
+   <path>Aircraft/AvroVulcanB2/Sounds/stall.wav</path>
    <property>/sim/alarms/stall-warning</property>
    <volume>
     <property>/velocities/airspeed-kt</property>
@@ -385,7 +385,7 @@
   <cockpit>
    <name>Cockpit Atmos</name>
    <mode>looped</mode>
-   <path>Aircraft/vulcanb2/Sounds/cockpit.wav</path>
+   <path>Aircraft/AvroVulcanB2/Sounds/cockpit.wav</path>
    <condition>
     	<property>/sim/current-view/internal</property>
    </condition>

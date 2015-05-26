@@ -15,7 +15,7 @@
 
  <!-- Fuel gauges in front of the throttles -->
  <model>
-   <path>Aircraft/vulcanb2/Models/Instruments/fuel-1.xml</path>
+   <path>Aircraft/AvroVulcanB2/Models/Instruments/fuel-1.xml</path>
    <offsets>
      <x-m>-0.1</x-m>
      <y-m>-0.15</y-m>
@@ -24,7 +24,7 @@
  </model>
  
  <model>
-   <path>Aircraft/vulcanb2/Models/Instruments/fuel-2.xml</path>
+   <path>Aircraft/AvroVulcanB2/Models/Instruments/fuel-2.xml</path>
    <offsets>
      <x-m>-0.1</x-m>
      <y-m>-0.07</y-m>
@@ -33,7 +33,7 @@
  </model>
  
  <model>
-   <path>Aircraft/vulcanb2/Models/Instruments/fuel-3.xml</path>
+   <path>Aircraft/AvroVulcanB2/Models/Instruments/fuel-3.xml</path>
    <offsets>
      <x-m>-0.1</x-m>
      <y-m> 0.07</y-m>
@@ -42,7 +42,7 @@
  </model>
  
  <model>
-   <path>Aircraft/vulcanb2/Models/Instruments/fuel-4.xml</path>
+   <path>Aircraft/AvroVulcanB2/Models/Instruments/fuel-4.xml</path>
    <offsets>
      <x-m>-0.1</x-m>
      <y-m> 0.15</y-m>
