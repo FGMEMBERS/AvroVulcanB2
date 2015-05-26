@@ -513,12 +513,12 @@ Started June 6 2006 by Stuart Buchanan,
   <!-- Nasal files/scripts -->
   <nasal>
     <vulcanb2>
+      <!-- Three Light nasal found ?? IH-COL May25-2015 -->
       <file>Aircraft/AvroVulcanB2/Nasal/vulcanb2.nas</file>
-<file>Aircraft/Jaguar/Nasal/light.nas</file>
-<file>Aircraft/Hawk/Nasal/light.nas</file>
-<file>Aircraft/ZLT-NT/Systems/ZLT-NT-copilot.nas</file>
-   <file>Aircraft/ZLT-NT/Systems/mp-network.nas</file>
-
+      <file>Aircraft/AvroVulcanB2/Nasal/jaguar-light.nas</file>
+      <file>Aircraft/AvroVulcanB2/Nasal/hawk-light.nas</file>
+      <file>Aircraft/AvroVulcanB2/Systems/vulcanb2-copilot.nas</file>
+      <file>Aircraft/AvroVulcanB2/Systems/mp-network.nas</file>
     </vulcanb2>
     <starter>
       <file>Aircraft/AvroVulcanB2/Nasal/starter.nas</file>
@@ -529,18 +529,15 @@ Started June 6 2006 by Stuart Buchanan,
     <aar>
       <file>Aircraft/AvroVulcanB2/Nasal/aar.nas</file>
     </aar>
+
 <!-- Dual control. -->
   <dual_control_tools>
-   <file>Aircraft/ZLT-NT/DualControl/dual-control-tools.nas</file>
+   <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
   </dual_control_tools>
   <!-- Offending item <aircraft_dual_control> -->
    <dual_control>
-   <file>Aircraft/ZLT-NT/DualControl/copilot-dual-control.nas</file>
-
+      <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
   </dual_control>
-
-
   </nasal>
 
 </PropertyList>
-
