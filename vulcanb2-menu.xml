@@ -31,6 +31,7 @@
           <script>vulcanb2.toggle_cockpit_door()</script>
         </binding>
       </item>
+	   
     </menu>
   </default>
 </PropertyList>

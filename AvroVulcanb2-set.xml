@@ -13,7 +13,7 @@ Started June 6 2006 by Stuart Buchanan,
 
     <description>Avro Vulcan B2 (Non-AI)</description>
     <author>Stuart Buchanan, Stuart C, Algernon (Sound)</author>
-	<aircraft-version>FGUK SE v1.9.1</aircraft-version>
+	<aircraft-version>FGUK SE v1.9.5</aircraft-version>
     <status>alpha</status>
 
     <flight-model archive="y">jsb</flight-model>
@@ -261,9 +261,11 @@ Started June 6 2006 by Stuart Buchanan,
         <path>Aircraft/AvroVulcanB2/Systems/vulcanb2-electrical.xml</path> 
 
       </electrical>
+  
 <autopilot>
-        <path>Aircraft/AvroVulcanB2/Systems/autopilot5.xml</path>
+        <path>Aircraft/AvroVulcanB2/Systems/autopilot2.xml</path>
       </autopilot>
+	  
 <refuel>
         <type>probe</type>
         <serviceable type="bool">true</serviceable>
@@ -291,9 +293,11 @@ Started June 6 2006 by Stuart Buchanan,
         <path>Aircraft/AvroVulcanB2/Systems/vulcanb2-electrical.xml</path> 
 
       </electrical>
+	
 <autopilot>
-        <path>Aircraft/AvroVulcanB2/Systems/autopilot5.xml</path>
+        <path>Aircraft/AvroVulcanB2/Systems/autopilot2.xml</path>
       </autopilot>
+	 
 <refuel>
         <type>probe</type>
         <serviceable type="bool">true</serviceable>
@@ -601,16 +605,17 @@ Started June 6 2006 by Stuart Buchanan,
 <low>
       <file>Aircraft/AvroVulcanB2/Nasal/low.nas</file>
     </low>
-<!-- Dual control -->
+<!-- Dual control. -->
   <dual_control_tools>
    <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
   </dual_control_tools>
   <aircraft_dual_control>
-   <file>Aircraft/AvroVulcanB2/Systems/vulcanb2-dual-control.nas</file>
+   <file>Aircraft/AvroVulcanB2/Nasal/vulcan-dual-control.nas</file>
   </aircraft_dual_control>
   <dual_control>
-   <file>Aircraft/Generic/DualControl/pilot-dual-control.nas</file>
+   <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
   </dual_control>
+
 
   </nasal>
 

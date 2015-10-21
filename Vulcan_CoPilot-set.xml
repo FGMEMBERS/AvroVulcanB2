@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<!--
+  F-29 multiplayer Back Seat view.
+
+  Copyright (C) 2009  Anders Gidenstam  (anders(at)gidenstam.org)
+  This file is licensed under the GPL license version 2 or later.
+-->
+<!--
+  Usage: fgfs - -prop:/sim/remote/pilot-callsign="remote pilot callsign" - -aircraft=Fi-156-passenger
+-->
+<PropertyList>
+
+ <sim>
+
+  <description>Vulcan B2 CoPilot</description>
+  <author>Mathias Froehlich, Algernon</author>
+  <status>vAlpha 0.1</status>
+  <aircraft-version>$Id$</aircraft-version>
+  
+  <flight-model>null</flight-model>
+
+  <presets>
+   <onground type="bool">false</onground>
+   <altitude-agl-ft type="double">30.0</altitude-agl-ft>
+  </presets>
+  
+  <startup>
+   <splash-texture>Aircraft/AvroVulcanB2/vulcanb2-splash.png</splash-texture>
+  </startup>
+
+  <!-- 3d model -->
+  <model>
+   <path>Aircraft/AvroVulcanB2/Models/Vulcan-CoPilot.xml</path>
+  </model>
+
+  <!-- Views -->
+  <view n="0">
+   <!-- Passenger's position. -->
+   <name>Copilot View</name>
+   <type>lookfrom</type>
+   <internal type="bool">true</internal>
+   <config>
+    <internal type="bool">true</internal>
+    <from-model type="bool">false</from-model>
+    <from-model-idx type="int">0</from-model-idx>
+    <eye-lat-deg-path>/position/latitude-deg</eye-lat-deg-path>
+    <eye-lon-deg-path>/position/longitude-deg</eye-lon-deg-path>
+    <eye-alt-ft-path>/position/altitude-ft</eye-alt-ft-path>
+    <eye-heading-deg-path>/orientation/heading-deg</eye-heading-deg-path>
+    <eye-pitch-deg-path>/orientation/pitch-deg</eye-pitch-deg-path>
+    <eye-roll-deg-path>/orientation/roll-deg</eye-roll-deg-path>
+
+    <!-- x/y/z == right/up/back -->
+   	    <x-offset-m archive="y">0.35</x-offset-m>
+        <y-offset-m archive="y">1.1</y-offset-m>
+        <z-offset-m archive="y">4.8</z-offset-m>
+        <pitch-offset-deg>-5.0</pitch-offset-deg>
+        <default-field-of-view-deg>86.3</default-field-of-view-deg>
+   </config>
+  </view>
+  
+  <view n="100">
+   <name>Navigators  belly periscope</name>
+   <type>lookfrom</type>
+   <internal type="bool">false</internal>
+   <config>
+    <from-model type="bool">true</from-model>
+    <from-model-idx type="int">0</from-model-idx>
+    <ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
+    <x-offset-m type="double">0.00</x-offset-m>
+    <y-offset-m type="double">-1.40</y-offset-m>
+    <z-offset-m type="double">5.55</z-offset-m>
+    <pitch-offset-deg>-10</pitch-offset-deg>
+	
+    <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+   </config>
+   <dynamic>
+    <enabled type="bool">false</enabled>
+   </dynamic>
+  </view>
+
+
+  <chase-distance-m type="double">-18.0</chase-distance-m>
+
+  <sound>
+    <path>Aircraft/AvroVulcanB2/Sounds/vulcanb2-sound.xml</path>
+  </sound>
+		
+
+		
+
+  <!-- Aircraft specific help. -->
+  <!-- help include="help.xml"/ -->
+
+  <!-- systems>
+   <electrical>
+    <path/>
+   </electrical>
+  </systems>
+  <instrumentation>
+   <path/>
+  </instrumentation -->
+
+  <menubar>
+   <default>
+    <menu n="100">
+     <label>Vulcan B2</label>
+     <item>
+      <label>Select Pilot</label>
+      <binding>
+       <command>nasal</command>
+       <script>
+        dual_control_tools.
+          copilot_dialog.show(aircraft_dual_control.pilot_type);
+       </script>
+      </binding>
+     </item>
+    </menu>
+   </default>
+  </menubar>
+
+ </sim>
+ 
+ <instrumentation>
+    <tacan n="0">
+      <name>tacan</name>
+      <number>0</number>
+      <serviceable type="bool" archive="y">true</serviceable>
+      <switch-position type="int" archive="y">1</switch-position>
+    </tacan>
+    <!-- radar-altimeter should come before air-ground-radar -->
+    
+
+    <air-ground-radar>
+      <serviceable type="bool">true</serviceable>
+      <switch type="string">ON</switch>
+      <threshold>0.18</threshold>
+      <mode-control type="int">5</mode-control>
+      <scan-sec type="double">1</scan-sec>
+      <display-controls>
+        <WX type="bool">false</WX>
+        <pos type="bool">true</pos>
+        <data type="bool">false</data>
+        <symbol type="bool">false</symbol>
+      </display-controls>
+      <range type="int">30</range>
+      <mode type="string">SV</mode>
+      <lightning type="bool">false</lightning>
+      <display-mode type="string">arc</display-mode>
+      <minimized type="bool">false</minimized>
+      <echo-texture-path>Aircraft/Instruments/Textures/wxecho-orange.rgb</echo-texture-path>
+      <antenna>
+        <x-offset-m type="double">0</x-offset-m>
+        <y-offset-m type="double">-0.5</y-offset-m>
+        <z-offset-m type="double">0</z-offset-m>
+      </antenna>
+      <terrain-warning>
+        <elev-limit-deg type="double">2</elev-limit-deg>
+        <elev-step-deg type="double">2</elev-step-deg>
+        <az-limit-deg type="double">1</az-limit-deg>
+        <az-step-deg type="double">1</az-step-deg>
+        <max-range-m type="double">4000</max-range-m>
+        <min-range-m type="double">250</min-range-m>
+        <tilt type="double">-2</tilt>
+        <stabilisation>
+          <roll type="bool">true</roll>
+          <pitch type="bool">false</pitch>
+        </stabilisation>
+        <scan-sec type="double">0</scan-sec>
+        <beamwidth-deg>1</beamwidth-deg>
+      </terrain-warning>
+      <surveillance>
+        <elev-limit-deg type="double">1.25</elev-limit-deg>
+        <elev-step-deg type="double">0.125</elev-step-deg>
+        <az-limit-deg type="double">45</az-limit-deg>
+        <az-step-deg type="double">2.5</az-step-deg>
+        <max-range-m type="double">120000</max-range-m>
+        <min-range-m type="double">1000</min-range-m>
+        <tilt type="double">-2.5</tilt>
+        <stabilisation>
+          <roll type="bool">true</roll>
+          <pitch type="bool">true</pitch>
+        </stabilisation>
+        <scan-sec type="double">0.001</scan-sec>
+        <persistance-sec type="double">18</persistance-sec>
+        <beamwidth-deg>5</beamwidth-deg>
+      </surveillance>
+    </air-ground-radar>
+    <radar-altimeter>
+      <switch type="string">ON</switch>
+      <serviceable type="bool">true</serviceable>
+      <antenna>
+        <x-offset-m type="double">-2.660540</x-offset-m>
+        <y-offset-m type="double">0</y-offset-m>
+        <z-offset-m type="double">-0.6275650</z-offset-m>
+      </antenna>
+      <set-height-ft>1000</set-height-ft>
+      <set-excursion-percent>5</set-excursion-percent>
+      <beamwidth-deg>10</beamwidth-deg>
+    </radar-altimeter>
+    <radar>
+      <!-- Used for Air-to-Air Refueling -->
+      <range type="int" archive="y">20</range>
+      <range-factor type="double" archive="n">20</range-factor>
+      <minimized type="bool" archive="y">false</minimized>
+    </radar>
+
+    <path>Aircraft/AvroVulcanB2/Systems/vulcanb2-instrumentation.xml</path>
+  </instrumentation>
+  
+  
+   <nasal>
+    <vulcanb2>
+      <file>Aircraft/AvroVulcanB2/Nasal/vulcanb2.nas</file>
+<file>Aircraft/AvroVulcanB2/Nasal/light.nas</file>
+<file>Aircraft/AvroVulcanB2/Nasal/liveries.nas</file>
+    </vulcanb2>
+    <starter>
+      <file>Aircraft/AvroVulcanB2/Nasal/starter.nas</file>
+    </starter>
+    <failures>
+      <file>Aircraft/Generic/limits.nas</file>
+    </failures>
+    <aar>
+  <file>Aircraft/Generic/aar.nas</file>
+ </aar>
+<low>
+      <file>Aircraft/AvroVulcanB2/Nasal/low.nas</file>
+    </low>
+<!-- Dual control. -->
+  <dual_control_tools>
+   <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+  </dual_control_tools>
+  <aircraft_dual_control>
+   <file>Aircraft/AvroVulcanB2/Nasal/vulcan-dual-control.nas</file>
+  </aircraft_dual_control>
+  <dual_control>
+   <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+  </dual_control>
+
+
+  </nasal>
+
+</PropertyList>

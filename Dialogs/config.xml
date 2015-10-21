@@ -143,7 +143,10 @@
       <legend>Select Co-Pilot</legend>
       <binding>
         <command>nasal</command>
-        <script>dual_control_tools.copilot_dialog.show(aircraft_dual_control.pilot_type)</script>
+         <script>
+        dual_control_tools.
+          copilot_dialog.show(aircraft_dual_control.copilot_type);
+       </script>
 
       </binding>
     </button>

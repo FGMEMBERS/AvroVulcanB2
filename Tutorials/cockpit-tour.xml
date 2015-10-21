@@ -3,7 +3,7 @@
   <description>
 This tutorial will guide you around the instrumentation of the Vulcan Bomber.
   </description>
-  <audio-dir>Aircraft/AvroVulcanB2/Tutorials/</audio-dir>
+  <audio-dir>Aircraft/vulcanb2/Tutorials/</audio-dir>
   <timeofday>morning</timeofday>
 <!--  
   <presets>

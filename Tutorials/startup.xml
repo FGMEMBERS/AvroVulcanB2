@@ -5,7 +5,7 @@ This tutorial will take you through the engine startup sequence for the Vulcan.
 
 This is based ona  startup using a ground cart to provide power.
   </description>
-  <audio-dir>Aircraft/AvroVulcanB2/Tutorials/</audio-dir>
+  <audio-dir>Aircraft/vulcanb2/Tutorials/</audio-dir>
   <timeofday>morning</timeofday>
 <!--  
   <presets>
