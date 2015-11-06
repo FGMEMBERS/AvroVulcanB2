@@ -110,7 +110,7 @@ Started June 6 2006 by Stuart Buchanan,
         <desc>2 position speedbrakes</desc>
       </key>
       <key>
-        <name>Tab</name>
+        <name>=</name>
         <desc>Configuration menu</desc>
       </key>
 <line>CoPilot option located in Vulcan B2 Config menu</line>
@@ -531,8 +531,8 @@ Started June 6 2006 by Stuart Buchanan,
   <input>
     <keyboard>
 
-      <key n="9">
-        <name>Tab</name>
+      <key n="61">
+        <name>=</name>
         <desc>Show configuration dialog</desc>
         <binding n="0">
           <command>nasal</command>
